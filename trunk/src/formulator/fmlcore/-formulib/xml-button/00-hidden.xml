@@ -1,0 +1,1389 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Hidden templates                                              -->
+<!--                                                                        -->
+<toolbar id="@t@Hidden@"
+         group="Presentation"
+         name="Hidden templates" 
+         caption="Hidden"
+		 visible="no" 
+		         image="" >
+        <!-- image="images/buttons/hidden.bmp" >-->
+
+  <!-- Box (Ctrl+Shift+T,X)                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Box (Ctrl+Shift+T,X)" id="@box_dash" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="T" />
+        <sequence                        key="X" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="rectangle" pen-style="dash" type="formula" name="BOX" />
+    </objects>
+    <expr>
+		BOX.left   = A.left + 1;
+		BOX.top    = A.top + 1;
+
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+        BOX.right  = A.right - 1 + (A.left_margin - LMO);
+        BOX.bottom = A.bottom - 1 + (A.top_margin - TMO);
+
+        A.left_margin = 3;
+        A.top_margin = 3;
+        A.right_margin = 3;
+        A.bottom_margin = 3;
+    </expr>
+    <mathml name="menclose" type="box-dashed" />
+    <dsr head="@box( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Division operator                                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Division operator" type="text" value="/" style="op" id="text /"
+    stretchy="yes"
+  >
+    <objects>
+      <object shape="line" name="L1" type="formula" alt-group="2" />
+    </objects>
+    <expr>
+		DY = (bottom - top) * 0.8;
+		DX = DY / 3.0;
+		LR = (0.1666670 * em);
+		TB = (bottom - top - DY) / 2;
+
+		right = DX + 2 + LR + LR;
+        L1.bottom = top + TB;
+        L1.top    = L1.bottom + DY;
+        L1.left   = left + 1 + LR;
+        L1.right  = L1.left + DX;
+
+    </expr>
+    <mathml type="mo" value="/" />
+    <dsr head="/" param="$empty$" />
+  </button>
+
+
+  <!-- Under bar                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Under bar" type="text" value="_" style="op" id="text _"
+    stretchy="yes"
+  >
+    <objects>
+      <object shape="line" name="L" type="formula" />
+    </objects>
+    <expr>
+        L.left   = left;
+        L.right  = right;
+        L.top    = bottom;
+        L.bottom = bottom;
+    </expr>
+    <mathml value="&UnderBar;" type="mo" />
+    <dsr head="_" param="$empty$" />
+  </button>
+
+
+  <!-- Left parenthesis                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!-- assuming that cannot-draw-width -> W[4], cannot-draw-height -> H[4]  -->
+  <!-- if we can't draw a text and draw graphics (alt-group=2), then increase button size as the following:   -->
+  <!-- this.width  += min( externalLine.height < W[0] ? W[1] : (externalLine.height * W[2]), W[3] );          -->
+  <!-- this.height += min( externalLine.height < H[0] ? H[1] : (externalLine.height * H[2]), H[3] );          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left parenthesis" type="text" value="(" style="op" id="text ("
+    stretchy="yes"
+   	cannot-draw-width="0.0;0.0;2.6;2000000000;" 
+	cannot-draw-height="0.0;0.0;9.0;2000000000;"
+  >
+    <objects>
+
+      <object name="ANW" 
+              shape="spline" type="formula"
+              alt-group="2" >
+        <point type="moveto" x =   "99"		 	y = "0" />
+        <point type="splnto" x =  "100" 		y =  "-2" />
+        <point type="splnto" x =  "81" 			y =   "5" />
+        <point type="splnto" x =  "67" 			y =   "11" />
+		<point type="splnto" x =   "41" 		y = "26" />
+        <point type="splnto" x =  "22" 			y =  "37" />
+        <point type="splnto" x =  "9" 			y =   "65" />
+        <point type="splnto" x =  "4" 			y =   "76" />
+		<point type="splnto" x =   "4" 			y = "90" />
+        <point type="splnto" x =  "4" 			y =  "100" />
+		<point type="lineto" x =   "16" 		y = "100" />
+        <point type="splnto" x =  "16" 			y =  "88" />
+        <point type="splnto" x =  "21" 			y =   "76" />
+        <point type="splnto" x =  "22" 			y =   "60" />
+		<point type="splnto" x =   "33" 		y = "36" />
+        <point type="splnto" x =  "54" 			y =  "19" />
+        <point type="splnto" x =   "99" 		y = "0" /> 
+	</object>
+
+      <object name="L1" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "4" 		y =   "0" />
+        <point type="lineto" x =   "4" 		y = "100" />
+        <point type="lineto" x =   "16" 	y = "100" />
+		<point type="lineto" x =   "16" 	y = "0" />		
+		<point type="lineto" x =   "4" 		y = "0" />		
+      </object>
+
+      <object name="ASW" 
+              shape="spline" type="formula"
+              alt-group="2" >
+        <point type="moveto" x =   "99" y = "100" />
+        <point type="splnto" x =  "100" y =  "102" />
+        <point type="splnto" x =  "81" y =   "95" />
+        <point type="splnto" x =  "67" y =   "89" />
+		<point type="splnto" x =   "41" y = "74" />
+        <point type="splnto" x =  "22" y =  "63" />
+        <point type="splnto" x =  "9" y =   "35" />
+        <point type="splnto" x =  "5" y =   "24" />
+		<point type="splnto" x =   "4" y = "10" />
+        <point type="splnto" x =  "4" y =  "0" />
+		<point type="lineto" x =   "16" y = "0" />
+        <point type="splnto" x =  "16" y =  "12" />
+        <point type="splnto" x =  "21" y =   "24" />
+        <point type="splnto" x =  "22" y =   "40" />
+		<point type="splnto" x =   "33" y = "64" />
+        <point type="splnto" x =  "54" y =  "81" />
+        <point type="splnto" x =   "99" y = "100" /> 
+      </object>
+
+    </objects>
+    <expr>
+		DX = 6;	
+		DY = 18; 
+		x_margin = 1;
+		y_margin = 0.25;
+
+        L1.top    = top + DY;
+        L1.bottom = bottom - DY;
+        L1.left   = left + x_margin;
+        L1.right  = L1.left + DX;
+
+		ANW.top    = top + y_margin;
+		ANW.bottom = top + DY;
+		ANW.left   = L1.left;
+		ANW.right  = L1.right;
+
+		ASW.top    = L1.bottom;
+		ASW.bottom = ASW.top + DY - y_margin;
+		ASW.left   = ANW.left;
+		ASW.right  = ANW.right;
+     </expr>
+    <mathml type="mo" value="(" />
+    <dsr head="(" param="$empty$" />
+  </button>
+
+
+<button name="Right parenthesis" type="text" value=")" style="op" id="text )"
+    stretchy="yes"
+  cannot-draw-width="0.0;0.0; 2.6; 2000000000;" 
+	cannot-draw-height="0.0;0.0;9.0; 2000000000;" >
+    <objects>
+
+      <object name="ANE" 
+              shape="spline" type="formula"
+              alt-group="2"    	
+	>
+        <point type="moveto" x =   "1" y = "0" />
+        <point type="splnto" x =  "0" y =  "-2" />
+        <point type="splnto" x =  "19" y =   "5" />
+        <point type="splnto" x =  "33" y =   "11" />
+		<point type="splnto" x =   "59" y = "26" />
+        <point type="splnto" x =  "78" y =  "37" />
+        <point type="splnto" x =  "91" y =   "65" />
+        <point type="splnto" x =  "95" y =   "76" />
+		<point type="splnto" x =   "95" y = "90" />
+        <point type="splnto" x =  "95" y =  "100" />
+		<point type="lineto" x =   "84" y = "100" />
+        <point type="splnto" x =  "84" y =  "88" />
+        <point type="splnto" x =  "79" y =   "76" />
+        <point type="splnto" x =  "78" y =   "60" />
+		<point type="splnto" x =   "67" y = "36" />
+        <point type="splnto" x =  "46" y =  "19" />
+        <point type="splnto" x =   "1" y = "0" />  
+      </object>
+
+      <object name="L1" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "84" 		y =   "0" />
+        <point type="lineto" x =   "84" 		y = "100" />
+        <point type="lineto" x =   "95,5" 	y = "100" />
+		<point type="lineto" x =   "95,5" 	y = "0" />		
+		<point type="lineto" x =   "84" 		y = "0" />	
+			  
+      </object>
+
+      <object name="ASE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "1" y = "100" />
+        <point type="splnto" x =  "1" y =  "102" />
+        <point type="splnto" x =  "19" y =   "95" />
+        <point type="splnto" x =  "33" y =   "89" />
+		<point type="splnto" x =   "59" y = "74" />
+        <point type="splnto" x =  "78" y =  "63" />
+        <point type="splnto" x =  "91" y =   "35" />
+        <point type="splnto" x =  "94,3" y =   "24" />
+		<point type="splnto" x =   "94" y = "10" />
+        <point type="splnto" x =  "94" y =  "0" />
+		<point type="lineto" x =   "84" y = "0" />
+        <point type="splnto" x =  "84" y =  "12" />
+        <point type="splnto" x =  "79" y =   "24" />
+        <point type="splnto" x =  "78" y =   "40" />
+		<point type="splnto" x =   "67" y = "64" />
+        <point type="splnto" x =  "46" y =  "81" />
+        <point type="splnto" x =   "1" y = "100" /> 
+
+      </object>
+
+
+    </objects>
+    <expr>
+		DX = 6;
+		DY = 18;
+		x_margin = 1;
+		y_margin = 0.25;
+
+        L1.top    = top + DY ;
+        L1.bottom = bottom - DY ;
+        L1.right  = right - x_margin;
+        L1.left   = L1.right - DX ;
+
+		ANE.top    = top + y_margin;
+		ANE.bottom = L1.top;
+		ANE.left   = L1.left;
+		ANE.right  = L1.right;
+
+		ASE.top    = L1.bottom ;
+		ASE.bottom = ASE.top + DY - y_margin;
+		ASE.left   = ANE.left;
+		ASE.right  = ANE.right;
+    </expr>
+    <mathml type="mo" value=")" />
+    <dsr head=")" param="$empty$" />
+  </button>
+
+  
+  <!-- Left square-brackets                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left square-brackets" type="text" value="[" style="op" id="text ["
+    stretchy="yes"
+    cannot-draw-width="0.0;0.0; 0.5; 4000000000;" 
+	cannot-draw-height="0.0;0.0;2.6;4000000000;">
+    <objects>
+<object name="L1" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "0"		y = "0"/>
+		<point type="lineto" x = "10"		y = "0"/>
+		<point type="lineto" x = "10"		y = "100"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "0"		y = "0"/>
+	  </object>
+       <object name="NW" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "0"		y = "0"/>
+		<point type="lineto" x = "100"		y = "0"/>
+		<point type="lineto" x = "100"		y = "100"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "0"		y = "0"/>
+	  </object>
+      <object name="SW" shape="spline" type="formula" alt-group="2"> 
+		<point type="moveto" x = "100"		y = "0"/>
+		<point type="lineto" x = "0"		y = "0"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "100"		y = "100"/>
+		<point type="lineto" x = "100"		y = "0"/>		  
+	  </object>
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 2;
+		x_margin = 1;
+		y_margin = 0.25;
+
+        L1.top    = top + DY;
+        L1.bottom = bottom - DY;
+        L1.left   = left + x_margin;
+        L1.right  = L1.left + DX;
+
+		NW.top    = L1.top;
+		NW.bottom = L1.top;
+		NW.left   = L1.left;
+		NW.right  = L1.left + DX;
+
+		SW.top    = L1.bottom;
+		SW.bottom = L1.bottom;
+		SW.left   = NW.left;
+		SW.right  = NW.right;
+    </expr>
+    <mathml type="mo" value="[" />
+    <dsr head="[" param="$empty$" />
+  </button>
+
+
+  <!-- Right square-brackets                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right square-brackets" type="text" value="]" style="op" id="text ]"
+    stretchy="yes"
+    cannot-draw-width="0.0;0.0; 0.5; 4000000000;" 
+	cannot-draw-height="0.0;0.0;2.6;4000000000;">
+    <objects>
+      <object name="L1" shape="spline" type="formula"  alt-group="2" >
+	  	<point type="moveto" x = "80"		y = "0"/>
+		<point type="lineto" x = "90"		y = "0"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "80"		y = "100"/>
+		<point type="lineto" x = "80"		y = "0"/>
+	  </object>	
+       <object name="NE" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "90"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "100"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "90"		y = "0"/>		
+	  </object>
+      <object name="SE" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "90"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "100"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "90"		y = "0"/>
+	  </object>		
+    </objects>
+    <expr>
+		DX = 4;	
+		DY = 2;
+		x_margin = 1;
+		y_margin = 0.25;	
+
+        L1.top    = top + DY;
+        L1.bottom = bottom - DY;
+        L1.right   = right - x_margin;
+        L1.left  = L1.right - DX;
+
+		NE.top    = L1.top;
+		NE.bottom = L1.top;
+		NE.right   = L1.right;
+		NE.left  = L1.right - DX;
+
+		SE.top    = L1.bottom;
+		SE.bottom = L1.bottom;
+		SE.left   = NE.left;
+		SE.right  = NE.right;
+		
+    </expr>
+    <mathml type="mo" value="]" />
+    <dsr head="]" param="$empty$" />
+  </button>
+
+
+  <!-- Left curly-brackets                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left curly-brackets" type="text" value="{" style="op" id="text {"
+    stretchy="yes"
+    cannot-draw-width="0.0;0.0;2.0;2000000000;" 
+	cannot-draw-height="0.0;0.0;4.0;2000000000;" 
+	>
+    <objects>
+
+      <object name="ANW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "100" y = "-1,666666667"/>
+		<point type="splnto" x =  "100" y = "-2,5"/>
+		<point type="splnto" x =  "60" y = "8,333333333"/>
+		<point type="splnto" x =  "35" y = "30"/>
+		<point type="splnto" x =  "3" y = "58,33333333"/>
+		<point type="splnto" x =  "0" y = "70"/>
+		<point type="splnto" x =  "0" y = "105"/>
+		<point type="lineto" x =  "8" y = "100"/>
+		<point type="splnto" x =  "8" y = "71,66666667"/>
+		<point type="splnto" x =  "33" y = "21"/>
+		<point type="splnto" x =  "100" y = "0"/>
+      </object>
+
+      <object name="L1HI" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "0" 		y =   "0" />
+        <point type="lineto" x =   "0" 		y = "100" />
+		<point type="lineto" x =   "8" 		y = "100" />
+		<point type="lineto" x =   "8" 		y = "0" />
+      </object>
+
+      <object name="L1LO" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "0" 		y =   "0" />
+        <point type="lineto" x =   "0" 		y = "100" />
+		<point type="lineto" x =   "8" 		y = "100" />
+		<point type="lineto" x =   "8"	 	y = "0" />
+      </object>
+
+      <object name="ASW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "100" y = "101,666666667"/>
+		<point type="splnto" x =  "100" y = "102,5"/>
+		<point type="splnto" x =  "60" y = "91,666666667"/>
+		<point type="splnto" x =  "35" y = "70"/>
+		<point type="splnto" x =  "3,33333" y = "41,66666667"/>
+		<point type="splnto" x =  "0" y = "15"/>
+		<point type="splnto" x =  "0" y = "0"/>
+		<point type="lineto" x =  "8" y = "0"/>
+		<point type="splnto" x =  "8" y = "28,33333333"/>
+		<point type="splnto" x =  "33" y = "79"/>
+		<point type="splnto" x =  "100" y = "100"/>
+      </object>
+
+      <object name="CNW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "108" y = "0"/>
+		<point type="lineto" x =  "100" y = "0"/>
+		<point type="splnto" x =  "98" y = "40"/>
+		<point type="splnto" x =  "50" y = "80"/>
+		<point type="splnto" x =  "22" y = "92"/>
+
+		<point type="lineto" x =  "22" y = "97"/>
+		<point type="splnto" x =  "37" y = "90"/>
+		<point type="splnto" x =  "112" y = "50"/>
+		<point type="splnto" x =  "108" y = "-1"/>	
+      </object>
+
+      <object name="CSW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+ 		 <point type="moveto" x = "108" y = "100"/>
+		<point type="lineto" x =  "100" y = "100"/>
+		<point type="splnto" x =  "98" y = "60"/>
+		<point type="splnto" x =  "50" y = "20"/>
+		<point type="splnto" x =  "22" y = "8"/>
+		
+		<point type="lineto" x =  "22" y = "3"/>
+		<point type="splnto" x =  "37" y = "10"/>
+		<point type="splnto" x =  "112" y = "50"/>
+		<point type="splnto" x =  "108" y = "101"/>	
+      </object>
+
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 4;
+		x_margin = 1;
+		y_margin = 0.25;
+
+        C = (bottom + top) / 2;
+
+        L1HI.top    = top + DY;
+        L1HI.bottom = C - DY;
+        L1HI.left   = left + DX + 1;
+        L1HI.right  = L1HI.left + DX;
+
+        L1LO.top    = C + DY;
+        L1LO.bottom = bottom - DY;
+        L1LO.left   = L1HI.left;
+        L1LO.right  = L1HI.left + DX;
+
+		ANW.top    = top + y_margin;
+		ANW.bottom = L1HI.top;
+		ANW.left   = L1HI.left;
+		ANW.right  = ANW.left + DX;
+
+		ASW.top    = L1LO.bottom;
+		ASW.bottom = bottom - y_margin;
+		ASW.left   = ANW.left;
+		ASW.right  = ANW.right;
+
+		CNW.top    = L1HI.bottom;
+		CNW.bottom = L1HI.bottom + DY;
+		CNW.left   = L1HI.left - DX/* + 1*/;
+		CNW.right  = CNW.left + DX;
+
+		CSW.top    = CNW.bottom;
+		CSW.bottom = L1LO.top;
+		CSW.left   = CNW.left;
+		CSW.right  = CNW.right;
+    </expr>
+    <mathml type="mo" value="{" />
+    <dsr head="{" param="$empty$" />
+  </button>
+
+
+  
+  <!-- Right curly-brackets                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right curly-brackets" type="text" value="}" style="op" id="text }"
+    stretchy="yes"
+    cannot-draw-width="0.0;0.0;2.0;2000000000;" 
+	cannot-draw-height="0.0;0.0;4.0;2000000000;" 
+	>
+    <objects>
+
+		<object name="ANE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "0	 	"y = "-1,666666667	"/>
+		<point type="splnto" x =  "0	 	"y = "-2,5	"/>
+		<point type="splnto" x =  "40	 	"y = "8,333333333"/>
+		<point type="splnto" x =  "65	 	"y = "30	"/>
+		<point type="splnto" x =  "97		"y = "58	"/>
+		<point type="splnto" x =  "100	 	"y = "70	"/>
+		<point type="splnto" x =  "100	 	"y = "105	"/>
+		<point type="lineto" x =  "92	 	"y = "100	"/>
+		<point type="splnto" x =  "92	 	"y = "71,66666667	"/>
+		<point type="splnto" x =  "63	 	"y = "21	"/>
+		<point type="splnto" x =  "0	 	"y = "0	"/>
+      </object>
+
+      <object name="L1HI" 
+                 shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "100" 	y =   "0" />
+        <point type="lineto" x =   "100" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "0" />
+      </object>
+
+      <object name="L1LO" 
+                 shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "100" 	y =   "0" />
+        <point type="lineto" x =   "100" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "0" />
+      </object>
+
+      <object name="ASE" 
+               shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "0	 	"y = "101,666666667		"/>
+		<point type="splnto" x =  "0	 	"y = "102,5	"/>
+		<point type="splnto" x =  "40	 	"y = "91,666666667"/>
+		<point type="splnto" x =  "65	 	"y = "70	"/>
+		<point type="splnto" x =  "96,66667	"y = "41,66666667"/>
+		<point type="splnto" x =  "100	 	"y = "15	"/>
+		<point type="splnto" x =  "100	 	"y = "0	"/>
+		<point type="lineto" x =  "92	 	"y = "0	"/>
+		<point type="splnto" x =  "92	 	"y = "28,33333333	"/>
+		<point type="splnto" x =  "67	 	"y = "79	"/>
+		<point type="splnto" x =  "0	 	"y = "100	"/>
+      </object> 
+
+	   <object name="CNE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =   "-8	 			"y = "0	"/>
+		<point type="lineto" x =   "0			 	"y = "0	"/>
+		<point type="splnto" x =  "2				"y = "40	"/>
+		<point type="splnto" x =  "50	 			"y = "80	"/>
+		<point type="splnto" x =  "78				"y = "92	"/>
+
+		<point type="lineto" x =  "78	 			"y = "97	"/>
+		<point type="splnto" x =  "63	 			"y = "90	"/>
+		<point type="splnto" x =  "-12	 			"y = "50	"/>
+		<point type="splnto" x =  "-8	 			"y = "-1	"/>	
+
+      </object>
+
+      <object name="CSE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =   "-8	 	"y = "100	"/>
+		<point type="lineto" x =   "0	 	"y = "100	"/>
+		<point type="splnto" x =  "2	 	"y = "60	"/>
+		<point type="splnto" x =  "50	 	"y = "20	"/>
+		<point type="splnto" x =  "78		"y = "8	"/>
+		
+		<point type="lineto" x =  "78	 	"y = "3	"/>
+		<point type="splnto" x =  "63	 	"y = "10	"/>
+		<point type="splnto" x =  "-12	 	"y = "50	"/>
+		<point type="splnto" x =  "-8	 	"y = "101	"/>	
+      </object>
+
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 4;
+		x_margin = 1;
+		y_margin = 0.25;
+		
+        C = (bottom + top) / 2;
+
+        L1HI.top    = top + DY;
+        L1HI.bottom = C - DY;
+        L1HI.right  = right - DX - 1;
+        L1HI.left   = L1HI.right - DX;
+
+        L1LO.top    = C + DY;
+        L1LO.bottom = bottom - DY;
+        L1LO.left   = L1HI.left;
+        L1LO.right  = L1HI.left + DX;
+
+		ANE.top    = top + y_margin;
+		ANE.bottom = L1HI.top;
+		ANE.left   = L1HI.left;
+		ANE.right  = L1HI.right;
+
+		ASE.top    = L1LO.bottom;
+		ASE.bottom = bottom - y_margin;
+		ASE.left   = ANE.left;
+		ASE.right  = ANE.right;
+
+		CNE.top    = L1HI.bottom;
+		CNE.bottom = L1HI.bottom + DY;
+		CNE.left   = L1HI.right/* - 1*/;
+		CNE.right  = CNE.left + DX;
+
+		CSE.top    = CNE.bottom;
+		CSE.bottom = L1LO.top;
+		CSE.left   = CNE.left;
+		CSE.right  = CNE.right;
+    </expr>
+    <mathml type="mo" value="}" />
+    <dsr head="}" param="$empty$" />
+  </button>
+
+
+  <!-- Left angle brackets                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left angle brackets" type="text" value="<" style="mathextra" id="text <"
+    stretchy="yes" 
+	cannot-draw-width="0.0;0.0;*0.25;2000000000;" 
+	cannot-draw-height="0.0;0.0;0.0;2000000000;" >
+    <objects>
+       <object name="LB" 
+              shape="spline-ex" type="formula"
+              offset-direction-x="0.5" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=   "0" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+      </object>     
+    </objects>
+    <expr>
+		LB.top    = top;
+        LB.bottom = bottom;
+        LB.left   = left;
+        LB.right  = right;
+    </expr>
+    <mathml type="mo" value="&langle;" />
+    <dsr head="<" param="$empty$" />
+  </button>
+
+
+  <!-- Right angle brackets                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right angle brackets" type="text" value=">" style="mathextra" id="text >"
+    stretchy="yes"
+  	cannot-draw-width="0.0;0.0;*0.25;2000000000;" 
+	cannot-draw-height="0.0;0.0;0.0;2000000000;" >
+    <objects>
+      <object name="RB" 
+              shape="spline-ex" type="formula"
+              offset-direction-x="-0.5" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x= "100" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+      </object>
+    </objects>
+    <expr>
+        RB.top    = top;
+        RB.bottom = bottom;
+        RB.left   = left;
+        RB.right  = right;
+    </expr>
+    <mathml value="&rangle;" type="mo" />
+    <dsr head=">" param="$empty$" />
+  </button>
+
+
+  <!-- Vertical bar                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Vertical bar" type="text" value="|" style="op" id="text |"
+    stretchy="yes"
+  >
+    <objects>
+      <object shape="line" name="L" type="formula" />
+    </objects>
+    <expr>
+        L.top    = top;
+        L.bottom = bottom;
+        L.left = average(left, right);
+        L.right = L.left;
+    </expr>
+    <mathml value="&verbar;" type="mo" />
+    <dsr head="|" param="$empty$" />
+  </button>
+
+
+  <!-- Double vertical bar                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double vertical bar" type="text" value="&amp;#x2225;" style="mathextra" id="text ||"
+    stretchy="yes"
+  >
+    <objects>
+      <object shape="line" name="L1" type="formula" />
+      <object shape="line" name="L2" type="formula" />
+    </objects>
+    <expr>
+        L1.top    = top;
+        L1.bottom = bottom;
+        L1.left = average(left, right) - 1;
+        L1.right = L1.left;
+
+        L2.top    = top;
+        L2.bottom = bottom;
+        L2.left = average(left, right) + 1;
+        L2.right = L2.left;
+    </expr>
+    <mathml value="&Verbar;" type="mo" />
+    <dsr head="||" param="$empty$" />
+  </button>
+
+
+  <!-- Double vertical bar - to correctly converts &spar;, &par; etc.       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double vertical bar" type="text" value="&amp;#x2225;" style="mathextra" id="par text ||"
+    stretchy="yes"
+  >
+    <objects>
+      <object shape="line" name="L1" type="formula" />
+      <object shape="line" name="L2" type="formula" />
+    </objects>
+    <expr>
+        L1.top    = top;
+        L1.bottom = bottom;
+        L1.left = average(left, right) - 1;
+        L1.right = L1.left;
+
+        L2.top    = top;
+        L2.bottom = bottom;
+        L2.left = average(left, right) + 1;
+        L2.right = L2.left;
+    </expr>
+    <mathml value="&spar;" type="mo" />
+    <dsr head="||" param="$empty$" />
+  </button>
+
+  <!-- Left floor brackets                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left floor brackets" type="text" value="&amp;#x230A;" 
+    style="mathextra" id="@lfloor" stretchy="yes"
+  >
+    <objects>
+      <object shape="line" name="L" type="formula" />
+      <object shape="line" name="D" type="formula" />
+    </objects>
+    <expr>
+		LM = 1;
+		DX = 4;
+
+        L.top = top;
+        L.bottom = bottom;
+        L.left = left;
+        L.right = L.left + LM;
+
+        D.top = L.bottom - 0.5;
+        D.bottom = D.top;
+        D.left = L.right;
+        D.right = D.left + DX + LM;
+    </expr>
+    <mathml type="mo" value="&lfloor;" />
+    <dsr head="@lfloor" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Right floor brackets                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right floor brackets" type="text" value="&amp;#x230B;"
+    style="mathextra" id="@rfloor" stretchy="yes"
+  >
+    <objects>
+      <object shape="line" name="L" type="formula" />
+      <object shape="line" name="D" type="formula" />
+    </objects>
+    <expr>
+		LM = 1;
+		DX = 4;
+
+        L.top = top;
+        L.bottom = bottom;
+        L.right = right;
+        L.left = L.right - LM;
+
+        D.top = L.bottom - 0.5;
+        D.bottom = D.top;
+        D.right = L.right;
+        D.left = D.right - DX - LM;
+    </expr>
+    <mathml type="mo" value="&rfloor;" />
+    <dsr head="@rfloor" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Left ceil brackets                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left ceil brackets" type="text" value="&amp;#x2308;" 
+    style="mathextra" id="@lceil" stretchy="yes"
+  >
+    <objects>
+      <object shape="line" name="L" type="formula" />
+      <object shape="line" name="D" type="formula" />
+    </objects>
+    <expr>
+		LM = 1;
+		DX = 4;
+
+        L.top = top;
+        L.bottom = bottom;
+        L.left = left;
+        L.right = L.left + LM;
+
+        D.top = L.top + 0.5;
+        D.bottom = D.top;
+        D.left = L.left;
+        D.right = D.left + DX + LM;
+    </expr>
+    <mathml type="mo" value="&lceil;" />
+    <dsr head="@lceil" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Right ceil brackets                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right ceil brackets" type="text" value="&amp;#x2309;" 
+    style="mathextra" id="@rceil" stretchy="yes"
+  >
+    <objects>
+      <object shape="line" name="L" type="formula" />
+      <object shape="line" name="D" type="formula" />
+    </objects>
+    <expr>
+		LM = 1;
+		DX = 4;
+
+        L.top = top;
+        L.bottom = bottom;
+        L.right = right;
+        L.left = L.right - LM;
+
+        D.top = L.top + 0.5;
+        D.bottom = D.top;
+        D.right = L.right - LM;
+        D.left = D.right - DX - LM;
+    </expr>
+    <mathml type="mo" value="&rceil;" />
+    <dsr head="@rceil" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Apply Function                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Apply Function" type="text" value="" style="op" id="@apply_function" >
+    <expr>
+		left_margin = em / 6;
+    </expr>
+    <mathml value="&ApplyFunction;" type="mo" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- Invisible Times                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Invisible Times" type="text" value="" style="op" id="@invisible_times" >
+    <expr>
+		left_margin = em / 18;
+    </expr>
+    <mathml value="&InvisibleTimes;" type="mo" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- Invisible Coma                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Invisible Coma" type="text" value="" style="op" id="@invisible_coma" >
+    <expr>
+		left_margin = em / 2;
+    </expr>
+    <mathml value="&InvisibleComma;" type="mo" />
+    <dsr head=", " param="$empty$" />
+  </button>
+
+  <!-- Four-Per-Em Space  (1/4 EM)                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Four-Per-Em Space (1/4 EM)" type="text" value="" style="text" id="emsp14" >
+    <expr>
+		left_margin = em / 4;
+    </expr>
+    <mathml value="&emsp14;" type="mtext" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- En Space (1/2 EM)                                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="En Space (1/2 EM)" type="text" value="" style="text" id="en space" >
+    <expr>
+		left_margin = em / 2;
+    </expr>
+    <mathml value="&ensp;" type="mtext" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- MSpace                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="En Space (1/2 EM)" type="text" value="" style="text" id="@mspace" >
+    <expr>
+		left_margin = em / 2;
+    </expr>
+    <mathml value="&ensp;" type="mtext" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- Medium Space (4/18 EM)                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Medium Space (4/18 EM)" type="text" value="" style="text" id="medium space" >
+    <expr>
+		left_margin = 4 * em / 18;
+    </expr>
+    <mathml value="&MediumSpace;" type="mtext" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- Negative Medium Space (4/18 EM)                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Negative Medium Space (4/18 EM)" type="text" value="" style="text" id="negative medium space" >
+    <expr>
+		left_margin = 4 * em / 18;
+    </expr>
+    <mathml value="&NegativeMediumSpace;" type="mtext" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- Non Breaking Space                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Non Breaking Space" type="text" value=" " style="text" id="nbsp space" >
+    <mathml value="&nbsp;" type="mtext" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- Very Thin Space (1/18 EM)                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Very Thin Space (1/18 EM)" type="text" value="" style="text" id="very thin space" >
+    <expr>
+		left_margin = em / 18;
+    </expr>
+    <mathml value="&VeryThinSpace;" type="mtext" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- Zero width space                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Zero width space" type="text" value="" style="text" id="zero width space" >
+    <expr>
+		left_margin = 0;
+    </expr>
+    <mathml value="&ZeroWidthSpace;" type="mtext" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- Empty frame                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Empty frame" id="@empty_frame" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame left="0" top="0" right="100" bottom="100" />
+    </frames>
+    <mathml name="mrow" />
+    <dsr head="( " tail=")" param="$child_list$" />
+  </button>
+
+
+  <!-- MPHANTOM frame                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="MPHANTOM frame" id="@mphantom_frame" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame left="0" top="0" right="100" bottom="100" />
+    </frames>
+    <mathml name="mphantom" />
+    <dsr head="( " tail=")" param="$child_list$" />
+  </button>
+
+
+  <!-- Error/warning message frame                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Error/warning message frame" id="@message_frame" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="rectangle" type="formula" name="BOX" color="light red" />
+    </objects>
+    <expr>
+		BOX.left   = A.left + 1;
+		BOX.top    = A.top + 1;
+
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+        BOX.right  = A.right - 1 + (A.left_margin - LMO);
+        BOX.bottom = A.bottom - 1 + (A.top_margin - TMO);
+
+        A.left_margin = 3;
+        A.top_margin = 3;
+        A.right_margin = 3;
+        A.bottom_margin = 3;
+    </expr>
+    <mathml name="merror" />
+    <dsr param="$empty$" />
+  </button>
+
+
+  <!-- Double integral                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double integral"
+          type="text" value="&amp;#x222C;" style="mathextra" id="@dintegral"
+          largeop="no"
+  >
+    <mathml value="&Int;" type="mo" />
+    <dsr head="@dintegral" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Triple integral                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Triple integral"
+          type="text" value="&amp;#x222D;" style="mathextra" id="@tintegral"
+          largeop="no"
+  >
+    <mathml value="&tint;" type="mo" />
+    <dsr head="@tintegral" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Contour integral                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Contour integral"
+          type="text" value="&amp;#x222E;" style="mathextra" id="@cintegral"
+          largeop="no"
+  >
+    <mathml value="&conint;" type="mo" />
+    <dsr head="@cintegral" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Area integral                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Area integral"
+          type="text" value="&amp;#x222F;" style="mathextra" id="@aintegral"
+          largeop="no"
+  >
+    <mathml value="&Conint;" type="mo" />
+    <dsr head="@aintegral" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Volume integral                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Volume integral"
+          type="text" value="&amp;#x2230;" style="mathextra" id="@vintegral"
+          largeop="no"
+  >
+    <mathml value="&Cconint;" type="mo" />
+    <dsr head="@vintegral" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Integral with counter-clockwise                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Integral with counter-clockwise"
+          type="text" value="&amp;#x2233;" style="mathextra" id="@awintegral"
+          largeop="no"
+  >
+    <mathml value="&awconint;" type="mo" />
+    <dsr head="@awintegral" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Integral with clockwise loop                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Integral with clockwise loop"
+          type="text" value="&amp;#x2232;" style="mathextra" id="@cwintegral"
+          largeop="no"
+  >
+    <mathml value="&cwconint;" type="mo" />
+    <dsr head="@cwintegral" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Assign-Eq sign                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Assign"
+          type="text" value="=" style="mathextra" id="@assign_eq"
+  >
+    <mathml value="=" type="mo" />
+    <dsr head="=" param="$empty$" />
+  </button>
+
+
+  <!-- Assign sign                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Assign"
+          type="text" value="&amp;#x2254;" style="mathextra" id=":="
+  >
+    <mathml value="&Assign;" type="mo" />
+    <dsr head=":=" param="$empty$" />
+  </button>
+
+
+  <!-- The menclose element rendered in radical notation                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The menclose element rendered in radical notation" id="@sqrt_menclose" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame left=60 top=4 right=97 bottom=96 halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" left="55" top= "0" right="100" bottom=  "0" />
+      <object shape="line" left="30" top="48" right= "30" bottom="100" />
+      <object shape="line" left="55" top= "0" right= "30" bottom="100" />
+      <object shape="line" left="30" top="48" right=  "5" bottom= "48" />
+    </objects>
+    <mathml name="menclose" type="radical" />
+    <dsr head="@sqrt_menclose( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+  <!-- diff                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The diff element is the differentiation operator element for functions of a single variable (the derivative of an expression with respect to a bound variable)"
+          id="@cm_diff1_degree1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" 
+          eatleftop="yes"
+  >
+    <math display='block'>
+        <apply>
+          <diff/>
+          <bvar>
+            <ci>x</ci>
+            <degree><cn>1</cn></degree>
+          </bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- diff                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The diff element is the differentiation operator element for functions of a single variable (the derivative of an expression with respect to a bound variable)"
+          id="@cm_diff3_degree2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" 
+          eatleftop="yes"
+  >
+    <math display='block'>
+        <apply>
+          <diff/>
+          <bvar>
+            <ci>x</ci>
+            <degree><cn>2</cn></degree>
+          </bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- PlusMinus                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The PlusMinus operator"
+          id="@cm_plus_minus1" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <csymbol>&PlusMinus;</csymbol>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- PlusMinus                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The PlusMinus operator"
+          id="@cm_plus_minus2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <csymbol>&PlusMinus;</csymbol>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- Parametric MathML code                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="MathML code"
+          id="@cm_mathml_code" type="mathml" 
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+    </math>
+  </button>
+
+  <!-- No operation                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="No operation"
+          type="text" value="&amp;#x25AE;" style="mathextra" id="@nop"
+  >
+    <mathml value="&marker;" type="mo" />
+    <dsr head="@nop" param="$empty$" />
+  </button>
+
+  <!-- No operation                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="No operation"
+          id="@cm_nop" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <nop/>
+    </math>
+  </button>
+
+  <!-- No operation                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="No operation"
+          id="@cm_nop1" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <nop/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- No operation                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="No operation"
+          id="@cm_nop2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <nop/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- No operation                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="No operation"
+          id="@cm_nop3" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <nop/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- No operation                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="No operation"
+          id="@cm_nop4" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <nop/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- Exponential e            value="&amp;#x212F;" style="mathextra"      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Exponential e"
+          type="text" value="e" style="variable" id="@exponentiale"
+  >
+    <mathml value="&exponentiale;" type="mi" />
+    <dsr head="@exponentiale" tail=" " param="$empty$" />
+  </button>
+
+  <!-- Exponential e            value="&amp;#x212F;" style="mathextra"      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Exponential e"
+          type="text" value="e" style="variable" id="@exponentiale"
+  >
+    <mathml value="&ee;" type="mi" />
+    <dsr head="@exponentiale" tail=" " param="$empty$" />
+  </button>
+
+  <!-- Imaginary i                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Imaginary i"
+          type="text" value="i" style="mathextra" id="@imaginaryi"
+  >
+    <mathml value="&ii;" type="mi" />
+    <dsr head="@imaginaryi" tail=" " param="$empty$" />
+  </button>
+
+</toolbar>

@@ -1,0 +1,107 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Spaces templates                                              -->
+<!--                                                                        -->
+<toolbar id="@t@Space@"
+         group="Presentation"
+         name="Spaces templates" 
+         caption="Space"
+         image="images/buttons/spaces.bmp"
+         image-title="images/title/t_spaces_n.bmp"
+         image-title-hot="images/title/t_spaces_h.bmp" >
+
+  <!-- 1-point space                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="1-point space (Ctrl+Alt+Space)" type="text" value="" style="op" id="1-point space" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" alt="yes" key=" " />
+      </hot-key>
+    </hot-keys>
+    <expr>
+		left_margin = 1;
+    </expr>
+    <mathml value="&hairsp;" type="mo" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- Thin space (1/6 EM)                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Thin space (1/6 EM) (Ctrl+Space)" type="text" value="" style="op" id="thin space" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key=" " />
+      </hot-key>
+    </hot-keys>
+    <expr>
+		left_margin = em / 6;
+    </expr>
+    <mathml value="&thinsp;" type="mo" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- Thick space (5/18 EM)                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Thick space (5/18 EM) (Ctrl+Shift+Space)" type="text" value="" style="op" id="thick space" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key=" " />
+      </hot-key>
+    </hot-keys>
+    <expr>
+		left_margin = 5 * em / 18;
+    </expr>
+    <mathml value="&ThickSpace;" type="mo" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+
+  <!-- EM space                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="EM space (Ctrl+K,4)" type="text" value="" style="op" id="em space" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence            key="4" />
+      </hot-key>
+    </hot-keys>
+    <expr>
+		left_margin = em;
+    </expr>
+    <mathml value="&emsp;" type="mo" />
+    <dsr head=" " param="$empty$" />
+  </button>
+
+</toolbar>

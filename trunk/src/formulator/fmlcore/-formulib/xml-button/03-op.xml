@@ -1,0 +1,212 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Operator symbols                                              -->
+<!--                                                                        -->
+<toolbar id="@t@Operator@"
+         group="Presentation"
+         name="Operator symbols" 
+         caption="Operator"
+         image="images/buttons/operator.bmp" 
+         image-title="images/title/t_operator_n.bmp" 
+         image-title-hot="images/title/t_operator_h.bmp" >
+
+
+  <!-- Plus-minus sign                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Plus-minus sign (Ctrl+Shift+K,=)"
+          type="text" value="&amp;#x00B1;" style="mathextra" id="@plusminus"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence                        key="=" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&PlusMinus;" type="mo" />
+    <dsr head="@plusminus" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Multiplication sign                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Multiplication sign (Ctrl+K,T)"
+          type="text" value="&amp;#x00D7;" style="mathextra" id="@times"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="T" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&times;" type="mo" />
+    <dsr head="@times" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Asterik operator                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Asterik operator (Ctrl+Shift+K,*)"
+          type="text" value="&amp;#x2217;" style="mathextra" id="*"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence                        key="*" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&lowast;" type="mo" />
+    <dsr head="*" param="$empty$" />
+  </button>
+
+
+  <!-- Division sign                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Division sign (Ctrl+Shift+K,/)"
+          type="text" value="&amp;#x00F7;" style="mathextra" id="@divide"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence                        key="/" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&divide;" type="mo" />
+    <dsr head="/" param="$empty$" />
+  </button>
+
+
+  <!-- Circled plus                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Circled plus"
+          type="text" value="&amp;#x2295;" style="mathextra" id="@circle_plus"
+  >
+    <mathml value="&CirclePlus;" type="mo" />
+    <dsr head="@circle_plus" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Circled times                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Circled times"
+          type="text" value="&amp;#x2297;" style="mathextra" id="@circle_times"
+  >
+    <mathml value="&CircleTimes;" type="mo" />
+    <dsr head="@circle_times" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Addition sign                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Addition sign"
+          type="text" value="+" style="mathextra" id="@plus"
+  >
+    <mathml value="&plus;" type="mo" />
+    <dsr head="+" param="$empty$" />
+  </button>
+
+
+  <!-- Substraction sign                                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Substraction sign"
+          type="text" value="&amp;#x2212;" style="mathextra" id="@minus"
+  >
+    <mathml value="&minus;" type="mo" />
+    <dsr head="-" param="$empty$" />
+  </button>
+
+
+  <!-- Dot operator                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Dot operator (Ctrl+Shift+K,.)"
+          type="text" value="&amp;#x22C5;" style="mathextra" id="@center_dot"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence                        key="." />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&sdot;" type="mo" />
+    <dsr head="@center_dot" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Bullet                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Bullet (Ctrl+Shift+K,8)"
+          type="text" value="&amp;#x2219;" style="mathextra" id="@bullet"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence                        key="8" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&bull;" type="mo" />
+    <dsr head="@bullet" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Left-pointing angle bracket                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left-pointing angle bracket (Ctrl+Shift+K,<)"
+          type="text" value="&amp;#x2329;" style="mathextra" id="@lang"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence            shift="yes" key="<" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&lang;" type="mo" />
+    <dsr head="@lang" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Right-pointing angle bracket                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right-pointing angle bracket (Ctrl+Shift+K,>)"
+          type="text" value="&amp;#x232A;" style="mathextra" id="@rang"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence            shift="yes" key=">" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&rang;" type="mo" />
+    <dsr head="@rang" tail=" " param="$empty$" />
+  </button>
+
+
+</toolbar>

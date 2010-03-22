@@ -1,0 +1,446 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Content MathML: Sequences and Series Templates                -->
+<!--                                                                        -->
+<toolbar id="@t@CMSum@"
+         group="Content"
+         name="Sequences and series"
+         caption="Sequences and Series" 
+         image="images/buttons/cm_sum.bmp"
+         image-title="images/title/t_cm_sum_n.bmp"
+         image-title-hot="images/title/t_cm_sum_h.bmp"
+         columns="6" >
+
+
+  <!-- sum                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The sum element denotes the summation operator"
+          id="@cm_sum" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <sum/>
+    </math>
+  </button>
+
+
+  <!-- sum                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The sum element denotes the summation operator"
+          id="@cm_sum1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <sum/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- sum                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The sum element denotes the summation operator"
+          id="@cm_sum_q1" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <sum/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+        <uplimit><mrow __flag="0x20000000"></mrow></uplimit>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- sum                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The sum element denotes the summation operator"
+          id="@cm_sum_q2" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <sum/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <interval>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </interval>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- sum                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The sum element denotes the summation operator"
+          id="@cm_sum_q3" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <sum/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- sum                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The sum element denotes the summation operator"
+          id="@cm_sum_q4" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <sum/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <domainofapplication>
+          <mrow __flag="0x20000000"></mrow>
+        </domainofapplication>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- product                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The product element denotes the product operator"
+          id="@cm_product" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <product/>
+    </math>
+  </button>
+
+
+  <!-- product                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The product element denotes the product operator"
+          id="@cm_product1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <product/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- product                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The product element denotes the product operator"
+          id="@cm_product_q1" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <product/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+        <uplimit><mrow __flag="0x20000000"></mrow></uplimit>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- product                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The product element denotes the product operator"
+          id="@cm_product_q2" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <product/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <interval>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </interval>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- product                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The product element denotes the product operator"
+          id="@cm_product_q3" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <product/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- product                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The product element denotes the product operator"
+          id="@cm_product_q4" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <product/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <domainofapplication>
+          <mrow __flag="0x20000000"></mrow>
+        </domainofapplication>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- limit                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The limit element represents the operation of taking a limit of a sequence"
+          id="@cm_limit" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <limit/>
+    </math>
+  </button>
+
+
+  <!-- limit                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The limit element represents the operation of taking a limit of a sequence"
+          id="@cm_limit1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <limit/>
+          <bvar><mrow __flag="0x20000000"></mrow></bvar>
+          <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- limit                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The limit element represents the operation of taking a limit of a sequence"
+          id="@cm_limit_q1" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <limit/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- limit                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The limit element represents the operation of taking a limit of a sequence"
+          id="@cm_limit_q2" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <limit/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <apply>
+            <tendsto/>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </apply>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- limit                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The limit element represents the operation of taking a limit of a sequence"
+          id="@cm_limit_q3" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <limit/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <apply>
+            <tendsto type="above"/>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </apply>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- limit                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The limit element represents the operation of taking a limit of a sequence"
+          id="@cm_limit_q4" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <limit/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <apply>
+            <tendsto type="below"/>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </apply>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- tendsto                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The tendsto element is used to express the relation that a quantity is tending to a specified value"
+          id="@cm_tendsto" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+            <tendsto/>
+    </math>
+  </button>
+
+
+  <!-- tendsto                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The tendsto element is used to express the relation that a quantity is tending to a specified value"
+          id="@cm_tendsto" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+            <tendsto type="above"/>
+    </math>
+  </button>
+
+
+  <!-- tendsto                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The tendsto element is used to express the relation that a quantity is tending to a specified value"
+          id="@cm_tendsto" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+            <tendsto type="below"/>
+    </math>
+  </button>
+
+
+  <!-- tendsto                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The tendsto element is used to express the relation that a quantity is tending to a specified value"
+          id="@cm_tendsto" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <apply>
+            <tendsto/>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </apply>
+    </math>
+  </button>
+
+
+  <!-- tendsto                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The tendsto element is used to express the relation that a quantity is tending to a specified value"
+          id="@cm_tendsto" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <apply>
+            <tendsto type="above"/>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </apply>
+    </math>
+  </button>
+
+
+  <!-- tendsto                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The tendsto element is used to express the relation that a quantity is tending to a specified value"
+          id="@cm_tendsto" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <apply>
+            <tendsto type="below"/>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </apply>
+    </math>
+  </button>
+
+
+</toolbar>
+
+

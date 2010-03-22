@@ -1,0 +1,382 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Relational and logical symbols                                -->
+<!--                                                                        -->
+<toolbar id="@t@Logics@"
+         group="Presentation"
+         name="Relational and logical symbols" 
+         caption="Logics"
+         image="images/buttons/logics.bmp"
+         image-title="images/title/t_logics_n.bmp" 
+         image-title-hot="images/title/t_logics_h.bmp" 
+>
+
+
+  <!-- Less-than or equal to                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Less-than or equal to (Ctrl+K,,)"
+          type="text" value="&amp;#x2264;" style="mathextra" id="<="
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="," />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&le;" type="mo" />
+    <dsr head="<=" param="$empty$" />
+  </button>
+
+
+  <!-- Greater-than or equal to                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Greater-than or equal to (Ctrl+K,.)"
+          type="text" value="&amp;#x2265;" style="mathextra" id=">="
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="." />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&ge;" type="mo" />
+    <dsr head=">=" param="$empty$" />
+  </button>
+
+
+  <!-- Much less-than                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Much less-than"
+          type="text" value="&amp;#x226A;" style="mathextra" id="<<"
+  >
+    <mathml value="&Lt;" type="mo" />
+    <dsr head="<<" param="$empty$" />
+  </button>
+
+
+  <!-- Much greater-than                                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Much greater-than"
+          type="text" value="&amp;#x226B;" style="mathextra" id=">>"
+  >
+    <mathml value="&Gt;" type="mo" />
+    <dsr head=">>" param="$empty$" />
+  </button>
+
+
+  <!-- Precedes                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Precedes"
+          type="text" value="&amp;#x227A;" style="mathextra" id="@precedes"
+  >
+    <mathml value="&Precedes;" type="mo" />
+    <dsr head="@precedes" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Succeeds                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Succeeds"
+          type="text" value="&amp;#x227B;" style="mathextra" id="@succeeds"
+  >
+    <mathml value="&Succeeds;" type="mo" />
+    <dsr head="@succeeds" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Contains as normal subgroup                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Contains as normal subgroup"
+          type="text" value="&amp;#x22B3;" style="mathextra" id="@normal_subgroup"
+  >
+    <mathml value="&vltri;" type="mo" />
+    <dsr head="@cnormal_subgroup" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Normal subgroup                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Normal subgroup"
+          type="text" value="&amp;#x22B2;" style="mathextra" id="@cnormal_subgroup"
+  >
+    <mathml value="&vrtri;" type="mo" />
+    <dsr head="@normal_subgroup" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Not equal to                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Not equal to (Ctrl+K,+)"
+          type="text" value="&amp;#x2260;" style="mathextra" id="!="
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence shift="yes" key="+" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&ne;" type="mo" />
+    <dsr head="!=" param="$empty$" />
+  </button>
+
+
+  <!-- Identical to                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Identical to (Ctrl+K,=)"
+          type="text" value="&amp;#x2261;" style="mathextra" id="@identical"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="=" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&equiv;" type="mo" />
+    <dsr head="=" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Tilde operator                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Tilde operator (Ctrl+K,Alt+~)"
+          type="text" value="&amp;#x223C;" style="mathextra" id="~"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence alt  ="yes" shift="yes" key="~" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&sim;" type="mo" />
+    <dsr head="~" param="$empty$" />
+  </button>
+
+
+  <!-- Almost equal to                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Almost equal to (Ctrl+K,~)"
+          type="text" value="&amp;#x2248;" style="mathextra" id="@almost_equal"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence shift="yes" key="~" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&ap;" type="mo" />
+    <dsr head="=" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Asymptotically equal to                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Asymptotically equal to"
+          type="text" value="&amp;#x2243;" style="mathextra" id="~-"
+  >
+    <mathml value="&sime;" type="mo" />
+    <dsr head="=" param="$empty$" />
+  </button>
+
+
+  <!-- Approximately equal to                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Approximately equal to"
+          type="text" value="&amp;#x2245;" style="mathextra" id="~="
+  >
+    <mathml value="&cong;" type="mo" />
+    <dsr head="=" param="$empty$" />
+  </button>
+
+  <!-- Reversed Tilde                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Reversed Tilde"
+          type="text" value="&amp;#x223D;" style="mathextra" id="reversed ~"
+  >
+    <mathml value="&bsim;" type="mo" />
+    <dsr head="=" param="$empty$" />
+  </button>
+
+
+  <!-- All equal to                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="All equal to"
+          type="text" value="&amp;#x224C;" style="mathextra" id="all_equal_to"
+  >
+    <mathml value="&bcong;" type="mo" />
+    <dsr head="=" param="$empty$" />
+  </button>
+
+
+  <!-- Proportional to                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Proportional to (Ctrl+K,P)"
+          type="text" value="&amp;#x221D;" style="mathextra" id="@proportional"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="P" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&prop;" type="mo" />
+    <dsr head="@proportional" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Therefore                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Therefore (Ctrl+Shift+K,T)"
+          type="text" value="&amp;#x2234;" style="mathextra" id="@therefore"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="K" />
+        <sequence                         key="T" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&there4;" type="mo" />
+    <dsr head="@therefore" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- There exists                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="There exists (Ctrl+Shift+K,E)"
+          type="text" value="&amp;#x2203;" style="mathextra" id="@exist"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="K" />
+        <sequence                         key="E" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&exist;" type="mo" />
+    <dsr head="@exist" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- For all                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="For all (Ctrl+Shift+K,A)"
+          type="text" value="&amp;#x2200;" style="mathextra" id="@forall"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="K" />
+        <sequence                         key="A" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&forall;" type="mo" />
+    <dsr head="@forall" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Not sign                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Not sign (Ctrl+Shift+K,N)"
+          type="text" value="&amp;#x00AC;" style="mathextra" id="!"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="K" />
+        <sequence                         key="N" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&not;" type="mo" />
+    <dsr head="!" param="$empty$" />
+  </button>
+
+
+  <!-- Logical and                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Logical and (Ctrl+Shift+K,7)"
+          type="text" value="&amp;#x2227;" style="mathextra" id="&"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="K" />
+        <sequence                         key="7" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&and;" type="mo" />
+    <dsr head="&" param="$empty$" />
+  </button>
+
+
+  <!-- Logical or                                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Logical or (Ctrl+Shift+K,\)"
+          type="text" value="&amp;#x2228;" style="mathextra" id="|"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="K" />
+        <sequence                         key="\" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&or;" type="mo" />
+    <dsr head="|" param="$empty$" />
+  </button>
+
+
+  <!-- Delta equal to                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Delta equal to"
+          type="text" value="&amp;#x225C;" style="mathextra" id="@delta_equal"
+  >
+    <mathml value="&trie;" type="mo" />
+    <dsr head="=" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Estimates                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Estimates"
+          type="text" value="&amp;#x2259;" style="mathextra" id="@estimates"
+  >
+    <mathml value="&wedgeq;" type="mo" />
+    <dsr head="@estimates" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Approaches the limit                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Approaches the limit"
+          type="text" value="&amp;#x2250;" style="mathextra" id="@approaches"
+  >
+    <mathml value="&DotEqual;" type="mo" />
+    <dsr head="@approaches" tail=" " param="$empty$" />
+  </button>
+
+
+</toolbar>

@@ -1,0 +1,121 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Content MathML: token elements templates                      -->
+<!--                                                                        -->
+<toolbar id="@t@Token@"
+         group="Content"
+         name="Token elements" 
+         caption="Token" 
+         image="images/buttons/cm_token.bmp"
+         image-title="images/title/t_cm_token_n.bmp" 
+         image-title-hot="images/title/t_cm_token_h.bmp" 
+		 columns="2" >
+
+  <!-- cn                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cn element is used to specify actual numerical constants" id="@cn" type="mathml" 
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <cn></cn>
+    </math>
+  </button>
+
+  <!-- cn                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cn element is used to specify actual numerical constants" id="@cn_input" type="mathml" 
+          vertical-center-type="frame" vertical-center-value="1"
+		  encoding="MathML-Content">
+    <math display='block'>
+        <cn></cn>
+    </math>
+  </button>
+
+  <!-- cn                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cn element for a rational constant" id="@cn_rational" type="mathml" 
+          vertical-center-type="object" vertical-center-value="1" 
+		  encoding="MathML-Content">
+    <math display='block'>
+        <cn type="rational"><sep/></cn>
+    </math>
+  </button>
+
+  <!-- cn                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cn element for a complex-cartesian constant" id="@cn_complex_cartesian" type="mathml" 
+          vertical-center-type="frame" vertical-center-value="1"
+		  encoding="MathML-Content">
+    <math display='block'>
+        <cn type="complex-cartesian"><sep/></cn>
+    </math>
+  </button>
+
+  <!-- cn                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cn element for a complex-polar constant" id="@cn_complex_polar" type="mathml" 
+          vertical-center-type="frame" vertical-center-value="1"
+		  encoding="MathML-Content">
+    <math display='block'>
+        <cn type="complex-polar"><sep/></cn>
+    </math>
+  </button>
+
+  <!-- ci                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The ci element is used to name an identifier in an expression" id="@ci" type="mathml" 
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <ci></ci>
+    </math>
+  </button>
+
+  <!-- ci                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The ci element is used to name an identifier in an expression" id="@ci_input" type="mathml" 
+          vertical-center-type="frame" vertical-center-value="1"
+		  encoding="MathML-Content">
+    <math display='block'>
+        <ci></ci>
+    </math>
+  </button>
+
+  <!-- csymbol                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The csymbol element is used to create an element whose semantics are externally defined " id="@csymbol" type="mathml" 
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <csymbol></csymbol>
+    </math>
+  </button>
+
+</toolbar>

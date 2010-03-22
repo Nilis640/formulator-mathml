@@ -1,0 +1,399 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Miscellaneous symbols                                             -->
+<!--                                                                        -->
+<toolbar id="@t@Misc@"
+         group="Presentation"
+         name="Miscellaneous symbols"
+         caption="Misc" 
+         image="images/buttons/misc.bmp"
+         image-title="images/title/t_misc_n.bmp" 
+         image-title-hot="images/title/t_misc_h.bmp" >
+
+
+  <!-- Weierstrass elliptic symbol                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Weierstrass elliptic symbol"
+          type="text" value="&amp;#x2118;" style="mathextra" id="@weierstrass"
+  >
+    <mathml value="&weierp;" type="mi" />
+    <dsr head="@weierstrass" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Fraktur capital I                                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Fraktur capital I, imaginary part (Ctrl+K,Shift+I)"
+          type="text" value="&amp;#x2111;" style="mathextra" id="imag"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes"  key="K" />
+        <sequence shift="yes" key="I" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&image;" type="mi" />
+    <dsr head="imag" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Fraktur capital R                                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Fraktur capital R, real part (Ctrl+K,Shift+R)"
+          type="text" value="&amp;#x211C;" style="mathextra" id="real"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes"  key="K" />
+        <sequence shift="yes" key="R" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&real;" type="mi" />
+    <dsr head="real" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Alef symbol                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Alef symbol (Ctrl+K,A)"
+          type="text" value="&amp;#x2135;" style="mathextra" id="@aleph"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence            key="A" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&aleph;" type="mi" />
+    <dsr head="@aleph" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Blackboard-bold capital R                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Blackboard-bold capital R, the set of all real numbers (Ctrl+D,Shift+R)"
+          type="text" value="&amp;#x211D;" style="mathextra" id="@reals"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="D" />
+        <sequence shift="yes" key="R" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&reals;" type="mi" />
+    <dsr head="@reals" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Blackboard-bold capital Z                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Blackboard-bold capital Z, the set of all integer numbers (Ctrl+D,Shift+Z)"
+          type="text" value="&amp;#x2124;" style="mathextra" id="@integers"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="D" />
+        <sequence shift="yes" key="Z" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&integers;" type="mi" />
+    <dsr head="@integers" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Blackboard-bold capital C                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Blackboard-bold capital C, the set of all complex numbers (Ctrl+D,Shift+C)"
+          type="text" value="&amp;#x2102;" style="mathextra" id="@complexes"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="D" />
+        <sequence shift="yes" key="C" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&complexes;" type="mi" />
+    <dsr head="@complexes" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Blackboard-bold capital Q                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Blackboard-bold capital Q, the set of all rational numbers (Ctrl+D,Shift+Q)"
+          type="text" value="&amp;#x211A;" style="mathextra" id="@rationals"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="D" />
+        <sequence shift="yes" key="Q" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&Qopf;" type="mi" />
+    <dsr head="@rationals" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Blackboard-bold capital N                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Blackboard-bold capital N, the set of all natural numbers (Ctrl+D,Shift+N)"
+          type="text" value="&amp;#x2115;" style="mathextra" id="@naturals"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="D" />
+        <sequence shift="yes" key="N" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&naturals;" type="mi" />
+    <dsr head="@naturals" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Dagger                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Dagger"
+          type="text" value="&amp;#x2020;" style="op" id="@dagger"
+  >
+    <mathml value="&dagger;" type="mi" />
+    <dsr head="@dagger" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Greek capital letter delta                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Greek capital letter delta (Ctrl+G,Shift+D)"
+          type="text" value="&amp;#x0394;" style="mathextra" id="Delta" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="G" />
+        <sequence shift="yes" key="D" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&Delta;" type="mi" />
+    <dsr head="" tail="$g" separator="" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Gradient (nabla)                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Gradient (nabla)"
+          type="text" value="&amp;#x2207;" style="mathextra" id="@gradient"
+  >
+    <mathml value="&nabla;" type="mo" />
+    <dsr head="@gradient" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Greek capital letter omega                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="ohm sign, greek capital letter omega (Ctrl+G,Shift+W)"
+          type="text" value="&amp;#x2126;" style="mathextra" id="Omega" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="G" />
+        <sequence shift="yes" key="W" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&Omega;" type="mi" />
+    <dsr head="" tail="$g" separator="" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Inverted ohm sign                                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Inverted ohm sign (Ctrl+Shift+K,Shift+O)"
+          type="text" value="&amp;#x2127;" style="mathextra" id="@mho"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence            shift="yes" key="O" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&mho;" type="mi" />
+    <dsr head="@mho" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Diamond                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Diamond"
+          type="text" value="&amp;#x22C4;" style="mathextra" id="@diam"
+  >
+    <mathml value="&diam;" type="mi" />
+    <dsr head="@diam" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- N-ary summation                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="N-ary summation"
+          type="text" value="&amp;#x2211;" style="mathextra" id="@sum"
+          largeop="no"
+  >
+    <mathml value="&sum;" type="mo" />
+    <dsr head="@sum" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- N-ary product                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="N-ary product"
+          type="text" value="&amp;#x220F;" style="mathextra" id="@product"
+          largeop="no"
+  >
+    <mathml value="&prod;" type="mo" />
+    <dsr head="@product" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- N-ary coproduct                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="N-ary coproduct"
+          type="text" value="&amp;#x2210;" style="mathextra" id="@coproduct"
+          largeop="no"
+  >
+    <mathml value="&coprod;" type="mo" />
+    <dsr head="@coproduct" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Integral                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Integral"
+          type="text" value="&amp;#x222B;" style="mathextra" id="@integral"
+          largeop="no"
+  >
+    <mathml value="&int;" type="mo" />
+    <dsr head="@integral" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Degree sign                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Degree sign (Ctrl+Shift+K,D)"
+          type="text" value="&amp;#x00B0;" style="mathextra" id="@deg"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence                        key="D" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&deg;" type="mi" />
+    <dsr head="@deg" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Angle                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Angle (Ctrl+Shift+K,Shift+A)"
+          type="text" value="&amp;#x2220;" style="mathextra" id="@angle"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence            shift="yes" key="A" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&ang;" type="mo" />
+    <dsr head="@angle" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Measured angle                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Measured angle (Ctrl+Shift+K,Alt+A)"
+          type="text" value="&amp;#x2221;" style="mathextra" id="@angmsd"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence            alt  ="yes" key="A" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&angmsd;" type="mo" />
+    <dsr head="@angmsd" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Spherical angle                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Spherical angle (Ctrl+Shift+K,Alt+Shift+A)"
+          type="text" value="&amp;#x2222;" style="mathextra" id="@angsph"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence alt ="yes" shift="yes" key="A" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&angsph;" type="mo" />
+    <dsr head="@angsph" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Perpendicular                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Perpendicular (Ctrl+Shift+K,P)"
+          type="text" value="&amp;#x22A5;" style="mathextra" id="@bottom"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence                        key="P" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&bottom;" type="mo" />
+    <dsr head="@bottom" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Parallel                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Parallel (Ctrl+Shift+K,I)"
+          type="text" value="&amp;#x2225;" style="mathextra" id="@parallel"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence                        key="I" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&par;" type="mo" />
+    <dsr head="@parallel" tail=" " param="$empty$" />
+  </button>
+
+
+</toolbar>

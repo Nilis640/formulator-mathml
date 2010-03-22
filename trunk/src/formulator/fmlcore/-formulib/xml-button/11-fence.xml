@@ -1,0 +1,2006 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Fence templates                                              -->
+<!--                                                                        -->
+<toolbar id="@t@Fence@"
+         group="Presentation"
+         name="Brackets templates" 
+         caption="Brackets" 
+         image="images/buttons/fence.bmp"
+         image-title="images/title/t_fence_n.bmp" 
+         image-title-hot="images/title/t_fence_h.bmp" >
+
+  <!-- Parenthesis or round-brackets                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Parenthesis or round-brackets (Ctrl+9)" id="()"
+          stretchy="yes" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="9" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+
+      <object shape="text" value="(" style="op" 
+              halign="left" valign="center" bind-to="1"
+              alt-group="1" />
+
+      <object name="ANW" 
+              shape="spline" type="formula"
+              alt-group="2" >
+        <point type="moveto" x =   "99"		 	y = "0" />
+        <point type="splnto" x =  "100" 		y =  "-2" />
+        <point type="splnto" x =  "81" 			y =   "5" />
+        <point type="splnto" x =  "67" 			y =   "11" />
+		<point type="splnto" x =   "41" 		y = "26" />
+        <point type="splnto" x =  "22" 			y =  "37" />
+        <point type="splnto" x =  "9" 			y =   "65" />
+        <point type="splnto" x =  "4" 			y =   "76" />
+		<point type="splnto" x =   "4" 			y = "90" />
+        <point type="splnto" x =  "4" 			y =  "100" />
+		<point type="lineto" x =   "16" 		y = "100" />
+        <point type="splnto" x =  "16" 			y =  "88" />
+        <point type="splnto" x =  "21" 			y =   "76" />
+        <point type="splnto" x =  "22" 			y =   "60" />
+		<point type="splnto" x =   "33" 		y = "36" />
+        <point type="splnto" x =  "54" 			y =  "19" />
+        <point type="splnto" x =   "99" 		y = "0" /> 
+	</object>
+
+      <object name="L1" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "4" 		y =   "0" />
+        <point type="lineto" x =   "4" 		y = "100" />
+        <point type="lineto" x =   "16" 	y = "100" />
+		<point type="lineto" x =   "16" 	y = "0" />		
+		<point type="lineto" x =   "4" 		y = "0" />		
+      </object>
+
+      <object name="ASW" 
+              shape="spline" type="formula"
+              alt-group="2" >
+        <point type="moveto" x =   "99" y = "100" />
+        <point type="splnto" x =  "100" y =  "102" />
+        <point type="splnto" x =  "81" y =   "95" />
+        <point type="splnto" x =  "67" y =   "89" />
+		<point type="splnto" x =   "41" y = "74" />
+        <point type="splnto" x =  "22" y =  "63" />
+        <point type="splnto" x =  "9" y =   "35" />
+        <point type="splnto" x =  "5" y =   "24" />
+		<point type="splnto" x =   "4" y = "10" />
+        <point type="splnto" x =  "4" y =  "0" />
+		<point type="lineto" x =   "16" y = "0" />
+        <point type="splnto" x =  "16" y =  "12" />
+        <point type="splnto" x =  "21" y =   "24" />
+        <point type="splnto" x =  "22" y =   "40" />
+		<point type="splnto" x =   "33" y = "64" />
+        <point type="splnto" x =  "54" y =  "81" />
+        <point type="splnto" x =   "99" y = "100" /> 
+      </object>
+
+      <object shape="text" value=")" style="op" 
+              halign="right" valign="center" bind-to="1"
+              alt-group="1" />
+
+      <object name="ANE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "1" y = "0" />
+        <point type="splnto" x =  "0" y =  "-2" />
+        <point type="splnto" x =  "19" y =   "5" />
+        <point type="splnto" x =  "33" y =   "11" />
+		<point type="splnto" x =   "59" y = "26" />
+        <point type="splnto" x =  "78" y =  "37" />
+        <point type="splnto" x =  "91" y =   "65" />
+        <point type="splnto" x =  "94,3" y =   "76" />
+		<point type="splnto" x =   "94,3" y = "90" />
+        <point type="splnto" x =  "94,3" y =  "100" />
+		<point type="lineto" x =   "84" y = "100" />
+        <point type="splnto" x =  "84" y =  "88" />
+        <point type="splnto" x =  "79" y =   "76" />
+        <point type="splnto" x =  "78" y =   "60" />
+		<point type="splnto" x =   "67" y = "36" />
+        <point type="splnto" x =  "46" y =  "19" />
+        <point type="splnto" x =   "1" y = "0" /> 
+      </object>
+
+      <object name="L2" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "94,5" y =   "100" />
+        <point type="lineto" x =   "94,5" y = "0" />
+        <point type="lineto" x =   "84" y = "0" />
+		<point type="lineto" x =   "84" y = "100" />		
+		<point type="lineto" x =   "94,5" y = "100" />
+      </object>
+
+      <object name="ASE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "0" y = "100" />
+        <point type="splnto" x =  "1" y =  "102" />
+        <point type="splnto" x =  "19" y =   "95" />
+        <point type="splnto" x =  "33" y =   "89" />
+		<point type="splnto" x =   "59" y = "74" />
+        <point type="splnto" x =  "78" y =  "63" />
+        <point type="splnto" x =  "91" y =   "35" />
+        <point type="splnto" x =  "94,3" y =   "24" />
+		<point type="splnto" x =   "94,3" y = "10" />
+        <point type="splnto" x =  "94,3" y =  "0" />
+		<point type="lineto" x =   "84" y = "0" />
+        <point type="splnto" x =  "84" y =  "12" />
+        <point type="splnto" x =  "79" y =   "24" />
+        <point type="splnto" x =  "78" y =   "40" />
+		<point type="splnto" x =   "67" y = "64" />
+        <point type="splnto" x =  "46" y =  "81" />
+        <point type="splnto" x =   "0" y = "100" /> 
+
+      </object>
+
+    </objects>
+    <expr>
+
+
+		DX = 6;
+		DY = 18;
+		x_margin = 1;
+		y_margin = 1;
+
+        L1.top    = A.top + DY + y_margin;
+        L1.bottom = A.bottom - DY - y_margin;
+        L1.left   = A.left + x_margin;
+        L1.right  = L1.left + DX;
+
+		ANW.top    = L1.top - DY;
+		ANW.bottom = L1.top;
+		ANW.left   = L1.left;
+		ANW.right  = L1.right;
+
+		ASW.top    = L1.bottom;
+		ASW.bottom = ASW.top + DY;
+		ASW.left   = ANW.left;
+		ASW.right  = ANW.right;
+
+        LMO = A.left_margin;
+        A.left_margin = DX + x_margin;
+
+        L2.top    = L1.top;
+        L2.bottom = L1.bottom;
+        L2.left   = A.right - DX - x_margin;
+        L2.right  = L2.left + DX;
+
+		ANE.top    = L2.top - DY;
+		ANE.bottom = L2.top;
+		ANE.left   = L2.left;
+		ANE.right  = L2.right;
+
+		ASE.top    = L2.bottom;
+		ASE.bottom = ASE.top + DY;
+		ASE.left   = ANE.left;
+		ASE.right  = ANE.right;
+
+        A.left_margin = (L1.right - A.left) + x_margin;
+        A.right_margin = (A.right - L2.left) + x_margin;
+		A.top_margin  = DY / 4 + y_margin;
+		A.bottom_margin = DY / 4 + y_margin;
+
+    </expr>
+    <mathml type="bracket" left="(" right=")" />
+    <dsr head="(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+   <!-- Brackets or square-brackets                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Brackets or square-brackets (Ctrl+[)" id="[]"
+          stretchy="yes" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes"  key="[" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" 
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="text" value="[" style="op" 
+              halign="left" valign="center" bind-to="1"
+              alt-group="1" />
+      <object shape="text" value="]" style="op" 
+              halign="right" valign="center" bind-to="1"
+              alt-group="1" />
+      <object name="L1" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "0"		y = "0"/>
+		<point type="lineto" x = "10"		y = "0"/>
+		<point type="lineto" x = "10"		y = "100"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "0"		y = "0"/>
+	  </object>
+      <object name="L2" shape="spline" type="formula"  alt-group="2" >
+	  	<point type="moveto" x = "80"		y = "0"/>
+		<point type="lineto" x = "90"		y = "0"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "80"		y = "100"/>
+		<point type="lineto" x = "80"		y = "0"/>
+	  </object>		
+       <object name="NW" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "0"		y = "0"/>
+		<point type="lineto" x = "100"		y = "0"/>
+		<point type="lineto" x = "100"		y = "100"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "0"		y = "0"/>
+	  </object>
+      <object name="SW" shape="spline" type="formula" alt-group="2"> 
+		<point type="moveto" x = "100"		y = "0"/>
+		<point type="lineto" x = "0"		y = "0"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "100"		y = "100"/>
+		<point type="lineto" x = "100"		y = "0"/>		  
+	  </object>
+       <object name="NE" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "90"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "100"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "90"		y = "0"/>		
+	  </object>
+      <object name="SE" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "90"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "100"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "90"		y = "0"/>		  
+	  </object>
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 1;
+		x_margin = 1;
+		y_margin = 1;
+
+        L1.top    = A.top + y_margin;
+        L1.bottom = A.bottom - y_margin;
+        L1.left   = A.left + x_margin;
+        L1.right  = L1.left + DX;
+
+        L2.top    = L1.top;
+        L2.bottom = L1.bottom;
+        L2.left   = A.right - DX - x_margin;
+        L2.right  = L2.left + DX;
+
+		NW.top    = L1.top;
+		NW.bottom = L1.top;
+		NW.left   = L1.left;
+		NW.right  = L1.left + DX;
+
+		SW.top    = L1.bottom;
+		SW.bottom = L1.bottom;
+		SW.left   = NW.left;
+		SW.right  = NW.right;
+
+		NE.top    = L2.top;
+		NE.bottom = L2.top;
+		NE.left   = L2.right - DX;
+		NE.right  = L2.right;
+
+		SE.top    = L2.bottom;
+		SE.bottom = L2.bottom;
+		SE.left   = NE.left;
+		SE.right  = NE.right;
+
+		A.left_margin = (L1.right - A.left) + x_margin;
+        A.right_margin = (A.right - L2.left) + x_margin + 0.3;
+		A.top_margin  = DY + y_margin;
+		A.bottom_margin = DY + y_margin;
+    </expr>
+    <mathml type="bracket" left="[" right="]" />
+    <dsr head="[ " tail="]" param="$child_list$" bracket="off" />
+  </button>
+
+  <!-- Brackets doublesided                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Brackets doublesided" id="[[-]]"
+          stretchy="yes" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+
+    <frames>
+      <frame name="A" 
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+<!--       <object shape="text" value="[[" style="op" 
+              halign="left" valign="center" bind-to="1"
+              alt-group="1" />
+      <object shape="text" value="]]" style="op" 
+              halign="right" valign="center" bind-to="1"
+              alt-group="1" /> -->
+      <object name="L1" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "0"		y = "0"/>
+		<point type="lineto" x = "3"		y = "0"/>
+		<point type="lineto" x = "3"		y = "100"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "0"		y = "0"/>
+	  </object>	
+	  <object name="L11" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "47"		y = "0"/>
+		<point type="lineto" x = "50"		y = "0"/>
+		<point type="lineto" x = "50"		y = "100"/>
+		<point type="lineto" x = "47"		y = "100"/>
+		<point type="lineto" x = "47"		y = "0"/>
+	  </object>
+      <object name="L2" shape="spline" type="formula"  alt-group="2" >
+	  	<point type="moveto" x = "87"		y = "0"/>
+		<point type="lineto" x = "90"		y = "0"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "87"		y = "100"/>
+		<point type="lineto" x = "87"		y = "0"/>
+	  </object>	
+      <object name="L22" shape="spline" type="formula"  alt-group="2" >
+	  	<point type="moveto" x = "40"		y = "0"/>
+		<point type="lineto" x = "43"		y = "0"/>
+		<point type="lineto" x = "43"		y = "100"/>
+		<point type="lineto" x = "40"		y = "100"/>
+		<point type="lineto" x = "40"		y = "0"/>
+	  </object>		  
+       <object name="NW" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "0"		y = "0"/>
+		<point type="lineto" x = "100"		y = "0"/>
+		<point type="lineto" x = "100"		y = "100"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "0"		y = "0"/>
+	  </object>
+      <object name="SW" shape="spline" type="formula" alt-group="2"> 
+		<point type="moveto" x = "100"		y = "0"/>
+		<point type="lineto" x = "0"		y = "0"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "100"		y = "100"/>
+		<point type="lineto" x = "100"		y = "0"/>		  
+	  </object>
+       <object name="NE" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "90"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "100"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "90"		y = "0"/>		
+	  </object>
+      <object name="SE" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "90"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "100"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "90"		y = "0"/>		  
+	  </object>
+    </objects>
+    <expr>
+		DX = 5;
+		DY = 1;
+		x_margin = 1;
+		y_margin = 1;
+
+        L1.top    = A.top + y_margin;
+        L1.bottom = A.bottom - y_margin;
+        L1.left   = A.left + x_margin;
+        L1.right  = L1.left + DX;
+		
+		L11.top    = A.top + y_margin;
+        L11.bottom = A.bottom - y_margin;
+        L11.left   = A.left + x_margin;
+        L11.right  = L1.left + DX;
+
+        L2.top    = L1.top;
+        L2.bottom = L1.bottom;
+        L2.left   = A.right - DX - x_margin;
+        L2.right  = L2.left + DX;
+		
+		L22.top    = L1.top;
+        L22.bottom = L1.bottom;
+        L22.left   = A.right - DX - x_margin;
+        L22.right  = L2.left + DX;
+
+		NW.top    = L1.top;
+		NW.bottom = L1.top;
+		NW.left   = L1.left;
+		NW.right  = L1.left + DX;
+
+		SW.top    = L1.bottom;
+		SW.bottom = L1.bottom;
+		SW.left   = NW.left;
+		SW.right  = NW.right;
+
+		NE.top    = L2.top;
+		NE.bottom = L2.top;
+		NE.left   = L2.right - DX;
+		NE.right  = L2.right;
+
+		SE.top    = L2.bottom;
+		SE.bottom = L2.bottom;
+		SE.left   = NE.left;
+		SE.right  = NE.right;
+
+		A.left_margin = (L1.right - A.left) + x_margin;
+        A.right_margin = (A.right - L2.left) + x_margin + 0.3;
+		A.top_margin  = DY + y_margin;
+		A.bottom_margin = DY + y_margin;
+    </expr>
+    <mathml type="bracket" left="[[" right="]]" />
+    <dsr head="[[" tail="]]" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Braces or curly-brackets                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Braces or curly-brackets (Ctrl+{)" id="{}"
+          stretchy="yes" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes"  shift="yes"  key="{" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="text" value="{" style="op" 
+              halign="left" valign="center" bind-to="1"
+              alt-group="1" />
+
+      <object name="ANW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "100	 	"y = "-1,666666667	"/>
+		<point type="splnto" x =  "100	 	"y = "-2,5	"/>
+		<point type="splnto" x =  "60	 	"y = "8,333333333"/>
+		<point type="splnto" x =  "35	 	"y = "30	"/>
+		<point type="splnto" x =  "3		"y = "58,33333333	"/>
+		<point type="splnto" x =  "0	 	"y = "70	"/>
+		<point type="splnto" x =  "0	 	"y = "105	"/>
+		<point type="lineto" x =  "8	 	"y = "100	"/>
+		<point type="splnto" x =  "8	 	"y = "71,66666667	"/>
+		<point type="splnto" x =  "33	 	"y = "21	"/>
+		<point type="splnto" x =  "100	 	"y = "0	"/>
+      </object>
+
+      <object name="L1HI" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "0" 		y =   "0" />
+        <point type="lineto" x =   "0" 		y = "100" />
+		<point type="lineto" x =   "8" 		y = "100" />
+		<point type="lineto" x =   "8" 		y = "0" />
+
+		
+      </object>
+
+      <object name="L1LO" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "0" 		y =   "0" />
+        <point type="lineto" x =   "0" 		y = "100" />
+		<point type="lineto" x =   "8" 		y = "100" />
+		<point type="lineto" x =   "8"	 	y = "0" />
+      </object>
+
+      <object name="ASW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "100		"y = "101,666666667	"/>
+		<point type="splnto" x =  "100		"y = "102,5	"/>
+		<point type="splnto" x =  "60	 	"y = "91,666666667"/>
+		<point type="splnto" x =  "35	 	"y = "70	"/>
+		<point type="splnto" x =  "3,33333	"y = "41,66666667	"/>
+		<point type="splnto" x =  "0	 	"y = "15	"/>
+		<point type="splnto" x =  "0	 	"y = "0	"/>
+		<point type="lineto" x =  "8	 	"y = "0	"/>
+		<point type="splnto" x =  "8	 	"y = "28,33333333	"/>
+		<point type="splnto" x =  "33	 	"y = "79	"/>
+		<point type="splnto" x =  "100	 	"y = "100	"/>
+      </object>
+
+      <object name="CNW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "108	 			"y = "0	"/>
+		<point type="lineto" x =  "100			 	"y = "0	"/>
+		<point type="splnto" x =  "98			 	"y = "40	"/>
+		<point type="splnto" x =  "50			 	"y = "80	"/>
+		<point type="splnto" x =  "22				"y = "92	"/>
+
+		<point type="lineto" x =  "22	 			"y = "97	"/>
+		<point type="splnto" x =  "37			 	"y = "90	"/>
+		<point type="splnto" x =  "112	 			"y = "50	"/>
+		<point type="splnto" x =  "108	 			"y = "-1	"/>	
+      </object>
+
+      <object name="CSW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+ 		 <point type="moveto" x = "108				"y = "100	"/>
+		<point type="lineto" x =  "100				"y = "100	"/>
+		<point type="splnto" x =  "98			 	"y = "60	"/>
+		<point type="splnto" x =  "50			 	"y = "20	"/>
+		<point type="splnto" x =  "22				"y = "8	"/>
+
+		
+		<point type="lineto" x =  "22	 			"y = "3	"/>
+		<point type="splnto" x =  "37			 	"y = "10	"/>
+		<point type="splnto" x =  "112	 			"y = "50	"/>
+		<point type="splnto" x =  "108	 			"y = "101	"/>	
+      </object>
+
+      <object shape="text" value="}" style="op" 
+              halign="right" valign="center" bind-to="1"
+              alt-group="1" />
+
+
+      <object name="ANE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "0	 	"y = "-1,666666667	"/>
+		<point type="splnto" x =  "0	 	"y = "-2,5	"/>
+		<point type="splnto" x =  "40	 	"y = "8,333333333"/>
+		<point type="splnto" x =  "65	 	"y = "30	"/>
+		<point type="splnto" x =  "97		"y = "58	"/>
+		<point type="splnto" x =  "100	 	"y = "70	"/>
+		<point type="splnto" x =  "100	 	"y = "105	"/>
+		<point type="lineto" x =  "92	 	"y = "100	"/>
+		<point type="splnto" x =  "92	 	"y = "71,66666667	"/>
+		<point type="splnto" x =  "63	 	"y = "21	"/>
+		<point type="splnto" x =  "0	 	"y = "0	"/>
+      </object>
+
+      <object name="L2HI" 
+                 shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "100" 	y =   "0" />
+        <point type="lineto" x =   "100" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "0" />
+      </object>
+
+      <object name="L2LO" 
+                 shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "100" 	y =   "0" />
+        <point type="lineto" x =   "100" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "0" />
+      </object>
+
+      <object name="ASE" 
+               shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "0	 	"y = "101,666666667		"/>
+		<point type="splnto" x =  "0	 	"y = "102,5	"/>
+		<point type="splnto" x =  "40	 	"y = "91,666666667"/>
+		<point type="splnto" x =  "65	 	"y = "70	"/>
+		<point type="splnto" x =  "96,66667	"y = "41,66666667"/>
+		<point type="splnto" x =  "100	 	"y = "15	"/>
+		<point type="splnto" x =  "100	 	"y = "0	"/>
+		<point type="lineto" x =  "92	 	"y = "0	"/>
+		<point type="splnto" x =  "92	 	"y = "28,33333333	"/>
+		<point type="splnto" x =  "67	 	"y = "79	"/>
+		<point type="splnto" x =  "0	 	"y = "100	"/>
+      </object>                               
+
+	   <object name="CNE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =   "-8	 			"y = "0	"/>
+		<point type="lineto" x =   "0			 	"y = "0	"/>
+		<point type="splnto" x =  "2				"y = "40	"/>
+		<point type="splnto" x =  "50	 			"y = "80	"/>
+		<point type="splnto" x =  "78				"y = "92	"/>
+
+		<point type="lineto" x =  "78	 			"y = "97	"/>
+		<point type="splnto" x =  "63	 			"y = "90	"/>
+		<point type="splnto" x =  "-12	 			"y = "50	"/>
+		<point type="splnto" x =  "-8	 			"y = "-1	"/>	
+
+      </object>
+	  
+      <object name="CSE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =   "-8	 	"y = "100	"/>
+		<point type="lineto" x =   "0	 	"y = "100	"/>
+		<point type="splnto" x =  "2	 	"y = "60	"/>
+		<point type="splnto" x =  "50	 	"y = "20	"/>
+		<point type="splnto" x =  "78		"y = "8	"/>
+		
+		<point type="lineto" x =  "78	 	"y = "3	"/>
+		<point type="splnto" x =  "63	 	"y = "10	"/>
+		<point type="splnto" x =  "-12	 	"y = "50	"/>
+		<point type="splnto" x =  "-8	 	"y = "101	"/>	
+      </object>
+
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 4;
+		x_margin = 1;
+		y_margin = 1;
+
+
+        L1HI.top    = A.top + DY + y_margin;
+        L1HI.bottom = (A.top + A.bottom) * 0.5 - DY;
+        L1HI.left   = A.left + DX + x_margin;
+        L1HI.right  = L1HI.left + DX;
+
+        L1LO.top    = (A.top + A.bottom) * 0.5 + DY;
+        L1LO.bottom = A.bottom - DY - y_margin;
+        L1LO.left   = L1HI.left;
+        L1LO.right  = L1HI.right;
+
+        L2HI.top    = L1HI.top;
+        L2HI.bottom = L1HI.bottom;
+        L2HI.right  = A.right - DX - x_margin;
+        L2HI.left   = L2HI.right - DX;
+
+        L2LO.top    = L1LO.top;
+        L2LO.bottom = L1LO.bottom;
+        L2LO.left   = L2HI.left;
+        L2LO.right  = L2HI.right;
+
+
+		ANW.top    = L1HI.top - DY;
+		ANW.bottom = L1HI.top;
+		ANW.left   = L1HI.left;
+		ANW.right  = L1HI.right;
+
+		ASW.top    = L1LO.bottom;
+		ASW.bottom = ASW.top + DY;
+		ASW.left   = ANW.left;
+		ASW.right  = ANW.right;
+
+		CNW.top    = L1HI.bottom;
+		CNW.bottom = L1HI.bottom + DY;
+		CNW.right  = L1HI.left;
+		CNW.left   = CNW.right - DX;
+
+		CSW.top    = CNW.bottom;
+		CSW.bottom = L1LO.top;
+		CSW.left   = CNW.left;
+		CSW.right  = CNW.right;
+
+		ANE.top    = ANW.top;
+		ANE.bottom = ANW.bottom;
+		ANE.left   = L2HI.left;
+		ANE.right  = L2HI.right;
+
+		ASE.top    = ASW.top;
+		ASE.bottom = ASW.bottom;
+		ASE.left   = ANE.left;
+		ASE.right  = ANE.right;
+
+		CNE.top    = CNW.top;
+		CNE.bottom = CNW.bottom;
+		CNE.left   = L2HI.right;
+		CNE.right  = CNE.left + DX;
+
+		CSE.top    = CNE.bottom;
+		CSE.bottom = L2LO.top;
+		CSE.left   = CNE.left;
+		CSE.right  = CNE.right;
+		
+		A.left_margin = 2 * DX + x_margin;
+        A.right_margin = A.left_margin;
+		A.top_margin = 2 + y_margin;
+		A.bottom_margin = A.top_margin;
+    </expr>
+    <mathml type="bracket" left="{" right="}" />
+    <dsr head="{ " tail="}" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Angle brackets                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Angle brackets (Ctrl+,)" id="<>" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes"  key="," />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <!-- <object name="LB" shape="spline" type="formula" >
+        <point type="moveto" x=   "100" y=   "0" />
+        <point type="moveto" x=   "90"  y=   "0" />		
+        <point type="lineto" x=    "0"  y=  "50" />
+        <point type="lineto" x=   "90"  y= "100" />
+        <point type="lineto" x=  "100"  y= "100" />		
+		<point type="lineto" x=   "10"  y=  "50" />
+		<point type="lineto" x=  "100"  y=   "0" />
+      </object> -->  
+      <object name="LB" 
+              shape="spline-ex" type="formula"
+              offset-direction-x="0.5" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=   "0" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+      </object>
+      <object name="RB" 
+              shape="spline-ex" type="formula"
+              offset-direction-x="-0.5" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x= "100" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+      </object>
+    </objects>
+    <expr>
+
+		DX = (A.bottom - A.top) / 4;
+
+        LB.top    = A.top;
+        LB.bottom = A.bottom;
+        LB.left   = A.left;
+        LB.right  = A.left + DX;
+
+        RB.top    = A.top;
+        RB.bottom = A.bottom;
+        RB.left   = A.right - DX;
+        RB.right  = A.right;
+
+		A.left_margin = DX + 1;
+        A.right_margin = DX + 1;
+    </expr>
+    <mathml type="bracket" left="&langle;" right="&rangle;" />
+    <dsr head="< " tail=">" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Single vertical bars                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Single vertical bars (Ctrl+T,|)" id="@abs" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence shift="yes" key="|" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" 
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" name="L1" type="formula" />
+      <object shape="line" name="R1" type="formula" />
+    </objects>
+    <expr>
+        DX = 4;
+
+        L1.top    = A.top;
+        L1.bottom = A.bottom;
+        L1.left   = A.left + 1;
+        L1.right  = L1.left;
+
+        LMO = A.left_margin;
+        A.left_margin = DX;
+
+        R1.top    = L1.top;
+        R1.bottom = L1.bottom;
+        R1.left   = A.right - A.right_margin + DX - 1 + (A.left_margin - LMO);
+        R1.right  = R1.left;
+
+        A.right_margin = A.left_margin;
+    </expr>
+    <mathml type="bracket" left="&verbar;" right="&verbar;" />
+    <dsr head="@abs( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Double vertical bars                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double vertical bars" id="@norm" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" name="L1" type="formula" />
+      <object shape="line" name="R1" type="formula" />
+      <object shape="line" name="L2" type="formula" />
+      <object shape="line" name="R2" type="formula" />
+    </objects>
+    <expr>
+        DX = 7;
+
+        L1.top    = A.top;
+        L1.bottom = A.bottom;
+        L1.left   = A.left + 1;
+        L1.right  = L1.left;
+
+        L2.top    = L1.top;
+        L2.bottom = L1.bottom;
+        L2.left   = L1.left + 2;
+        L2.right  = L2.left;
+
+        LMO = A.left_margin;
+        A.left_margin = DX;
+
+        R2.top    = L1.top;
+        R2.bottom = L1.bottom;
+        R2.left   = A.right - A.right_margin + DX - 1 + (A.left_margin - LMO);
+        R2.right  = R2.left;
+
+        R1.top    = R2.top;
+        R1.bottom = R2.bottom;
+        R1.left   = R2.left - 2;
+        R1.right  = R1.left;
+
+        A.right_margin = A.left_margin;
+    </expr>
+    <mathml type="bracket" left="&Verbar;" right="&Verbar;" />
+    <dsr head="@norm( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Floor brackets                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Floor brackets" id="@floor" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" 
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L1" shape="line" type="formula" />
+      <object name="L2" shape="line" type="formula" />
+      <object name="SW" shape="line" type="formula" />
+      <object name="SE" shape="line" type="formula" />
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 1;
+
+        L1.top    = A.top + DY;
+        L1.bottom = A.bottom - A.top_margin - A.bottom_margin;
+        L1.left   = A.left + 1;
+        L1.right  = L1.left;
+
+        LMO = A.left_margin;
+        A.left_margin = DX + 1;
+
+        L2.top    = A.top + DY;
+        L2.bottom = A.bottom - A.top_margin - A.bottom_margin;
+        L2.left   = A.right - A.right_margin + DX + (A.left_margin - LMO);
+        L2.right  = L2.left;
+
+		SW.top    = L1.bottom;
+		SW.bottom = L1.bottom;
+		SW.left   = L1.left - 0.5;
+		SW.right  = L1.left + DX;
+
+		SE.top    = L2.bottom;
+		SE.bottom = L2.bottom;
+		SE.left   = L2.right - DX;
+		SE.right  = L2.right + 0.5;
+
+        A.right_margin = A.left_margin;
+		A.bottom_margin = DY;
+    </expr>
+    <mathml type="bracket" left="&lfloor;" right="&rfloor;" />
+    <dsr head="@floor( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Ceiling brackets                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Ceiling brackets" id="@ceil" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" 
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L1" shape="line" type="formula" />
+      <object name="L2" shape="line" type="formula" />
+      <object name="NW" shape="line" type="formula" />
+      <object name="NE" shape="line" type="formula" />
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 1;
+
+        L1.top    = A.top + DY;
+        L1.bottom = A.bottom - A.top_margin - A.bottom_margin;
+        L1.left   = A.left;
+        L1.right  = L1.left;
+
+        LMO = A.left_margin;
+        A.left_margin = DX + 1;
+
+        L2.top    = A.top + DY;
+        L2.bottom = A.bottom - A.top_margin - A.bottom_margin;
+        L2.left   = A.right - A.right_margin + DX + (A.left_margin - LMO);
+        L2.right  = L2.left;
+
+		NW.top    = L1.top;
+		NW.bottom = L1.top;
+		NW.left   = L1.left - 0.5;
+		NW.right  = L1.left + DX;
+
+		NE.top    = L2.top;
+		NE.bottom = L2.top;
+		NE.left   = L2.right - DX;
+		NE.right  = L2.right + 0.5;
+
+        A.right_margin = A.left_margin;
+		A.top_margin  = DY;
+    </expr>
+    <mathml type="bracket" left="&lceil;" right="&rceil;" />
+    <dsr head="@ceil( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Left parenthesis                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left parenthesis" id="("
+          stretchy="yes"
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+
+      <object shape="text" value="(" style="op" 
+              halign="left" valign="center" bind-to="1"
+              alt-group="1" />
+
+      <object name="ANW" 
+              shape="spline" type="formula"
+              alt-group="2" >
+        <point type="moveto" x =   "99"		 	y = "0" />
+        <point type="splnto" x =  "100" 		y =  "-2" />
+        <point type="splnto" x =  "81" 			y =   "5" />
+        <point type="splnto" x =  "67" 			y =   "11" />
+		<point type="splnto" x =   "41" 		y = "26" />
+        <point type="splnto" x =  "22" 			y =  "37" />
+        <point type="splnto" x =  "9" 			y =   "65" />
+        <point type="splnto" x =  "4" 			y =   "76" />
+		<point type="splnto" x =   "4" 			y = "90" />
+        <point type="splnto" x =  "4" 			y =  "100" />
+		<point type="lineto" x =   "16" 		y = "100" />
+        <point type="splnto" x =  "16" 			y =  "88" />
+        <point type="splnto" x =  "21" 			y =   "76" />
+        <point type="splnto" x =  "22" 			y =   "60" />
+		<point type="splnto" x =   "33" 		y = "36" />
+        <point type="splnto" x =  "54" 			y =  "19" />
+        <point type="splnto" x =   "99" 		y = "0" /> 
+	</object>
+
+      <object name="L1" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "4" 		y =   "0" />
+        <point type="lineto" x =   "4" 		y = "100" />
+        <point type="lineto" x =   "16" 	y = "100" />
+		<point type="lineto" x =   "16" 	y = "0" />		
+		<point type="lineto" x =   "4" 		y = "0" />		
+      </object>
+
+      <object name="ASW" 
+              shape="spline" type="formula"
+              alt-group="2" >
+        <point type="moveto" x =   "99" y = "100" />
+        <point type="splnto" x =  "100" y =  "102" />
+        <point type="splnto" x =  "81" y =   "95" />
+        <point type="splnto" x =  "67" y =   "89" />
+		<point type="splnto" x =   "41" y = "74" />
+        <point type="splnto" x =  "22" y =  "63" />
+        <point type="splnto" x =  "9" y =   "35" />
+        <point type="splnto" x =  "5" y =   "24" />
+		<point type="splnto" x =   "4" y = "10" />
+        <point type="splnto" x =  "4" y =  "0" />
+		<point type="lineto" x =   "16" y = "0" />
+        <point type="splnto" x =  "16" y =  "12" />
+        <point type="splnto" x =  "21" y =   "24" />
+        <point type="splnto" x =  "22" y =   "40" />
+		<point type="splnto" x =   "33" y = "64" />
+        <point type="splnto" x =  "54" y =  "81" />
+        <point type="splnto" x =   "99" y = "100" /> 
+      </object>
+
+    </objects>
+    <expr>
+		DX = 6;
+		DY = 18;
+		x_margin = 1;
+		y_margin = 1;
+
+        L1.top    = A.top + DY + y_margin;
+        L1.bottom = A.bottom - DY - y_margin;
+        L1.left   = A.left + x_margin;
+        L1.right  = L1.left + DX;
+
+		ANW.top    = L1.top - DY;
+		ANW.bottom = L1.top;
+		ANW.left   = L1.left;
+		ANW.right  = L1.right;
+
+		ASW.top    = L1.bottom;
+		ASW.bottom = ASW.top + DY;
+		ASW.left   = ANW.left;
+		ASW.right  = ANW.right;
+
+        A.left_margin = (L1.right - A.left) + x_margin;
+		A.top_margin  = DY / 4 + y_margin;
+		A.bottom_margin = DY / 4 + y_margin;
+    </expr>
+    <mathml type="bracket" left="(" right="" />
+    <dsr head="( " param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Right parenthesis                                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right parenthesis" id=")"
+          stretchy="yes"
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+
+      <object shape="text" value=")" style="op" 
+              halign="right" valign="center" bind-to="1"
+              alt-group="1" />
+
+      <object name="ANE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "1" y = "0" />
+        <point type="splnto" x =  "0" y =  "-2" />
+        <point type="splnto" x =  "19" y =   "5" />
+        <point type="splnto" x =  "33" y =   "11" />
+		<point type="splnto" x =   "59" y = "26" />
+        <point type="splnto" x =  "78" y =  "37" />
+        <point type="splnto" x =  "91" y =   "65" />
+        <point type="splnto" x =  "94,3" y =   "76" />
+		<point type="splnto" x =   "94,3" y = "90" />
+        <point type="splnto" x =  "94,3" y =  "100" />
+		<point type="lineto" x =   "84" y = "100" />
+        <point type="splnto" x =  "84" y =  "88" />
+        <point type="splnto" x =  "79" y =   "76" />
+        <point type="splnto" x =  "78" y =   "60" />
+		<point type="splnto" x =   "67" y = "36" />
+        <point type="splnto" x =  "46" y =  "19" />
+        <point type="splnto" x =   "1" y = "0" /> 
+      </object>
+
+      <object name="L2" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "94,5" y =   "100" />
+        <point type="lineto" x =   "94,5" y = "0" />
+        <point type="lineto" x =   "84" y = "0" />
+		<point type="lineto" x =   "84" y = "100" />		
+		<point type="lineto" x =   "94,5" y = "100" />
+      </object>
+
+      <object name="ASE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "0" y = "100" />
+        <point type="splnto" x =  "1" y =  "102" />
+        <point type="splnto" x =  "19" y =   "95" />
+        <point type="splnto" x =  "33" y =   "89" />
+		<point type="splnto" x =   "59" y = "74" />
+        <point type="splnto" x =  "78" y =  "63" />
+        <point type="splnto" x =  "91" y =   "35" />
+        <point type="splnto" x =  "94,3" y =   "24" />
+		<point type="splnto" x =   "94,3" y = "10" />
+        <point type="splnto" x =  "94,3" y =  "0" />
+		<point type="lineto" x =   "84" y = "0" />
+        <point type="splnto" x =  "84" y =  "12" />
+        <point type="splnto" x =  "79" y =   "24" />
+        <point type="splnto" x =  "78" y =   "40" />
+		<point type="splnto" x =   "67" y = "64" />
+        <point type="splnto" x =  "46" y =  "81" />
+        <point type="splnto" x =   "0" y = "100" /> 
+
+      </object>
+
+    </objects>
+    <expr>
+		DX = 6;
+		DY = 18;
+		x_margin = 1;
+		y_margin = 1;
+ 
+		LMO = A.left_margin;
+     <!--    A.left_margin = DX + x_margin; -->
+		
+        L2.top    = A.top + DY + y_margin;
+        L2.bottom = A.bottom - DY - y_margin;
+        L2.left   = A.right - DX - x_margin;
+        L2.right  = L2.left + DX;
+
+		ANE.top    = L2.top - DY;
+		ANE.bottom = L2.top;
+		ANE.left   = L2.left;
+		ANE.right  = ANE.left + DX;
+
+		ASE.top    = L2.bottom;
+		ASE.bottom = ASE.top + DY;
+		ASE.left   = ANE.left;
+		ASE.right  = ANE.right;
+
+        A.right_margin = (A.right - L2.left) + x_margin;
+		A.top_margin  = DY / 4 + y_margin;
+		A.bottom_margin = DY / 4 + y_margin;
+    </expr>
+
+    <mathml type="bracket" left="" right=")" />
+    <dsr tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Left brackets                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left brackets (Ctrl+T,[)" id="["
+          stretchy="yes" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence key="[" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" 
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="text" value="[" style="op" 
+              halign="left" valign="center" bind-to="1"
+              alt-group="1" />
+      <object name="L1" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "0"		y = "0"/>
+		<point type="lineto" x = "10"		y = "0"/>
+		<point type="lineto" x = "10"		y = "100"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "0"		y = "0"/>
+	  </object>
+       <object name="NW" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "0"		y = "0"/>
+		<point type="lineto" x = "100"		y = "0"/>
+		<point type="lineto" x = "100"		y = "100"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "0"		y = "0"/>
+	  </object>
+      <object name="SW" shape="spline" type="formula" alt-group="2"> 
+		<point type="moveto" x = "100"		y = "0"/>
+		<point type="lineto" x = "0"		y = "0"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "100"		y = "100"/>
+		<point type="lineto" x = "100"		y = "0"/>		  
+	  </object>
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 1;
+		x_margin = 1;
+		y_margin = 1;
+
+        L1.top    = A.top + y_margin;
+        L1.bottom = A.bottom - y_margin;
+        L1.left   = A.left + x_margin;
+        L1.right  = L1.left + DX;
+
+
+		NW.top    = L1.top;
+		NW.bottom = L1.top;
+		NW.left   = L1.left;
+		NW.right  = L1.left + DX;
+
+		SW.top    = L1.bottom;
+		SW.bottom = L1.bottom;
+		SW.left   = NW.left;
+		SW.right  = NW.right;
+
+		A.left_margin = (L1.right - A.left) + x_margin;
+		A.top_margin  = DY + y_margin;
+		A.bottom_margin = DY + y_margin;
+    </expr>
+    <mathml type="bracket" left="[" right="" />
+    <dsr head="[ " param="$child_list$" bracket="off" />
+  </button>
+
+  
+  <!-- Right brackets                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right brackets (Ctrl+T,])" id="]"
+          stretchy="yes" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence key="]" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" 
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="text" value="]" style="op" 
+              halign="right" valign="center" bind-to="1"
+              alt-group="1" />
+      <object name="L2" shape="spline" type="formula"  alt-group="2" >
+	  	<point type="moveto" x = "80"		y = "0"/>
+		<point type="lineto" x = "90"		y = "0"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "80"		y = "100"/>
+		<point type="lineto" x = "80"		y = "0"/>
+	  </object>	
+       <object name="NE" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "90"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "100"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "90"		y = "0"/>		
+	  </object>
+      <object name="SE" shape="spline" type="formula" alt-group="2" >
+		<point type="moveto" x = "90"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "100"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "90"		y = "0"/>		  
+	  </object>
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 1;
+				
+		x_margin = 1;
+		y_margin = 1;
+        
+		L2.top    = A.top + y_margin;
+        L2.bottom = A.bottom - y_margin;
+        L2.left   = A.right - DX - x_margin;
+        L2.right  = L2.left + DX;
+
+		NE.top    = L2.top;
+		NE.bottom = L2.top;
+		NE.left   = L2.right - DX;
+		NE.right  = L2.right;
+
+		SE.top    = L2.bottom;
+		SE.bottom = L2.bottom;
+		SE.left   = NE.left;
+		SE.right  = NE.right;
+
+        A.right_margin = (A.right - L2.left) + x_margin + 0.3;
+		A.top_margin  = DY + y_margin;
+		A.bottom_margin = DY + y_margin;
+    </expr>
+    <mathml type="bracket" right="]" />
+    <dsr tail="]" param="$child_list$" bracket="off" />
+  </button>
+
+<!-- Left brackets doublesided      -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--
+<button name="Left brackets doublesided" id="[[-"
+          stretchy="yes" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+ 
+    <frames>
+      <frame name="A" 
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+
+       <object name="L1" shape="spline" type="formula" >
+		<point type="moveto" x = "0"		y = "0"/>
+		<point type="lineto" x = "3"		y = "0"/>
+		<point type="lineto" x = "3"		y = "100"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "0"		y = "0"/>
+	  </object>	
+	  <object name="L11" shape="spline" type="formula" >
+		<point type="moveto" x = "47"		y = "0"/>
+		<point type="lineto" x = "50"		y = "0"/>
+		<point type="lineto" x = "50"		y = "100"/>
+		<point type="lineto" x = "47"		y = "100"/>
+		<point type="lineto" x = "47"		y = "0"/>
+	  </object>
+       <object name="NW" shape="spline" type="formula" >
+		<point type="moveto" x = "0"		y = "0"/>
+		<point type="lineto" x = "100"		y = "0"/>
+		<point type="lineto" x = "100"		y = "100"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "0"		y = "0"/>
+	  </object>
+      <object name="SW" shape="spline" type="formula" > 
+		<point type="moveto" x = "100"		y = "0"/>
+		<point type="lineto" x = "0"		y = "0"/>
+		<point type="lineto" x = "0"		y = "100"/>
+		<point type="lineto" x = "100"		y = "100"/>
+		<point type="lineto" x = "100"		y = "0"/>		  
+	  </object>
+    </objects>
+    <expr>
+		DX = 5;
+		DY = 1;
+		x_margin = 1;
+		y_margin = 1;
+
+        L1.top    = A.top + y_margin;
+        L1.bottom = A.bottom - y_margin;
+        L1.left   = A.left + x_margin;
+        L1.right  = L1.left + DX;
+
+		L11.top    = A.top + y_margin;
+        L11.bottom = A.bottom - y_margin;
+        L11.left   = A.left + x_margin;
+        L11.right  = L1.left + DX;
+		
+		NW.top    = L1.top;
+		NW.bottom = L1.top;
+		NW.left   = L1.left;
+		NW.right  = L1.left + DX;
+
+		SW.top    = L1.bottom;
+		SW.bottom = L1.bottom;
+		SW.left   = NW.left;
+		SW.right  = NW.right;
+
+		A.left_margin = (L1.right - A.left) + x_margin;
+		A.top_margin  = DY + y_margin;
+		A.bottom_margin = DY + y_margin;
+    </expr>
+    <mathml type="bracket" left="[[" />
+    <dsr head="[[ " param="$child_list$" bracket="off" />
+  </button> 
+-->
+
+  <!-- Right brackets doublesided                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--
+  <button name="Right brackets doublesided" id="-]]"
+          stretchy="yes" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    
+    <frames>
+      <frame name="A" 
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+
+      <object name="L2" shape="spline" type="formula" >
+	  	<point type="moveto" x = "87"		y = "0"/>
+		<point type="lineto" x = "90"		y = "0"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "87"		y = "100"/>
+		<point type="lineto" x = "87"		y = "0"/>
+	  </object>	
+      <object name="L22" shape="spline" type="formula" >
+	  	<point type="moveto" x = "40"		y = "0"/>
+		<point type="lineto" x = "43"		y = "0"/>
+		<point type="lineto" x = "43"		y = "100"/>
+		<point type="lineto" x = "40"		y = "100"/>
+		<point type="lineto" x = "40"		y = "0"/>
+	  </object>		  
+       <object name="NE" shape="spline" type="formula" >
+		<point type="moveto" x = "90"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "100"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "90"		y = "0"/>		
+	  </object>
+      <object name="SE" shape="spline" type="formula" >
+		<point type="moveto" x = "90"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "0"/>
+		<point type="lineto" x = "-10"		y = "100"/>
+		<point type="lineto" x = "90"		y = "100"/>
+		<point type="lineto" x = "90"		y = "0"/>		  
+	  </object>
+    </objects>
+    <expr>
+		DX = 5;
+		DY = 1;
+		x_margin = 1;
+		y_margin = 1;
+
+        
+		L2.top    = A.top + y_margin;
+        L2.bottom = A.bottom - y_margin;
+        L2.left   = A.right - DX - x_margin;
+        L2.right  = L2.left + DX;
+		
+		L22.top    = L2.top;
+        L22.bottom = L2.bottom;
+        L22.left   = A.right - DX - x_margin;
+        L22.right  = L2.left + DX;
+
+		NE.top    = L2.top;
+		NE.bottom = L2.top;
+		NE.left   = L2.right - DX;
+		NE.right  = L2.right;
+
+		SE.top    = L2.bottom;
+		SE.bottom = L2.bottom;
+		SE.left   = NE.left;
+		SE.right  = NE.right;
+
+        A.right_margin = (A.right - L2.left) + x_margin + 0.3;
+		A.top_margin  = DY + y_margin;
+		A.bottom_margin = DY + y_margin;
+    </expr>
+    <mathml type="bracket" right="]]" />
+    <dsr tail="]]" param="$child_list$" bracket="off" />
+  </button>
+-->
+
+  <!-- Left braces                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left braces (Ctrl+T,{)" id="{"
+          stretchy="yes" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence shift="yes" key="{" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="text" value="{" style="op" 
+              halign="left" valign="center" bind-to="1"
+              alt-group="1" />
+
+      <object name="ANW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "100" y = "-1,666666667"/>
+		<point type="splnto" x =  "100" y = "-2,5"/>
+		<point type="splnto" x =  "60" y = "8,333333333"/>
+		<point type="splnto" x =  "35" y = "30"/>
+		<point type="splnto" x =  "3" y = "58,33333333"/>
+		<point type="splnto" x =  "0" y = "70"/>
+		<point type="splnto" x =  "0" y = "105"/>
+		<point type="lineto" x =  "8" y = "100"/>
+		<point type="splnto" x =  "8" y = "71,66666667"/>
+		<point type="splnto" x =  "33" y = "21"/>
+		<point type="splnto" x =  "100" y = "0"/>
+      </object>
+
+      <object name="L1HI" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "0" 		y =   "0" />
+        <point type="lineto" x =   "0" 		y = "100" />
+		<point type="lineto" x =   "8" 		y = "100" />
+		<point type="lineto" x =   "8" 		y = "0" />
+      </object>
+
+      <object name="L1LO" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "0" 		y =   "0" />
+        <point type="lineto" x =   "0" 		y = "100" />
+		<point type="lineto" x =   "8" 		y = "100" />
+		<point type="lineto" x =   "8"	 	y = "0" />
+      </object>
+
+      <object name="ASW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "100" y = "101,666666667"/>
+		<point type="splnto" x =  "100" y = "102,5"/>
+		<point type="splnto" x =  "60" y = "91,666666667"/>
+		<point type="splnto" x =  "35" y = "70"/>
+		<point type="splnto" x =  "3,33333" y = "41,66666667"/>
+		<point type="splnto" x =  "0" y = "15"/>
+		<point type="splnto" x =  "0" y = "0"/>
+		<point type="lineto" x =  "8" y = "0"/>
+		<point type="splnto" x =  "8" y = "28,33333333"/>
+		<point type="splnto" x =  "33" y = "79"/>
+		<point type="splnto" x =  "100" y = "100"/>
+      </object>
+
+      <object name="CNW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "108" y = "0"/>
+		<point type="lineto" x =  "100" y = "0"/>
+		<point type="splnto" x =  "98" y = "40"/>
+		<point type="splnto" x =  "50" y = "80"/>
+		<point type="splnto" x =  "22" y = "92"/>
+
+		<point type="lineto" x =  "22" y = "97"/>
+		<point type="splnto" x =  "37" y = "90"/>
+		<point type="splnto" x =  "112" y = "50"/>
+		<point type="splnto" x =  "108" y = "-1"/>	
+      </object>
+
+      <object name="CSW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+ 		 <point type="moveto" x = "108" y = "100"/>
+		<point type="lineto" x =  "100" y = "100"/>
+		<point type="splnto" x =  "98" y = "60"/>
+		<point type="splnto" x =  "50" y = "20"/>
+		<point type="splnto" x =  "22" y = "8"/>
+		
+		<point type="lineto" x =  "22" y = "3"/>
+		<point type="splnto" x =  "37" y = "10"/>
+		<point type="splnto" x =  "112" y = "50"/>
+		<point type="splnto" x =  "108" y = "101"/>	
+      </object>
+	</objects>
+    <expr>
+		DX = 4;
+		DY = 4;
+		x_margin = 1;
+		y_margin = 1;
+
+        L1HI.top    = A.top + DY + y_margin;
+        L1HI.bottom = (A.top + A.bottom) * 0.5 - DY;
+        L1HI.left   = A.left + DX + x_margin;
+        L1HI.right  = L1HI.left + DX;
+
+        L1LO.top    = (A.top + A.bottom) * 0.5 + DY;
+        L1LO.bottom = A.bottom - DY - y_margin;
+        L1LO.left   = L1HI.left;
+        L1LO.right  = L1HI.right;
+
+		ANW.top    = L1HI.top - DY;
+		ANW.bottom = L1HI.top;
+		ANW.left   = L1HI.left;
+		ANW.right  = L1HI.right;
+
+		ASW.top    = L1LO.bottom;
+		ASW.bottom = ASW.top + DY;
+		ASW.left   = ANW.left;
+		ASW.right  = ANW.right;
+
+		CNW.top    = L1HI.bottom;
+		CNW.bottom = L1HI.bottom + DY;
+		CNW.right  = L1HI.left;
+		CNW.left   = CNW.right - DX;
+
+		CSW.top    = CNW.bottom;
+		CSW.bottom = L1LO.top;
+		CSW.left   = CNW.left;
+		CSW.right  = CNW.right;
+		
+		A.left_margin = 2 * DX + x_margin;
+		A.top_margin = 2 + y_margin;
+		A.bottom_margin = A.top_margin;
+    </expr>
+    <mathml type="bracket" left="{" />
+    <dsr head="{ " param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Right braces                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right braces (Ctrl+T,})" id="}"
+          stretchy="yes" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence shift="yes" key="}" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+
+      <object shape="text" value="}" style="op" 
+              halign="right" valign="center" bind-to="1"
+              alt-group="1" />
+
+      <object name="ANE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "0	 	"y = "-1,666666667	"/>
+		<point type="splnto" x =  "0	 	"y = "-2,5	"/>
+		<point type="splnto" x =  "40	 	"y = "8,333333333"/>
+		<point type="splnto" x =  "65	 	"y = "30	"/>
+		<point type="splnto" x =  "97		"y = "58	"/>
+		<point type="splnto" x =  "100	 	"y = "70	"/>
+		<point type="splnto" x =  "100	 	"y = "105	"/>
+		<point type="lineto" x =  "92	 	"y = "100	"/>
+		<point type="splnto" x =  "92	 	"y = "71,66666667	"/>
+		<point type="splnto" x =  "63	 	"y = "21	"/>
+		<point type="splnto" x =  "0	 	"y = "0	"/>
+      </object>
+
+      <object name="L2HI" 
+                 shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "100" 	y =   "0" />
+        <point type="lineto" x =   "100" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "0" />
+      </object>
+
+      <object name="L2LO" 
+                 shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "100" 	y =   "0" />
+        <point type="lineto" x =   "100" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "100" />
+		<point type="lineto" x =   "92" 	y = "0" />
+      </object>
+
+      <object name="ASE" 
+               shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "0	 	"y = "101,666666667		"/>
+		<point type="splnto" x =  "0	 	"y = "102,5	"/>
+		<point type="splnto" x =  "40	 	"y = "91,666666667"/>
+		<point type="splnto" x =  "65	 	"y = "70	"/>
+		<point type="splnto" x =  "96,66667	"y = "41,66666667"/>
+		<point type="splnto" x =  "100	 	"y = "15	"/>
+		<point type="splnto" x =  "100	 	"y = "0	"/>
+		<point type="lineto" x =  "92	 	"y = "0	"/>
+		<point type="splnto" x =  "92	 	"y = "28,33333333	"/>
+		<point type="splnto" x =  "67	 	"y = "79	"/>
+		<point type="splnto" x =  "0	 	"y = "100	"/>
+      </object> 
+
+	   <object name="CNE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =   "-8	 			"y = "0	"/>
+		<point type="lineto" x =   "0			 	"y = "0	"/>
+		<point type="splnto" x =  "2				"y = "40	"/>
+		<point type="splnto" x =  "50	 			"y = "80	"/>
+		<point type="splnto" x =  "78				"y = "92	"/>
+
+		<point type="lineto" x =  "78	 			"y = "97	"/>
+		<point type="splnto" x =  "63	 			"y = "90	"/>
+		<point type="splnto" x =  "-12	 			"y = "50	"/>
+		<point type="splnto" x =  "-8	 			"y = "-1	"/>	
+
+      </object>
+
+      <object name="CSE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =   "-8	 	"y = "100	"/>
+		<point type="lineto" x =   "0	 	"y = "100	"/>
+		<point type="splnto" x =  "2	 	"y = "60	"/>
+		<point type="splnto" x =  "50	 	"y = "20	"/>
+		<point type="splnto" x =  "78		"y = "8	"/>
+		
+		<point type="lineto" x =  "78	 	"y = "3	"/>
+		<point type="splnto" x =  "63	 	"y = "10	"/>
+		<point type="splnto" x =  "-12	 	"y = "50	"/>
+		<point type="splnto" x =  "-8	 	"y = "101	"/>	
+      </object>
+
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 4;
+		x_margin = 1;
+		y_margin = 1;
+
+
+        L2HI.top    = A.top + DY + y_margin;
+        L2HI.bottom = (A.top + A.bottom) * 0.5 - DY;
+        L2HI.right  = A.right - DX - x_margin;
+        L2HI.left   = L2HI.right - DX;
+
+        L2LO.top    = (A.top + A.bottom) * 0.5 + DY;
+        L2LO.bottom = A.bottom - DY - y_margin;
+        L2LO.left   = L2HI.left;
+        L2LO.right  = L2HI.right;
+
+		ANE.top    = L2HI.top - DY;
+		ANE.bottom = L2HI.top;
+		ANE.left   = L2HI.left;
+		ANE.right  = L2HI.right;
+
+		ASE.top    = L2LO.bottom;
+		ASE.bottom = L2LO.bottom + DY;
+		ASE.left   = ANE.left;
+		ASE.right  = ANE.right;
+
+		CNE.top    = L2HI.bottom;
+		CNE.bottom = CNE.top + DY;
+		CNE.left   = L2HI.right;
+		CNE.right  = CNE.left + DX;
+
+		CSE.top    = CNE.bottom;
+		CSE.bottom = L2LO.top;
+		CSE.left   = CNE.left;
+		CSE.right  = CNE.right;
+ 
+		A.right_margin = 2 * DX + x_margin;
+		A.top_margin = 2 + y_margin;
+		A.bottom_margin = A.top_margin;
+		
+    </expr>
+    <mathml type="bracket" right="}" />
+    <dsr tail="}" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Left angle brackets                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left angle brackets (Ctrl+T,<)" id="<" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence shift="yes" key="<" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="LB" 
+              shape="spline-ex" type="formula"
+              offset-direction-x="0.5" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=   "0" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+      </object>
+    </objects>
+    <expr>
+        DX = (A.bottom - A.top) * 0.25;
+
+        LB.top    = A.top;
+        LB.bottom = A.bottom;
+        LB.left   = A.left;
+        LB.right  = A.left + DX;
+
+		A.left_margin = DX + 1;
+    </expr>
+
+
+    <mathml type="bracket" left="&langle;" />
+    <dsr head="< " param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Right angle brackets                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right angle brackets (Ctrl+T,>)" id=">" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence shift="yes" key=">" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="RB" 
+              shape="spline-ex" type="formula"
+              offset-direction-x="-0.5" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x= "100" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+      </object>
+    </objects>
+    <expr>
+        DX = (A.bottom - A.top) * 0.25;
+
+        RB.top    = A.top;
+        RB.bottom = A.bottom;
+        RB.left   = A.right - DX;
+        RB.right  = A.right;
+
+        A.right_margin = DX + 1;
+    </expr>
+    <mathml type="bracket" right="&rangle;" />
+    <dsr tail=">" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Left vertical bar                                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left vertical bar" id="| left" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" 
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" name="L1" type="formula" />
+    </objects>
+    <expr>
+        DX = 4;
+
+        L1.top    = A.top;
+        L1.bottom = A.bottom;
+        L1.left   = A.left + 1;
+        L1.right  = L1.left;
+
+        A.left_margin = DX;
+    </expr>
+    <mathml type="bracket" left="&verbar;" />
+    <dsr head="| " param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Right vertical bar                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right vertical bar" id="| right" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" 
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" name="R1" type="formula" />
+    </objects>
+    <expr>
+        DX = 4;
+
+        R1.top    = A.top;
+        R1.bottom = A.bottom;
+        R1.left   = A.right - A.right_margin + DX - 1;
+        R1.right  = R1.left;
+
+        A.right_margin = DX;
+    </expr>
+    <mathml type="bracket" right="&verbar;" />
+    <dsr tail="|" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Left double bar                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left double bar" id="|| left" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" name="L1" type="formula" />
+      <object shape="line" name="L2" type="formula" />
+    </objects>
+    <expr>
+        DX = 7;
+
+        L1.top    = A.top;
+        L1.bottom = A.bottom;
+        L1.left   = A.left + 1;
+        L1.right  = L1.left;
+
+        L2.top    = L1.top;
+        L2.bottom = L1.bottom;
+        L2.left   = L1.left + 2;
+        L2.right  = L2.left;
+
+        A.left_margin = DX;
+    </expr>
+    <mathml type="bracket" left="&Verbar;" />
+    <dsr head="|| " param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Right double bar                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right double bar" id="|| right" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" name="R1" type="formula" />
+      <object shape="line" name="R2" type="formula" />
+    </objects>
+    <expr>
+        DX = 7;
+
+        R2.top    = A.top;
+        R2.bottom = A.bottom;
+        R2.left   = A.right - A.right_margin + DX - 1;
+        R2.right  = R2.left;
+
+        R1.top    = R2.top;
+        R1.bottom = R2.bottom;
+        R1.left   = R2.left - 2;
+        R1.right  = R1.left;
+
+        A.right_margin = DX;
+    </expr>
+    <mathml type="bracket" right="&Verbar;" />
+    <dsr tail="||" param="$child_list$" bracket="off" />
+  </button>
+
+
+</toolbar>

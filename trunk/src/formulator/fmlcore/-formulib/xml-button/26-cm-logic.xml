@@ -1,0 +1,617 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Content MathML: Logic Templates                               -->
+<!--                                                                        -->
+<toolbar id="@t@CMLogic@"
+         group="Content"
+         name="Logic operators"
+         caption="Logic"
+         image="images/buttons/cm_logic.bmp"
+         image-title="images/title/t_cm_logic_n.bmp"
+         image-title-hot="images/title/t_cm_logic_h.bmp"
+
+         columns="7" >
+
+
+  <!-- and                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The and element is the Boolean 'and' operator"
+          id="@cm_and" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <and/>
+    </math>
+  </button>
+
+
+  <!-- and                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The and element is the Boolean 'and' operator"
+          id="@and2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <and/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- and                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The and element is the Boolean 'and' operator"
+          id="@and3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <and/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- and                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The and element is the Boolean 'and' operator"
+          id="@and_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <and/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- and                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The and element is the Boolean 'and' operator"
+          id="@cm_and_q1" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <and/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+        <uplimit><mrow __flag="0x20000000"></mrow></uplimit>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- and                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The and element is the Boolean 'and' operator"
+          id="@cm_and_q2" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <and/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <interval>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </interval>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- and                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The and element is the Boolean 'and' operator"
+          id="@cm_and_q3" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <and/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- or                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The or element is the Boolean 'or' operator"
+          id="@cm_or" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <or/>
+    </math>
+  </button>
+
+
+  <!-- or                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The or element is the Boolean 'or' operator"
+          id="@or2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <or/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- or                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The or element is the Boolean 'or' operator"
+          id="@or3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <or/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- or                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The or element is the Boolean 'or' operator"
+          id="@or_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <or/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- or                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The or element is the Boolean 'or' operator"
+          id="@cm_or_q1" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <or/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+        <uplimit><mrow __flag="0x20000000"></mrow></uplimit>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- or                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The or element is the Boolean 'or' operator"
+          id="@cm_or_q2" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <or/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <interval>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </interval>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- or                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The or element is the Boolean 'or' operator"
+          id="@cm_or_q3" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <or/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- xor                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The xor element is the Boolean 'exclusive or' operator"
+          id="@cm_xor" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <xor/>
+    </math>
+  </button>
+
+
+  <!-- xor                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The xor element is the Boolean 'exclusive or' operator"
+          id="@xor2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <xor/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- xor                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The xor element is the Boolean 'exclusive or' operator"
+          id="@xor3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <xor/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- xor                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The xor element is the Boolean 'exclusive or' operator"
+          id="@xor_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <xor/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- xor                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The xor element is the Boolean 'exclusive or' operator"
+          id="@cm_xor_q1" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <xor/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+        <uplimit><mrow __flag="0x20000000"></mrow></uplimit>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- xor                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The xor element is the Boolean 'exclusive or' operator"
+          id="@cm_xor_q2" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <xor/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <interval>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </interval>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- xor                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The xor element is the Boolean 'exclusive or' operator"
+          id="@cm_xor_q3" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <xor/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- not                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The not operator is the Boolean 'not' operator"
+          id="@cm_not" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <not/>
+    </math>
+  </button>
+
+
+  <!-- not                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The not operator is the Boolean 'not' operator"
+          id="@cm_not1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <not/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- implies                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The implies element is the Boolean relational operator 'implies'"
+          id="@cm_implies" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <implies/>
+    </math>
+  </button>
+
+
+  <!-- implies                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The implies element is the Boolean relational operator 'implies'"
+          id="@cm_implies2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <implies/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- forall                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The forall element represents the universal quantifier of logic"
+          id="@cm_forall" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <forall/>
+    </math>
+  </button>
+
+
+  <!-- forall                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The forall element represents the universal quantifier of logic"
+          id="@cm_forall_bvar" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <forall/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- forall                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The forall element represents the universal quantifier of logic"
+          id="@cm_forall_bvar_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <forall/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- forall                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The forall element represents the universal quantifier of logic"
+          id="@cm_forall_bvar_cond" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <forall/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- forall                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The forall element represents the universal quantifier of logic"
+          id="@cm_forall_bvar_cond_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <forall/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- exists                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The exists element represents the existential quantifier of logic"
+          id="@cm_exists" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <exists/>
+    </math>
+  </button>
+
+
+  <!-- exists                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The exists element represents the existential quantifier of logic"
+          id="@cm_exists_bvar" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <exists/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- exists                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The exists element represents the existential quantifier of logic"
+          id="@cm_exists_bvar_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <exists/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- exists                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The exists element represents the existential quantifier of logic"
+          id="@cm_exists_bvar_cond" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <exists/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- exists                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The exists element represents the existential quantifier of logic"
+          id="@cm_exists_bvar_cond_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <exists/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+</toolbar>
+

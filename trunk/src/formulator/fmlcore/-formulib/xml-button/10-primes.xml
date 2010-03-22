@@ -1,0 +1,141 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Differentiation templates                                     -->
+<!--                                                                        -->
+<toolbar id="@t@Derivative@"
+         group="Presentation"
+         name="Differentiation" 
+         caption="Derivative"
+         image="images/buttons/primes.bmp"
+         image-title="images/title/t_primes_n.bmp" 
+         image-title-hot="images/title/t_primes_h.bmp" >
+
+
+  <!-- Prime                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Prime (Ctrl+Alt+')" id="@prime" type="mathml" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" alt="yes" key="'" />
+      </hot-key>
+    </hot-keys>
+    <math display = 'block'>
+        <msup>
+          <mrow></mrow>
+          <mo>&prime;</mo>
+        </msup>
+    </math>
+  </button>
+
+
+  <!-- Double prime                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name='Double prime (Ctrl+")' id="@prime2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key='"' />
+      </hot-key>
+    </hot-keys>
+    <math display = 'block'>
+        <msup>
+          <mrow></mrow>
+          <mo>&Prime;</mo>
+        </msup>
+    </math>
+  </button>
+
+
+  <!-- Differentiation (t as the independent variable)                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Differentiation (t as the independent variable)" id="@d_dt" type="mathml" 
+          vertical-center-type="object" vertical-center-value="1" >
+    <math display='block'>
+      <mfrac>
+       <mrow>
+        <mi>d</mi><mrow></mrow>
+       </mrow>
+       <mrow>
+        <mi>d</mi><mi>t</mi>
+       </mrow>
+      </mfrac>
+    </math>
+  </button>
+
+
+  <!-- Differentiation of vector X (t as the independent variable)          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Differentiation of vector X (t as the independent variable)" id="@dx_dt" type="mathml" 
+          vertical-center-type="object" vertical-center-value="1" >
+    <math display='block'>
+      <mfrac>
+       <mrow>
+        <mi>d</mi>
+        <msub>
+         <mi>x</mi>
+         <mrow></mrow>
+        </msub>
+       </mrow>
+       <mrow>
+        <mi>d</mi><mi>t</mi>
+       </mrow>
+      </mfrac>
+    </math>
+  </button>
+
+
+  <!-- Differentiation of vector (t as the independent variable)                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Differentiation of vector (t as the independent variable)" id="@dxi_dt" type="mathml" 
+          vertical-center-type="object" vertical-center-value="1" >
+    <math display='block'>
+      <mfrac>
+       <mrow>
+        <mi>d</mi>
+        <msub>
+         <mrow></mrow>
+         <mrow></mrow>
+        </msub>
+       </mrow>
+       <mrow>
+        <mi>d</mi><mi>t</mi>
+       </mrow>
+      </mfrac>
+    </math>
+  </button>
+
+
+</toolbar>

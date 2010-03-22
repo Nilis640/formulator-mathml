@@ -1,0 +1,1723 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Labelled arrow templates                                       -->
+<!--                                                                        -->
+<toolbar id="@t@Labels@"
+         group="Presentation"
+         name="Labelled arrow templates" 
+         caption="Labels" 
+         image="images/buttons/labeledar.bmp"
+         image-title="images/title/t_labeledar_n.bmp" 
+         image-title-hot="images/title/t_labeledar_h.bmp" >
+
+
+  <!-- Right arrow with upper text slot                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right arrow with upper text slot (Ctrl+T,Shift+Right)" id="@rauslot" 
+          vertical-center-type="object" vertical-center-value="1" 
+          mathml-form="postfix" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence shift="yes" key="Right" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 3;
+        L.bottom = L.top;
+        L.left   = A.left + 1;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml value="&xrarr;" type="mo" frame="mover" />
+    <dsr head="@rauslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Right arrow with lower text slot                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right arrow with lower text slot (Ctrl+T,Alt+Right)" id="@ralslot" 
+          vertical-center-type="object" vertical-center-value="1" 
+          mathml-form="postfix" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence alt ="yes" key="Right" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top;
+        L.left   = A.left + 1;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.top_margin  = DY;
+    </expr>
+    <mathml value="&xrarr;" type="mo" frame="munder" />
+    <dsr head="@ralslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Right arrow with upper and lower text slot                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right arrow with upper and lower text slot (Ctrl+T,Right)" id="@raulslot" 
+          vertical-center-type="object" vertical-center-value="1" 
+          mathml-form="postfix" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence            key="Right" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="B" left="0" top="63" right="100" bottom="100"
+            halign="center" valign="bottom" level="child" />
+      <frame name="A" left="0" top= "0" right="100" bottom="37"
+            halign="center" valign="top" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = average(A.bottom, B.top);
+        L.bottom = L.top;
+        L.left   = min(A.left,  B.left) + 1;
+        L.right  = max(A.right, B.right) + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        A.left_margin  = DX;
+        A.right_margin = DX;
+        B.left_margin  = DX;
+        B.right_margin = DX;
+    </expr>
+    <mathml value="&xrarr;" type="mo" frame="munderover" />
+    <dsr head="@raulslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Left arrow with upper text slot                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left arrow with upper text slot (Ctrl+T,Shift+Left)" id="@lauslot" 
+          vertical-center-type="object" vertical-center-value="1" 
+          mathml-form="postfix" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence shift="yes" key="Left" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 3;
+        L.bottom = L.top;
+        L.left   = A.left + 3;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 1;
+
+        AL.top    = L.top - 2;
+        AL.bottom = L.top + 2;
+        AL.left   = L.left - 3;
+        AL.right  = L.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml value="&xlarr;" type="mo" frame="mover" />
+    <dsr head="@lauslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Left arrow with lower text slot                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left arrow with lower text slot (Ctrl+T,Alt+Left)" id="@lalslot" 
+          vertical-center-type="object" vertical-center-value="1" 
+          mathml-form="postfix" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence alt ="yes" key="Left" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top;
+        L.left   = A.left + 3;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 1;
+
+        AL.top    = L.top - 2;
+        AL.bottom = L.top + 2;
+        AL.left   = L.left - 3;
+        AL.right  = L.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.top_margin  = DY;
+    </expr>
+    <mathml value="&xlarr;" type="mo" frame="munder" />
+    <dsr head="@lalslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+
+  <!-- Left arrow with upper and lower text slot                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left arrow with upper and lower text slot (Ctrl+T,Left)" id="@laulslot" 
+          vertical-center-type="object" vertical-center-value="1" 
+          mathml-form="postfix" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence            key="Left" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="B" left="0" top="63" right="100" bottom="100"
+            halign="center" valign="bottom" level="child" />
+      <frame name="A" left="0" top= "0" right="100" bottom="37"
+            halign="center" valign="top" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = average(A.bottom, B.top);
+        L.bottom = L.top;
+        L.left   = min(A.left,  B.left) + 3;
+        L.right  = max(A.right, B.right) + (DX - A.right_margin) + (DX - A.left_margin) - 1;
+
+        AL.top    = L.top - 2;
+        AL.bottom = L.top + 2;
+        AL.left   = L.left - 3;
+        AL.right  = L.left + 1;
+
+        A.left_margin  = DX;
+        A.right_margin = DX;
+        B.left_margin  = DX;
+        B.right_margin = DX;
+    </expr>
+    <mathml value="&xlarr;" type="mo" frame="munderover" />
+    <dsr head="@laulslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Double-headed arrow with upper text slot                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double-headed arrow with upper text slot (Ctrl+T,Shift+Up)" id="@dauslot" 
+          vertical-center-type="object" vertical-center-value="1" 
+          mathml-form="postfix" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence shift="yes" key="Up" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 3;
+        L.bottom = L.top;
+        L.left   = A.left + 3;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        AL.top    = L.top - 2;
+        AL.bottom = L.top + 2;
+        AL.left   = L.left - 3;
+        AL.right  = L.left + 1;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml value="&harr;" type="mo" frame="mover" />
+    <dsr head="@dauslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Double-headed arrow with lower text slot                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double-headed arrow with lower text slot (Ctrl+T,Alt+Up)" id="@dalslot" 
+          vertical-center-type="object" vertical-center-value="1" 
+          mathml-form="postfix" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence alt ="yes" key="Up" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top;
+        L.left   = A.left + 3;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        AL.top    = L.top - 2;
+        AL.bottom = L.top + 2;
+        AL.left   = L.left - 3;
+        AL.right  = L.left + 1;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.top_margin  = DY;
+    </expr>
+    <mathml value="&harr;" type="mo" frame="munder" />
+    <dsr head="@dalslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Double-headed arrow with upper and lower text slot                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double-headed arrow with upper and lower text slot (Ctrl+T,Up)" id="@daulslot" 
+          vertical-center-type="object" vertical-center-value="1" 
+          mathml-form="postfix" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence            key="Up" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="B" left="0" top="63" right="100" bottom="100"
+            halign="center" valign="bottom" level="child" />
+      <frame name="A" left="0" top= "0" right="100" bottom="37"
+            halign="center" valign="top" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = average(A.bottom, B.top);
+        L.bottom = L.top;
+        L.left   = min(A.left,  B.left) + 3;
+        L.right  = max(A.right, B.right) + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        AL.top    = L.top - 2;
+        AL.bottom = L.top + 2;
+        AL.left   = L.left - 3;
+        AL.right  = L.left + 1;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        A.left_margin  = DX;
+        A.right_margin = DX;
+        B.left_margin  = DX;
+        B.right_margin = DX;
+    </expr>
+    <mathml value="&harr;" type="mo" frame="munderover" />
+    <dsr head="@daulslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Double arrow with upper text slot                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double arrow with upper text slot" id="@ddauslot"  
+          vertical-center-type="average" vertical-center-value="2" 
+          mathml-form="postfix" 
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 9;
+        L.bottom = L.top;
+        L.left   = A.left + 1;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top;
+        M.left   = L.left + 3;
+        M.right  = L.right + 3;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        AL.top    = M.top - 2;
+        AL.bottom = M.top + 2;
+        AL.left   = M.left - 3;
+        AL.right  = M.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml value="&rlarr;" type="mo" frame="mover" />
+    <dsr head="@ddauslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Double arrow with lower text slot                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double arrow with lower text slot" id="@ddalslot"  
+          vertical-center-type="average" vertical-center-value="2" 
+          mathml-form="postfix" 
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top;
+        L.left   = A.left + 1;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top;
+        M.left   = L.left + 3;
+        M.right  = L.right + 3;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        AL.top    = M.top - 2;
+        AL.bottom = M.top + 2;
+        AL.left   = M.left - 3;
+        AL.right  = M.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.top_margin  = DY;
+    </expr>
+    <mathml value="&rlarr;" type="mo" frame="munder" />
+    <dsr head="@ddalslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Double arrow with upper and lower text slot                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double arrow with upper and lower text slot" id="@ddaulslot"  
+          vertical-center-type="average" vertical-center-value="2" 
+          mathml-form="postfix" 
+  >
+    <frames>
+      <frame name="B" left="0" top="70" right="100" bottom="100"
+            halign="center" valign="bottom" level="child" />
+      <frame name="A" left="0" top= "0" right="100" bottom="30"
+            halign="center" valign="top" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = average(A.bottom, B.top) - 3;
+        L.bottom = L.top;
+        L.left   = min(A.left,  B.left) + 1;
+        L.right  = max(A.right, B.right) + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = average(A.bottom, B.top) + 3;
+        M.bottom = M.top;
+        M.left   = L.left + 3;
+        M.right  = L.right + 3;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        AL.top    = M.top - 2;
+        AL.bottom = M.top + 2;
+        AL.left   = M.left - 3;
+        AL.right  = M.left + 1;
+
+        A.left_margin  = DX;
+        A.right_margin = DX;
+        B.left_margin  = DX;
+        B.right_margin = DX;
+    </expr>
+    <mathml value="&rlarr;" type="mo" frame="munderover" />
+    <dsr head="@ddaulslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Large over small arrow with upper text slot                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Large over small arrow with upper text slot" id="@ddlsauslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 9;
+        L.bottom = L.top;
+        L.left   = A.left + 1;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top;
+        M.left   = L.left + 7;
+        M.right  = L.right - 3;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        AL.top    = M.top - 2;
+        AL.bottom = M.top + 2;
+        AL.left   = M.left - 3;
+        AL.right  = M.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<mover>&#x0D;&#x0A;"
+"  <munder accentunder='true'>&#x0D;&#x0A;"
+"    <mo>&xrarr;</mo>&#x0D;&#x0A;"
+"    <mo>&larr;</mo>&#x0D;&#x0A;"
+"  </munder>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"</mover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@ddlsauslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Large over small arrow with lower text slot                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Large over small arrow with lower text slot" id="@ddlsalslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top;
+        L.left   = A.left + 1;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top;
+        M.left   = L.left + 7;
+        M.right  = L.right - 3;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        AL.top    = M.top - 2;
+        AL.bottom = M.top + 2;
+        AL.left   = M.left - 3;
+        AL.right  = M.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.top_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<munder>&#x0D;&#x0A;"
+"  <munder accentunder='true'>&#x0D;&#x0A;"
+"    <mo>&xrarr;</mo>&#x0D;&#x0A;"
+"    <mo>&larr;</mo>&#x0D;&#x0A;"
+"  </munder>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"</munder>&#x0D;&#x0A;"
+	/>
+    <dsr head="@ddlsalslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Large over small arrow with upper and lower text slot                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Large over small arrow with upper and lower text slot" id="@ddlsaulslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="B" left="0" top="70" right="100" bottom="100"
+            halign="center" valign="bottom" level="child" />
+      <frame name="A" left="0" top= "0" right="100" bottom="30"
+            halign="center" valign="top" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = average(A.bottom, B.top) - 3;
+        L.bottom = L.top;
+        L.left   = min(A.left,  B.left) + 1;
+        L.right  = max(A.right, B.right) + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = average(A.bottom, B.top) + 3;
+        M.bottom = M.top;
+        M.left   = L.left + 7;
+        M.right  = L.right - 3;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        AL.top    = M.top - 2;
+        AL.bottom = M.top + 2;
+        AL.left   = M.left - 3;
+        AL.right  = M.left + 1;
+
+        A.left_margin  = DX;
+        A.right_margin = DX;
+        B.left_margin  = DX;
+        B.right_margin = DX;
+    </expr>
+    <mathml mathml-template=
+"<munderover accentunder='true'>&#x0D;&#x0A;"
+"  <mo>&xrarr;</mo>&#x0D;&#x0A;"
+"  <munder>&#x0D;&#x0A;"
+"    <mo>&larr;</mo>&#x0D;&#x0A;"
+"    ///$$$ 1st slot&#x0D;&#x0A;"
+"  </munder>&#x0D;&#x0A;"
+"  ///$$$ 2nd slot&#x0D;&#x0A;"
+"</munderover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@ddlsaulslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Small over large arrow with upper text slot                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Small over large arrow with upper text slot" id="@ddslauslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 9;
+        L.bottom = L.top;
+        L.left   = A.left + 6;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 8;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top;
+        M.left   = L.left - 2;
+        M.right  = L.right + 8;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        AL.top    = M.top - 2;
+        AL.bottom = M.top + 2;
+        AL.left   = M.left - 3;
+        AL.right  = M.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<mover>&#x0D;&#x0A;"
+"  <munder accentunder='true'>&#x0D;&#x0A;"
+"    <mo>&rarr;</mo>&#x0D;&#x0A;"
+"    <mo>&xlarr;</mo>&#x0D;&#x0A;"
+"  </munder>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"</mover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@ddslauslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Small over large arrow with lower text slot                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Small over large arrow with lower text slot" id="@ddslalslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top;
+        L.left   = A.left + 6;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 8;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top;
+        M.left   = L.left - 2;
+        M.right  = L.right + 8;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        AL.top    = M.top - 2;
+        AL.bottom = M.top + 2;
+        AL.left   = M.left - 3;
+        AL.right  = M.left + 1;
+
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.top_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<munder>&#x0D;&#x0A;"
+"  <munder accentunder='true'>&#x0D;&#x0A;"
+"    <mo>&rarr;</mo>&#x0D;&#x0A;"
+"    <mo>&xlarr;</mo>&#x0D;&#x0A;"
+"  </munder>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"</munder>&#x0D;&#x0A;"
+	/>
+    <dsr head="@ddslalslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Small over large arrow with upper and lower text slot                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Small over large arrow with upper and lower text slot" id="@ddslaulslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="B" left="0" top="70" right="100" bottom="100"
+            halign="center" valign="bottom" level="child" />
+      <frame name="A" left="0" top= "0" right="100" bottom="30"
+            halign="center" valign="top" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = average(A.bottom, B.top) - 3;
+        L.bottom = L.top;
+        L.left   = min(A.left,  B.left) + 6;
+        L.right  = max(A.right, B.right) + (DX - A.right_margin) + (DX - A.left_margin) - 8;
+
+        M.top    = average(A.bottom, B.top) + 3;
+        M.bottom = M.top;
+        M.left   = L.left - 2;
+        M.right  = L.right + 8;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = L.right - 1;
+        AR.right  = L.right + 3;
+
+        AL.top    = M.top - 2;
+        AL.bottom = M.top + 2;
+        AL.left   = M.left - 3;
+        AL.right  = M.left + 1;
+
+        A.left_margin  = DX;
+        A.right_margin = DX;
+        B.left_margin  = DX;
+        B.right_margin = DX;
+    </expr>
+    <mathml mathml-template=
+"<munderover accentunder='true'>&#x0D;&#x0A;"
+"  <mo>&rarr;</mo>&#x0D;&#x0A;"
+"  <munder>&#x0D;&#x0A;"
+"    <mo>&xlarr;</mo>&#x0D;&#x0A;"
+"    ///$$$ 1st slot&#x0D;&#x0A;"
+"  </munder>&#x0D;&#x0A;"
+"  ///$$$ 2nd slot&#x0D;&#x0A;"
+"</munderover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@ddslaulslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Harpoons with upper text slot                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Harpoons with upper text slot" id="@hddauslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="ARH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y= "66.5" />
+        <point type="lineto" x= "80" y= "66.5" />
+      </object>
+      <object name="ALH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "75" y=   "0" />
+        <point type="lineto" x= "90" y= "66.5" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 9;
+        L.bottom = L.top;
+        L.left   = A.left + 1;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top;
+        M.left   = L.left + 3;
+        M.right  = L.right + 3;
+
+        ARH.top    = L.top - 2;
+        ARH.bottom = L.top + 1;
+        ARH.left   = L.right - 1;
+        ARH.right  = L.right + 3;
+
+        ALH.top    = M.top;
+        ALH.bottom = M.top + 3;
+        ALH.left   = M.left - 3;
+        ALH.right  = M.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<mover>&#x0D;&#x0A;"
+"  <mo>&rlhar;</mo>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"</mover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@hddauslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Harpoons with lower text slot                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Harpoons with lower text slot" id="@hddalslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="ARH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y= "66.5" />
+        <point type="lineto" x= "80" y= "66.5" />
+      </object>
+      <object name="ALH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "75" y=   "0" />
+        <point type="lineto" x= "90" y= "66.5" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top ;
+        L.left   = A.left + 1;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top;
+        M.left   = L.left + 3;
+        M.right  = L.right + 3;
+
+        ARH.top    = L.top - 2;
+        ARH.bottom = L.top + 1;
+        ARH.left   = L.right - 1;
+        ARH.right  = L.right + 3;
+
+        ALH.top    = M.top;
+        ALH.bottom = M.top + 3;
+        ALH.left   = M.left - 3;
+        ALH.right  = M.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.top_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<munder>&#x0D;&#x0A;"
+"  <mo>&rlhar;</mo>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"</munder>&#x0D;&#x0A;"
+	/>
+    <dsr head="@hddalslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Harpoons with upper and lower text slot                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Harpoons with upper and lower text slot" id="@hddaulslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="B" left="0" top="70" right="100" bottom="100"
+            halign="center" valign="bottom" level="child" />
+      <frame name="A" left="0" top= "0" right="100" bottom="30"
+            halign="center" valign="top" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="ARH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y= "66.5" />
+        <point type="lineto" x= "80" y= "66.5" />
+      </object>
+      <object name="ALH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "75" y=   "0" />
+        <point type="lineto" x= "90" y= "66.6" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = average(A.bottom, B.top) - 4;
+        L.bottom = L.top;
+        L.left   = min(A.left,  B.left) + 1;
+        L.right  = max(A.right, B.right) + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = average(A.bottom, B.top) + 2;
+        M.bottom = M.top;
+        M.left   = L.left + 3;
+        M.right  = L.right + 3;
+
+        ARH.top    = L.top - 2;
+        ARH.bottom = L.top + 1;
+        ARH.left   = L.right - 1;
+        ARH.right  = L.right + 3;
+
+        ALH.top    = M.top;
+        ALH.bottom = M.top + 3;
+        ALH.left   = M.left - 3;
+        ALH.right  = M.left + 1;
+
+        A.left_margin  = DX;
+        A.right_margin = DX;
+        B.left_margin  = DX;
+        B.right_margin = DX;
+    </expr>
+    <mathml mathml-template=
+"<munderover>&#x0D;&#x0A;"
+"  <mo>&rlhar;</mo>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"  ///$$$ 2nd slot&#x0D;&#x0A;"
+"</munderover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@hddaulslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Large over small harpoon with upper text slot                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Large over small harpoon with upper text slot" id="@hddlsauslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="ARH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y= "66.5" />
+        <point type="lineto" x= "80" y= "66.5" />
+      </object>
+      <object name="ALH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "75" y=   "0" />
+        <point type="lineto" x= "90" y= "66.5" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 9;
+        L.bottom = L.top ;
+        L.left   = A.left + 1;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top ;
+        M.left   = L.left + 7;
+        M.right  = L.right - 3;
+
+        ARH.top    = L.top - 2;
+        ARH.bottom = L.top + 1;
+        ARH.left   = L.right - 1;
+        ARH.right  = L.right + 3;
+
+        ALH.top    = M.top;
+        ALH.bottom = M.top + 3;
+        ALH.left   = M.left - 2;
+        ALH.right  = M.left + 2;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<munderover>&#x0D;&#x0A;"
+"  <mo>&rharu;</mo>&#x0D;&#x0A;"
+"  <mo>&lhard;</mo>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"</munderover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@hddlsauslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Large over small harpoon with lower text slot                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Large over small harpoon with lower text slot" id="@hddlsalslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+       <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="ARH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y= "66.5" />
+        <point type="lineto" x= "80" y= "66.5" />
+      </object>
+      <object name="ALH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "75" y=   "0" />
+        <point type="lineto" x= "90" y= "66.5" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top ;
+        L.left   = A.left + 1;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top ;
+        M.left   = L.left + 7;
+        M.right  = L.right - 3;
+
+        ARH.top    = L.top - 2;
+        ARH.bottom = L.top + 1;
+        ARH.left   = L.right - 1;
+        ARH.right  = L.right + 3;
+
+        ALH.top    = M.top;
+        ALH.bottom = M.top + 3;
+        ALH.left   = M.left - 3;
+        ALH.right  = M.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.top_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<munder>&#x0D;&#x0A;"
+"  <munder accentunder='true'>&#x0D;&#x0A;"
+"    <mo>&rharu;</mo>&#x0D;&#x0A;"
+"    <mo>&lhard;</mo>&#x0D;&#x0A;"
+"  </munder>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"</munder>&#x0D;&#x0A;"
+	/>
+    <dsr head="@hddlsalslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Large over small harpoon with upper and lower text slot                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Large over small harpoon with upper and lower text slot" id="@hddlsaulslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="B" left="0" top="70" right="100" bottom="100"
+            halign="center" valign="bottom" level="child" />
+      <frame name="A" left="0" top= "0" right="100" bottom="30"
+            halign="center" valign="top" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="ARH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y= "66.5" />
+        <point type="lineto" x= "80" y= "66.5" />
+      </object>
+      <object name="ALH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "75" y=   "0" />
+        <point type="lineto" x= "90" y= "66.5" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = average(A.bottom, B.top) - 3;
+        L.bottom = L.top ;
+        L.left   = min(A.left,  B.left) + 1;
+        L.right  = max(A.right, B.right) + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        M.top    = average(A.bottom, B.top) + 3;
+        M.bottom = M.top;
+        M.left   = L.left + 7;
+        M.right  = L.right - 3;
+
+        ARH.top    = L.top - 2;
+        ARH.bottom = L.top + 1;
+        ARH.left   = L.right - 1;
+        ARH.right  = L.right + 3;
+
+        ALH.top    = M.top;
+        ALH.bottom = M.top + 3;
+        ALH.left   = M.left - 3;
+        ALH.right  = M.left + 1;
+
+        A.left_margin  = DX;
+        A.right_margin = DX;
+        B.left_margin  = DX;
+        B.right_margin = DX;
+    </expr>
+    <mathml mathml-template=
+"<munderover accentunder='true'>&#x0D;&#x0A;"
+"  <mo>&rharu;</mo>&#x0D;&#x0A;"
+"  <munder>&#x0D;&#x0A;"
+"    <mo>&lhard;</mo>&#x0D;&#x0A;"
+"    ///$$$ 1st slot&#x0D;&#x0A;"
+"  </munder>&#x0D;&#x0A;"
+"  ///$$$ 2nd slot&#x0D;&#x0A;"
+"</munderover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@hddlsaulslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Small over large harpoon with upper text slot                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Small over large harpoon with upper text slot" id="@hddslauslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="ARH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y= "66.5" />
+        <point type="lineto" x= "80" y= "66.5" />
+      </object>
+      <object name="ALH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "75" y=   "0" />
+        <point type="lineto" x= "90" y= "66.5" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 9;
+        L.bottom = L.top;
+        L.left   = A.left + 6;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 8;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top;
+        M.left   = L.left - 2;
+        M.right  = L.right + 8;
+
+        ARH.top    = L.top - 2;
+        ARH.bottom = L.top + 1;
+        ARH.left   = L.right - 1;
+        ARH.right  = L.right + 3;
+
+        ALH.top    = M.top;
+        ALH.bottom = M.top + 3;
+        ALH.left   = M.left - 3;
+<math display = 'block'>
+  <mrow>
+    <mover>
+      <munder accentunder='true'>
+        <mo>&rarr;</mo>
+        <mo>&xlarr;</mo>
+      </munder>
+      <mrow></mrow>
+    </mover>
+  </mrow>
+</math>
+        ALH.right  = M.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<mover>&#x0D;&#x0A;"
+"  <mover accent='true'>&#x0D;&#x0A;"
+"    <mo>&lhard;</mo>&#x0D;&#x0A;"
+"    <mo>&rharu;</mo>&#x0D;&#x0A;"
+"  </mover>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"</mover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@hddslauslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Small over large harpoon with lower text slot                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Small over large harpoon with lower text slot" id="@hddslalslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="ARH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y= "66.5" />
+        <point type="lineto" x= "80" y= "66.5" />
+      </object>
+      <object name="ALH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "75" y=   "0" />
+        <point type="lineto" x= "90" y= "66.5" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 12;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top ;
+        L.left   = A.left + 6;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 8;
+
+        M.top    = L.top + 6;
+        M.bottom = M.top;
+        M.left   = L.left - 2;
+        M.right  = L.right + 8;
+
+        ARH.top    = L.top - 2;
+        ARH.bottom = L.top + 1;
+        ARH.left   = L.right - 1;
+        ARH.right  = L.right + 3;
+
+        ALH.top    = M.top;
+        ALH.bottom = M.top + 3;
+        ALH.left   = M.left - 3;
+        ALH.right  = M.left + 1;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.top_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<munderover>&#x0D;&#x0A;"
+"  <mo>&lhard;</mo>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"  <mo>&rharu;</mo>&#x0D;&#x0A;"
+"</munderover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@hddslalslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Small over large harpoon with upper and lower text slot              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Small over large harpoon with upper and lower text slot" id="@hddslaulslot"  
+          vertical-center-type="average" vertical-center-value="2" >
+    <frames>
+      <frame name="B" left="0" top="70" right="100" bottom="100"
+            halign="center" valign="bottom" level="child" />
+      <frame name="A" left="0" top= "0" right="100" bottom="30"
+            halign="center" valign="top" level="child" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="M"  shape="line" type="formula" width="1" />
+      <object name="ARH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y= "66.5" />
+        <point type="lineto" x= "80" y= "66.5" />
+      </object>
+      <object name="ALH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "75" y=   "0" />
+        <point type="lineto" x= "90" y= "66.5" />
+      </object>
+    </objects>
+    <expr>
+		DX = 10;
+		DY = 6;
+
+        L.top    = average(A.bottom, B.top) - 3;
+        L.bottom = L.top;
+        L.left   = min(A.left,  B.left) + 6;
+        L.right  = max(A.right, B.right) + (DX - A.right_margin) + (DX - A.left_margin) - 8;
+
+        M.top    = average(A.bottom, B.top) + 3;
+        M.bottom = M.top;
+        M.left   = L.left - 2;
+        M.right  = L.right + 8;
+
+        ARH.top    = L.top - 2;
+        ARH.bottom = L.top + 1;
+        ARH.left   = L.right - 1;
+        ARH.right  = L.right + 3;
+
+        ALH.top    = M.top;
+        ALH.bottom = M.top + 3;
+        ALH.left   = M.left - 3;
+        ALH.right  = M.left + 1;
+
+        A.left_margin  = DX;
+        A.right_margin = DX;
+        B.left_margin  = DX;
+        B.right_margin = DX;
+    </expr>
+    <mathml mathml-template=
+"<munderover accentunder='true'>&#x0D;&#x0A;"
+"  <mo>&lhard;</mo>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"  <mover>&#x0D;&#x0A;"
+"    <mo>&rharu;</mo>&#x0D;&#x0A;"
+"    ///$$$ 2nd slot&#x0D;&#x0A;"
+"  </mover>&#x0D;&#x0A;"
+"</munderover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@hddslaulslot(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+</toolbar>

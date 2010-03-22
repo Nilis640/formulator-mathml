@@ -1,0 +1,915 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Content MathML: Theory of Sets Templates                      -->
+<!--                                                                        -->
+<toolbar id="@t@CMSet@"
+         group="Content"
+         name="Theory of sets"
+         caption="Theory of Sets" 
+         image="images/buttons/cm_set.bmp"
+         image-title="images/title/t_cm_set_n.bmp"
+         image-title-hot="images/title/t_cm_set_h.bmp"
+         columns="7" >
+
+
+  <!-- set                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set element is the container element that constructs a set of elements"
+          id="@cm_set1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <set>
+        <mrow __flag="0x20000000"></mrow>
+      </set>
+    </math>
+  </button>
+
+
+  <!-- set                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set element is the container element that constructs a set of elements"
+          id="@cm_set2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <set>
+        <mrow __flag="0x20000000"></mrow>
+        <mrow __flag="0x20000000"></mrow>
+      </set>
+    </math>
+  </button>
+
+
+  <!-- set                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set element is the container element that constructs a set of elements"
+          id="@cm_set3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <set>
+        <mrow __flag="0x20000000"></mrow>
+        <mrow __flag="0x20000000"></mrow>
+        <mrow __flag="0x20000000"></mrow>
+      </set>
+    </math>
+  </button>
+
+
+  <!-- set                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set element is the container element that constructs a set of elements"
+          id="@cm_set_ask" type="mathml" rows="ask"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <set>
+        <mrow __flag="0x20000000"></mrow>
+      </set>
+    </math>
+  </button>
+
+
+  <!-- set                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set element is the container element that constructs a set of elements"
+          id="@cm_set_bvar" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <set>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </set>
+    </math>
+  </button>
+
+
+  <!-- set                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set element is the container element that constructs a set of elements"
+          id="@cm_set_bvar_ask" type="mathml" rows="ask"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <set>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </set>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- list                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The list element is the container element that constructs a list of elements"
+          id="@cm_list1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <list>
+        <mrow __flag="0x20000000"></mrow>
+      </list>
+    </math>
+  </button>
+
+
+  <!-- list                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The list element is the container element that constructs a list of elements"
+          id="@cm_list2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <list>
+        <mrow __flag="0x20000000"></mrow>
+        <mrow __flag="0x20000000"></mrow>
+      </list>
+    </math>
+  </button>
+
+
+  <!-- list                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The list element is the container element that constructs a list of elements"
+          id="@cm_list3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <list>
+        <mrow __flag="0x20000000"></mrow>
+        <mrow __flag="0x20000000"></mrow>
+        <mrow __flag="0x20000000"></mrow>
+      </list>
+    </math>
+  </button>
+
+
+  <!-- list                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The list element is the container element that constructs a list of elements"
+          id="@cm_list_ask" type="mathml" rows="ask"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <list>
+        <mrow __flag="0x20000000"></mrow>
+      </list>
+    </math>
+  </button>
+
+
+  <!-- list                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The list element is the container element that constructs a list of elements"
+          id="@cm_list_bvar" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <list>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </list>
+    </math>
+  </button>
+
+
+  <!-- list                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The list element is the container element that constructs a list of elements"
+          id="@cm_list_bvar_ask" type="mathml" rows="ask"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <list>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </list>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- union                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The union element is the operator for a set-theoretic union or join of sets"
+          id="@cm_union" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <union/>
+    </math>
+  </button>
+
+
+  <!-- union                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The union element is the operator for a set-theoretic union or join of sets"
+          id="@cm_union2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <union/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- union                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The union element is the operator for a set-theoretic union or join of sets"
+          id="@cm_union3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <union/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- union                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The union element is the operator for a set-theoretic union or join of sets"
+          id="@cm_union_ask" type="mathml" rows="ask"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <union/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- union                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The union element is the operator for a set-theoretic union or join of sets (qualifier elements: lowlimit and uplimit)"
+          id="@cm_union_q1" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <union/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+        <uplimit><mrow __flag="0x20000000"></mrow></uplimit>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- union                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The union element is the operator for a set-theoretic union or join of sets (qualifier element: interval)"
+          id="@cm_union_q2" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <union/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <interval>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </interval>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- union                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The union element is the operator for a set-theoretic union or join of sets (qualifier element: condition)"
+          id="@cm_union_q3" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <union/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- intersect                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The intersect element is the operator for the set-theoretic intersection or meet of sets"
+          id="@cm_intersect" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <intersect/>
+    </math>
+  </button>
+
+
+  <!-- intersect                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The intersect element is the operator for the set-theoretic intersection or meet of sets"
+          id="@cm_intersect2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <intersect/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- intersect                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The intersect element is the operator for the set-theoretic intersection or meet of sets"
+          id="@cm_intersect3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <intersect/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- intersect                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The intersect element is the operator for the set-theoretic intersection or meet of sets"
+          id="@cm_intersect_ask" type="mathml" rows="ask"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <intersect/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- intersect                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The intersect element is the operator for the set-theoretic intersection or meet of sets (qualifier elements: lowlimit and uplimit)"
+          id="@cm_intersect_q1" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <intersect/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+        <uplimit><mrow __flag="0x20000000"></mrow></uplimit>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- intersect                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The intersect element is the operator for the set-theoretic intersection or meet of sets (qualifier element: interval)"
+          id="@cm_intersect_q2" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <intersect/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <interval>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </interval>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- intersect                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The intersect element is the operator for the set-theoretic intersection or meet of sets (qualifier element: condition)"
+          id="@cm_intersect_q3" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <intersect/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- in                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The in element is the relational operator used for a set-theoretic inclusion"
+          id="@cm_in" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <in/>
+    </math>
+  </button>
+
+
+  <!-- in                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The in element is the relational operator used for a set-theoretic inclusion"
+          id="@cm_in2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <in/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- notin                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The notin element is the relational operator element used for set-theoretic exclusion"
+          id="@cm_notin" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <notin/>
+    </math>
+  </button>
+
+
+  <!-- notin                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The notin element is the relational operator element used for set-theoretic exclusion"
+          id="@cm_notin2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <notin/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- subset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The subset element is the relational operator element for a set-theoretic containment"
+          id="@cm_subset" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <subset/>
+    </math>
+  </button>
+
+
+  <!-- subset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The subset element is the relational operator element for a set-theoretic containment"
+          id="@cm_subset2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <subset/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- subset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The subset element is the relational operator element for a set-theoretic containment (qualifier elements: lowlimit and uplimit)"
+          id="@cm_subset_q1" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <subset/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+        <uplimit><mrow __flag="0x20000000"></mrow></uplimit>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- subset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The subset element is the relational operator element for a set-theoretic containment (qualifier element: interval)"
+          id="@cm_subset_q2" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <subset/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <interval>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </interval>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- subset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The subset element is the relational operator element for a set-theoretic containment (qualifier element: condition)"
+          id="@cm_subset_q3" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <subset/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- prsubset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The prsubset element is the relational operator element for set-theoretic proper containment"
+          id="@cm_prsubset" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <prsubset/>
+    </math>
+  </button>
+
+
+  <!-- prsubset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The prsubset element is the relational operator element for set-theoretic proper containment"
+          id="@cm_prsubset2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <prsubset/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- prsubset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The prsubset element is the relational operator element for set-theoretic proper containment"
+          id="@cm_prsubset_q1" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <prsubset/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+        <uplimit><mrow __flag="0x20000000"></mrow></uplimit>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- prsubset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The prsubset element is the relational operator element for set-theoretic proper containment"
+          id="@cm_prsubset_q2" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <prsubset/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <interval>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </interval>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- prsubset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The prsubset element is the relational operator element for set-theoretic proper containment"
+          id="@cm_prsubset_q3" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <prsubset/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- notsubset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The notsubset element is the relational operator element for the set-theoretic relation 'is not a subset of'"
+          id="@cm_notsubset" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <notsubset/>
+    </math>
+  </button>
+
+
+  <!-- notsubset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The notsubset element is the relational operator element for the set-theoretic relation 'is not a subset of'"
+          id="@cm_notsubset2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <notsubset/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- notprsubset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The notprsubset element is the operator element for the set-theoretic relation 'is not a proper subset of'"
+          id="@cm_notprsubset" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <notprsubset/>
+    </math>
+  </button>
+
+
+  <!-- notprsubset                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The notprsubset element is the operator element for the set-theoretic relation 'is not a proper subset of'"
+          id="@cm_notprsubset2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <notprsubset/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- setdiff                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The setdiff element is the operator element for a set-theoretic difference of two sets"
+          id="@cm_setdiff" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <setdiff/>
+    </math>
+  </button>
+
+
+  <!-- setdiff                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The setdiff element is the operator element for a set-theoretic difference of two sets"
+          id="@cm_setdiff2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <setdiff/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- card                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The card element is the operator element for the size or cardinality of a set"
+          id="@cm_card" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <card/>
+    </math>
+  </button>
+
+
+  <!-- card                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The card element is the operator element for the size or cardinality of a set"
+          id="@cm_card1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <card/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- cartesianproduct                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cartesianproduct element is the operator element for the Cartesian product of two or more sets"
+          id="@cm_cartesianproduct" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <cartesianproduct/>
+    </math>
+  </button>
+
+
+  <!-- cartesianproduct                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cartesianproduct element is the operator element for the Cartesian product of two or more sets"
+          id="@cm_cartesianproduct2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <cartesianproduct/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- cartesianproduct                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cartesianproduct element is the operator element for the Cartesian product of two or more sets"
+          id="@cm_cartesianproduct3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <cartesianproduct/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- cartesianproduct                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cartesianproduct element is the operator element for the Cartesian product of two or more sets"
+          id="@cm_cartesianproduct_ask" type="mathml" rows="ask"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <cartesianproduct/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- cartesianproduct                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cartesianproduct element is the operator element for the Cartesian product of two or more sets"
+          id="@cm_cartesianproduct_q1" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <cartesianproduct/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+        <uplimit><mrow __flag="0x20000000"></mrow></uplimit>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- cartesianproduct                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cartesianproduct element is the operator element for the Cartesian product of two or more sets"
+          id="@cm_cartesianproduct_q2" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <cartesianproduct/>
+        <bvar><mrow __flag="0x20000000"></mrow></bvar>
+        <interval>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </interval>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- cartesianproduct                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The cartesianproduct element is the operator element for the Cartesian product of two or more sets"
+          id="@cm_cartesianproduct_q3" type="mathml" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <cartesianproduct/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+</toolbar>

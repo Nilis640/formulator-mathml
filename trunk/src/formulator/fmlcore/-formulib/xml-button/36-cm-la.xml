@@ -1,0 +1,541 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Content MathML: linear algebra templates                      -->
+<!--                                                                        -->
+<toolbar id="@t@CMLinearAlgebra@"
+         group="Content"
+         name="Linear algebra" 
+         caption="Linear Algebra" 
+         image="images/buttons/cm_la.bmp"
+         image-title="images/title/t_cm_la_n.bmp"
+         image-title-hot="images/title/t_cm_la_h.bmp"
+         columns="5" >
+
+  <!-- 1 row 1 column vector                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="1 row 1 column vector" type="mathml" rows="1" columns="1" id="@cm_vector 1x1" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <vector>
+          <mrow __flag="0x20000000"></mrow>
+        </vector>
+    </math>
+  </button>
+
+
+  <!-- 2 row 1 column vector                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="2 row 1 column vector" type="mathml" rows="2" columns="1" id="@cm_vector 2x1" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <vector>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </vector>
+    </math>
+  </button>
+
+
+  <!-- 3 row 1 column vector                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="3 row 1 column vector" type="mathml" rows="3" columns="1" id="@cm_vector 3x1" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <vector>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </vector>
+    </math>
+  </button>
+
+
+  <!-- 4 row 1 column vector                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="4 row 1 column vector" type="mathml" rows="4" columns="1" id="@cm_vector 4x1" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <vector>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </vector>
+    </math>
+  </button>
+
+
+  <!-- Variable-size vector                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Variable-size vector" type="mathml" rows="ask" columns="1" id="@cm_vector ask x 1" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <vector>
+          <mrow __flag="0x20000000"></mrow>
+        </vector>
+    </math>
+  </button>
+
+
+  <!-- 1 row 1 column matrix                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="1 row 1 column matrix" type="mathml" rows="1" columns="1" id="@cm_matrix 1x1" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+  <!-- 1 row 2 column matrix                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="1 row 2 column matrix" type="mathml" rows="1" columns="2" id="@cm_matrix 1x2" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <!-- 2 row 1 column matrix                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="2 row 1 column matrix" type="mathml" rows="2" columns="1" id="@cm_matrix 2x1" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <!-- 2 row 2 column matrix                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="2 row 2 column matrix" type="mathml" rows="2" columns="2" id="@cm_matrix 2x2" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- 1 row 3 column matrix                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="1 row 3 column matrix" type="mathml" rows="1" columns="3" id="@cm_matrix 1x3" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <!-- 3 row 1 column matrix                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="3 row 1 column matrix" type="mathml" rows="3" columns="1" id="@cm_matrix 3x1" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <!-- 3 row 3 column matrix                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="3 row 3 column matrix" type="mathml" rows="3" columns="3" id="@cm_matrix 3x3" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- 1 row 4 column matrix                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="1 row 4 column matrix" type="mathml" rows="1" columns="4" id="@cm_matrix 1x4" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <!-- 4 row 1 column matrix                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="4 row 1 column matrix" type="mathml" rows="4" columns="1" id="@cm_matrix 4x1" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <!-- 4 row 4 column matrix                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="4 row 4 column matrix" type="mathml" rows="4" columns="4" id="@cm_matrix 4x4" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- Variable-size row matrix                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Variable-size row matrix" type="mathml" rows="1" columns="ask" id="@cm_matrix 1 x ask" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <!-- Variable-size column matrix                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Variable-size column matrix" type="mathml" rows="ask" columns="1" id="@cm_matrix ask x 1" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <!-- Variable-size matrix                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Variable-size matrix" type="mathml" rows="ask" columns="ask" id="@cm_matrix ask x ask" 
+          vertical-center-type="half"
+  >
+    <math display='block'>
+        <matrix>
+          <matrixrow>
+            <mrow __flag="0x20000000"></mrow>
+          </matrixrow>
+        </matrix>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- determinant                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The determinant of a matrix" id="@determinant" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <determinant/>
+    </math>
+  </button>
+
+
+  <!-- determinant                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The determinant of a matrix" id="@determinant_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <determinant/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- transpose                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The transpose of a matrix" id="@transpose_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <transpose/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- selector                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Indexing into vectors, matrices and lists" id="@selector_apply2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" eatleftop="yes" >
+    <math display='block'>
+        <apply>
+          <selector/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- selector                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Indexing into vectors, matrices and lists" id="@selector_apply3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <selector/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- selector                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Indexing into vectors, matrices and lists" id="@selector_apply_ask" 
+          type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <selector/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- vectorproduct                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The operator element for deriving the vector product of two vectors" id="@vectorproduct" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <vectorproduct/>
+    </math>
+  </button>
+
+
+  <!-- vectorproduct                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The vector product of two vectors" id="@vectorproduct_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <vectorproduct/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- scalarproduct                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The operator element for deriving the scalar product of two vectors" id="@scalarproduct" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <scalarproduct/>
+    </math>
+  </button>
+
+
+  <!-- scalarproduct                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The scalar product of two vectors" id="@scalarproduct_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <scalarproduct/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- outerproduct                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The operator element for deriving the outer product of two vectors" id="@outerproduct" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <outerproduct/>
+    </math>
+  </button>
+
+
+  <!-- outerproduct                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The outer product of two vectors" id="@outerproduct_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <outerproduct/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+</toolbar>

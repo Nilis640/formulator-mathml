@@ -1,0 +1,207 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Set theory symbols                                            -->
+<!--                                                                        -->
+<toolbar id="@t@Set@"
+         group="Presentation"
+         name="Set theory symbols" 
+         caption="Set"
+         image="images/buttons/set.bmp"
+         image-title="images/title/t_set_n.bmp" 
+         image-title-hot="images/title/t_set_h.bmp" >
+
+  <!-- Element of                                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Element of (Ctrl+K,E)"
+          type="text" value="&amp;#x2208;" style="mathextra" id="@in"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="E" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&isin;" type="mo" />
+    <dsr head="@in" tail=" " param="$empty$" />
+  </button>
+
+  <!-- Not an element of                                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Not an element of (Ctrl+K,Shift+E)"
+          type="text" value="&amp;#x2209;" style="mathextra" id="@not_in"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence shift="yes" key="E" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&notin;" type="mo" />
+    <dsr head="@not_in" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Union                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Union (Ctrl+K,U)"
+          type="text" value="&amp;#x222A;" style="mathextra" id="@sadd"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="U" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&cup;" type="mo" />
+    <dsr head="@sadd" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Intersection                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Intersection (Ctrl+K,X)"
+          type="text" value="&amp;#x2229;" style="mathextra" id="@smul"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="X" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&cap;" type="mo" />
+    <dsr head="@smul" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Subset                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Subset (Ctrl+K,C)"
+          type="text" value="&amp;#x2282;" style="mathextra" id="@set_in"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="C" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&sub;" type="mo" />
+    <dsr head="@set_in" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Superset                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Superset (Ctrl+K,S)"
+          type="text" value="&amp;#x2283;" style="mathextra" id="@set_in_inv"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="S" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&sup;" type="mo" />
+    <dsr head="@set_in_inv" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Subset of or equal to                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Subset of or equal to"
+          type="text" value="&amp;#x2286;" style="mathextra" id="@set_in_eq"
+  >
+    <mathml value="&subE;" type="mo" />
+    <dsr head="@set_in_eq" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Superset of or equal to                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Superset of or equal to"
+          type="text" value="&amp;#x2287;" style="mathextra" id="@set_in_eq_inv"
+  >
+    <mathml value="&supE;" type="mo" />
+    <dsr head="@set_in_eq_inv" tail=" " param="$empty$" />
+  </button>
+
+  <!-- Subset of with not equal to                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Subset of with not equal to"
+          type="text" value="&amp;#x228A;" style="mathextra" id="@set_with_not_in_eq"
+  >
+    <mathml value="&subnE;" type="mo" />
+    <dsr head="@set_with_not_in_eq" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Superset of with not equal to                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Superset of with not equal to"
+          type="text" value="&amp;#x228B;" style="mathextra" id="@set_with_not_in_eq_inv"
+  >
+    <mathml value="&supnE;" type="mo" />
+    <dsr head="@set_with_not_in_eq_inv" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Not a subset of                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Not a subset of (Ctrl+K,Shift+C)"
+          type="text" value="&amp;#x2284;" style="mathextra" id="@set_not_in"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence shift="yes" key="C" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&vnsub;" type="mo" />
+    <dsr head="@set_not_in" tail=" " param="$empty$" />
+  </button>
+
+  <!-- Empty set                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Empty set (Ctrl+K,O)"
+          type="text" value="&amp;#x2205;" style="mathextra" id="@set_empty"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="O" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&emptyv;" type="mo" />
+    <dsr head="@set_empty" tail=" " param="$empty$" />
+  </button>
+
+</toolbar>

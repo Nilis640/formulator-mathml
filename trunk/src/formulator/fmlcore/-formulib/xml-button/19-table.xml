@@ -1,0 +1,206 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Table templates                                               -->
+<!--                                                                        -->
+<toolbar id="@t@Table@"
+         group="Presentation"
+         name="Table templates"
+         caption="Table"
+         image="images/buttons/table.bmp"
+         image-title="images/title/t_table_n.bmp" 
+         image-title-hot="images/title/t_table_h.bmp" >
+
+  <!-- 1 row 1 column frame                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="1 row 1 column frame" rows=1 columns=1 id="@table 1x1" 
+          vertical-center-type="half"
+  >
+    <frames>
+      <frame left= 0 top=0 right=100 bottom=100 halign="center" valign="center" />
+    </frames>
+    <mathml name="mrow" />
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- 1 row 2 column table                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="1 row 2 column table" rows=1 columns=2 id="@table 1x2" 
+          vertical-center-type="half"
+  >
+    <frames>
+      <frame left= 0 top=0 right= 40 bottom=100 halign="center" valign="center" />
+      <frame left=60 top=0 right=100 bottom=100 halign="center" valign="center" />
+    </frames>
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- 2 row 1 column table                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="2 row 1 column table" rows=2 columns=1 id="@table 2x1" 
+          vertical-center-type="half"
+  >
+    <frames>
+      <frame left=0 top= 0 right=100 bottom= 40 halign="center" valign="center" />
+      <frame left=0 top=60 right=100 bottom=100 halign="center" valign="center" />
+    </frames>
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- 2 row 2 column table                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="2 row 2 column table" 
+          type="formula" value="table" rows=2 columns=2 id="@table 2x2" 
+          vertical-center-type="half"
+  >
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- 1 row 3 column table                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="1 row 3 column table" 
+          type="formula" value="table" rows=1 columns=3 id="@table 1x3" 
+          vertical-center-type="half"
+  >
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- 3 row 1 column table                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="3 row 1 column table" 
+          type="formula" value="table" rows=3 columns=1 id="@table 3x1" 
+          vertical-center-type="half"
+  >
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- 3 row 3 column table                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="3 row 3 column table" 
+          type="formula" value="table" rows=3 columns=3 id="@table 3x3" 
+          vertical-center-type="half"
+  >
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- 1 row 4 column table                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="1 row 4 column table" 
+          type="formula" value="table" rows=1 columns=4 id="@table 1x4" 
+          vertical-center-type="half"
+  >
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- 4 row 1 column table                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="4 row 1 column table" 
+          type="formula" value="table" rows=4 columns=1 id="@table 4x1" 
+          vertical-center-type="half"
+  >
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- 4 row 4 column table                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="4 row 4 column table" 
+          type="formula" value="table" rows=4 columns=4 id="@table 4x4" 
+          vertical-center-type="half"
+  >
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Variable-size row table                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Variable-size row table" 
+          type="formula" value="table" rows=1 columns="ask" id="@table 1 x ask" 
+          vertical-center-type="half"
+  >
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Variable-size column table                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Variable-size column table" 
+          type="formula" value="table" rows="ask" columns=1 id="@table ask x 1" 
+          vertical-center-type="half"
+  >
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Variable-size table                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Variable-size table" 
+          type="formula" value="table" rows="ask" columns="ask" id="@table ask x ask" 
+          vertical-center-type="half"
+  >
+    <mathml name="mtable" type="table"/>
+    <dsr head="@table( " tail=")" separator="," 
+         param="$rows$" param="$columns$" param="$child_list$" bracket="off" />
+  </button>
+
+</toolbar>

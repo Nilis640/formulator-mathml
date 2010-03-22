@@ -1,0 +1,179 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Special Constants                                             -->
+<!--                                                                        -->
+<toolbar id="@t@Const@"
+         group="Presentation"
+         name="Special constants"
+         caption="Const" 
+         image="images/buttons/constants.bmp"
+         image-title="images/title/t_constants_n.bmp" 
+         image-title-hot="images/title/t_constants_h.bmp" >
+
+
+  <!-- Capital Differential D                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Capital differential D"
+          type="text" value="D" style="variable" id="@capitaldifferentiald"
+  >
+    <mathml value="&CapitalDifferentialD;" type="mo" />
+    <dsr head="@capitaldifferentiald" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Differential D                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Differential D"
+          type="text" value="d" style="variable" id="@differentiald"
+  >
+    <mathml value="&DifferentialD;" type="mo" />
+    <dsr head="@differentiald" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Partial Differential                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Partial Differential (Ctrl+K,D)"
+          type="text" value="&amp;#x2202;" style="mathextra" id="@partiald"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence            key="D" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&PartialD;" type="mo" />
+    <dsr head="@partiald" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Exponential e            value="&amp;#x212F;" style="mathextra"      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Exponential e"
+          type="text" value="e" style="variable" id="@exponentiale"
+  >
+    <mathml value="&ExponentialE;" type="mi" />
+    <dsr head="@exponentiale" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Imaginary i                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Imaginary i"
+          type="text" value="i" style="mathextra" id="@imaginaryi"
+  >
+    <mathml value="&ImaginaryI;" type="mi" />
+    <dsr head="@imaginaryi" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Greek small letter pi                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Greek small letter pi (Ctrl+G,P)"
+          type="text" value="&amp;#x03C0;" style="mathextra" id="pi" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="P" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&pi;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Planck constant over two pi                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Planck constant over two pi (Ctrl+K,H)"
+          type="text" value="&amp;#x210F;" style="mathextra" id="@planck2pi"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="H" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&hbar;" type="mi" />
+    <dsr head="@planck2pi" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Infinity                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Infinity (Ctrl+K,I)"
+          type="text" value="&amp;#x221E;" style="mathextra" id="@infinity"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence            key="I" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&infin;" type="mi" />
+    <dsr head="@infinity" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Latin small letter lambda with stroke                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Latin small letter lambda with stroke (Ctrl+K,L)"
+          type="text" value="&amp;#x019B;" style="mathextra" id="@lambda_stroke"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence             key="L" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&amp;#x019B;" type="mi" />
+    <dsr head="@lambda_stroke" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Script small l                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Script small l (Ctrl+Shift+K,L)"
+          type="text" value="&amp;#x2113;" style="mathextra" id="@ell"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="K" />
+        <sequence                        key="L" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&ell;" type="mi" />
+    <dsr head="@ell" tail=" " param="$empty$" />
+  </button>
+
+
+</toolbar>

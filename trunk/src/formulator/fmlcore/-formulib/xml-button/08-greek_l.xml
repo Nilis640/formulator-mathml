@@ -1,0 +1,357 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Greek characters (lowercase)                                  -->
+<!--                                                                        -->
+<toolbar id="@t@GreekLo@"
+         group="Presentation"
+         name="Greek characters (lowercase)" 
+         caption="Greek Lo" 
+         image="images/buttons/greek_l.bmp" 
+         image-title="images/title/t_greek_l_n.bmp" 
+         image-title-hot="images/title/t_greek_l_h.bmp" >
+
+  <!-- Greek characters (lowercase)                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Greek small letter alpha (Ctrl+G,A)"
+          type="text" value="&amp;#x03B1;" style="mathextra" id="alpha" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="A" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&alpha;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter beta (Ctrl+G,B)"
+          type="text" value="&amp;#x03B2;" style="mathextra" id="beta" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="B" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&beta;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter gamma (Ctrl+G,G)"
+          type="text" value="&amp;#x03B3;" style="mathextra" id="gamma" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="G" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&gamma;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter delta (Ctrl+G,D)"
+          type="text" value="&amp;#x03B4;" style="mathextra" id="delta" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="D" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&delta;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter epsilon (Ctrl+G,E)"
+          type="text" value="&amp;#x03B5;" style="mathextra" id="epsiv" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="E" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&epsiv;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter zeta (Ctrl+G,Z)"
+          type="text" value="&amp;#x03B6;" style="mathextra" id="zeta" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="Z" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&zeta;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter eta (Ctrl+G,H)"
+          type="text" value="&amp;#x03B7;" style="mathextra" id="eta" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="H" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&eta;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter theta (Ctrl+G,Q)"
+          type="text" value="&amp;#x03B8;" style="mathextra" id="theta" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="Q" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&theta;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter iota (Ctrl+G,I)"
+          type="text" value="&amp;#x03B9;" style="mathextra" id="iota" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="I" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&iota;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter kappa (Ctrl+G,K)"
+          type="text" value="&amp;#x03BA;" style="mathextra" id="kappa" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="K" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&kappa;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter lambda (Ctrl+G,L)"
+          type="text" value="&amp;#x03BB;" style="mathextra" id="lambda" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="L" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&lambda;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter mu (Ctrl+G,M)"
+          type="text" value="&amp;#x03BC;" style="mathextra" id="mu" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="M" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&mu;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter nu (Ctrl+G,N)"
+          type="text" value="&amp;#x03BD;" style="mathextra" id="nu" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="N" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&nu;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter xi (Ctrl+G,X)"
+          type="text" value="&amp;#x03BE;" style="mathextra" id="xi" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="X" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&xi;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter omicron (Ctrl+G,O)"
+          type="text" value="&amp;#x03BF;" style="mathextra" id="ogr" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="O" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&ogr;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter pi (Ctrl+G,P)"
+          type="text" value="&amp;#x03C0;" style="mathextra" id="pi" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="P" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&pi;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter rho (Ctrl+G,R)"
+          type="text" value="&amp;#x03C1;" style="mathextra" id="rho" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="R" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&rho;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek sigma symbol (Ctrl+G,Shift+V)"
+          type="text" value="&amp;#x03C2;" style="mathextra" id="sigmav" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence shift="yes" key="V" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&sigmav;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter sigma (Ctrl+G,S)"
+          type="text" value="&amp;#x03C3;" style="mathextra" id="sigma" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="S" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&sigma;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter tau (Ctrl+G,T)"
+          type="text" value="&amp;#x03C4;" style="mathextra" id="tau" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="T" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&tau;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter upsilon (Ctrl+G,U)"
+          type="text" value="&amp;#x03C5;" style="mathextra" id="upsilon" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="U" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&upsilon;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter phi (Ctrl+G,F)"
+          type="text" value="&amp;#x03C6;" style="mathextra" id="phi" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="F" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&phi;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek phi symbol (Ctrl+G,J)"
+          type="text" value="&amp;#x03D5;" style="mathextra" id="phiv" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="J" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&phiv;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter chi (Ctrl+G,C)"
+          type="text" value="&amp;#x03C7;" style="mathextra" id="chi" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="C" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&chi;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter psi (Ctrl+G,Y)"
+          type="text" value="&amp;#x03C8;" style="mathextra" id="psi" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="Y" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&psi;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+  <button name="Greek small letter omega (Ctrl+G,W)"
+          type="text" value="&amp;#x03C9;" style="mathextra" id="omega" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="G" />
+        <sequence key="W" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&omega;" type="mi" />
+    <dsr head="" tail="$g " separator="" param="$child_list$" bracket="off" />
+  </button>
+
+</toolbar>
