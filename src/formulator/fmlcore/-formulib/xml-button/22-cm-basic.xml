@@ -1,0 +1,452 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Content MathML: Basic Content Elements templates              -->
+<!--                                                                        -->
+<toolbar id="@t@Apply@"
+         group="Content"
+         name="Basic content elements" 
+         caption="Basic" 
+         image="images/buttons/cm_basic.bmp"
+         image-title="images/title/t_cm_basic_n.bmp" 
+         image-title-hot="images/title/t_cm_basic_h.bmp" >
+
+  <!-- apply                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The apply element allows a function or operator to be applied to its arguments"
+          id="@apply2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- apply                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The apply element allows a function or operator to be applied to its arguments"
+          id="@apply3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- apply                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The apply element allows a function or operator to be applied to its arguments"
+          id="@apply4" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- apply                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The apply element allows a function or operator to be applied to its arguments"
+          id="@apply_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <button name="" id="@b@Empty@" type="text" />
+
+  <!-- inverse                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The functional inverse"
+          id="@apply_inverse" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <inverse/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- condition                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The condition element is used to assert that a Boolean valued expression should be true"
+          id="@condition" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <condition>
+          <mrow __flag="0x20000000"></mrow>
+        </condition>
+    </math>
+  </button>
+
+
+  <!-- declare                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Declare a specific mathematical object"
+          id="@declare_ask" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <declare __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </declare>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- lambda                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The lambda element is used to construct a user-defined function from an expression, bound variables, and qualifiers"
+          id="@lambda1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <lambda>
+        <bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <mrow __flag="0x20000000"></mrow>
+      </lambda>
+    </math>
+  </button>
+
+
+  <!-- lambda                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The lambda element is used to construct a user-defined function from an expression, bound variables, and qualifiers"
+          id="@lambda2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <lambda>
+        <bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <domainofapplication>
+          <mrow __flag="0x20000000"></mrow>
+        </domainofapplication>
+        <mrow __flag="0x20000000"></mrow>
+      </lambda>
+    </math>
+  </button>
+
+
+  <!-- lambda                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The lambda element is used to construct a user-defined function from an expression, bound variables, and qualifiers"
+          id="@lambda3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <lambda>
+        <domainofapplication>
+          <mrow __flag="0x20000000"></mrow>
+        </domainofapplication>
+        <mrow __flag="0x20000000"></mrow>
+      </lambda>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- compose                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The compose element represents the function composition operator"
+          id="@compose" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <compose/>
+    </math>
+  </button>
+
+
+  <!-- compose                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The compose element represents the function composition operator"
+          id="@compose2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <compose/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- compose                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The compose element represents the function composition operator"
+          id="@compose3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <compose/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- compose                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The compose element represents the function composition operator"
+          id="@compose_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <compose/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- compose                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The compose element represents the function composition operator"
+          id="@compose_q1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <apply>
+        <compose/>
+        <bvar __flag="0x10000000">
+          <mrow __flag="0x20000000"></mrow>
+        </bvar>
+        <domainofapplication>
+          <mrow __flag="0x20000000"></mrow>
+        </domainofapplication>
+        <mrow __flag="0x20000000"></mrow>
+      </apply>
+    </math>
+  </button>
+
+
+  <!-- ident                                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The ident element represents the identity function"
+          id="@ident" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <ident/>
+    </math>
+  </button>
+
+
+  <!-- domain                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The domain element denotes the domain of a given function, which is the set of values over which it is defined"
+          id="@domain" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <domain/>
+    </math>
+  </button>
+
+
+  <!-- domain                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The domain element denotes the domain of a given function, which is the set of values over which it is defined"
+          id="@domain_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <domain/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- codomain                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The codomain element denotes the codomain of a given function, which is a set containing all values taken by the function"
+          id="@codomain" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <codomain/>
+    </math>
+  </button>
+
+
+  <!-- codomain                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The codomain element denotes the codomain of a given function, which is a set containing all values taken by the function"
+          id="@codomain_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <codomain/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- image                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The image element denotes the image of a given function, which is the set of values taken by the function"
+          id="@image" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <image/>
+    </math>
+  </button>
+
+
+
+  <!-- domainofapplication                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The domainofapplication element is a qualifier which denotes the domain over which a given function is being applied"
+          id="@domainofapplication" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <domainofapplication>
+        <mrow __flag="0x20000000"></mrow>
+      </domainofapplication>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- interval                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The interval element is used to represent simple mathematical intervals of the real number line"
+          id="@interval_o" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1"
+          eatleftop="yes" >
+    <math display='block'>
+      <interval closure="open">
+        <mrow __flag="0x20000000"></mrow>
+        <mrow __flag="0x20000000"></mrow>
+      </interval>
+    </math>
+  </button>
+
+
+  <!-- interval                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The interval element is used to represent simple mathematical intervals of the real number line"
+          id="@interval_c" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <interval closure="closed">
+        <mrow __flag="0x20000000"></mrow>
+        <mrow __flag="0x20000000"></mrow>
+      </interval>
+    </math>
+  </button>
+
+
+  <!-- interval                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The interval element is used to represent simple mathematical intervals of the real number line"
+          id="@interval_oc" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <interval closure="open-closed">
+        <mrow __flag="0x20000000"></mrow>
+        <mrow __flag="0x20000000"></mrow>
+      </interval>
+    </math>
+  </button>
+
+
+  <!-- interval                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The interval element is used to represent simple mathematical intervals of the real number line"
+          id="@interval_co" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <interval closure="closed-open">
+        <mrow __flag="0x20000000"></mrow>
+        <mrow __flag="0x20000000"></mrow>
+      </interval>
+    </math>
+  </button>
+
+
+  <!-- assign                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The assignment operator"
+          id="@cm_assign" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <csymbol>&Assign;</csymbol>
+    </math>
+  </button>
+
+
+  <!-- assign                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The assignment operator"
+          id="@cm_assign2" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <csymbol>&Assign;</csymbol>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+</toolbar>

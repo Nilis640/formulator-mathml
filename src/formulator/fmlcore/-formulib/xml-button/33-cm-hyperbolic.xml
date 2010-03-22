@@ -1,0 +1,296 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Content MathML: common hyperbolic functions templates         -->
+<!--                                                                        -->
+<toolbar id="@t@Hyperbolic@"
+         group="Content"
+         name="Common hyperbolic functions" 
+         caption="Hyperbolic" 
+         image="images/buttons/cm_hyperbolic.bmp"
+         image-title="images/title/t_cm_hyperbolic_n.bmp"
+         image-title-hot="images/title/t_cm_hyperbolic_h.bmp"
+         columns="6" >
+
+  <!-- sinh                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: sinh" id="@sinh" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <sinh/>
+    </math>
+  </button>
+
+  <!-- cosh                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: cosh" id="@cosh" type="mathml" 
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <cosh/>
+    </math>
+  </button>
+
+  <!-- tanh                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: tanh" id="@tanh" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <tanh/>
+    </math>
+  </button>
+
+  <!-- sech                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: sech" id="@sech" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <sech/>
+    </math>
+  </button>
+
+  <!-- csch                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: csch" id="@csch" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <csch/>
+    </math>
+  </button>
+
+  <!-- coth                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: coth" id="@coth" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <coth/>
+    </math>
+  </button>
+
+  <!-- arcsinh                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arcsinh" id="@arcsinh" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <arcsinh/>
+    </math>
+  </button>
+
+  <!-- arccosh                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arccosh" id="@arccosh" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <arccosh/>
+    </math>
+  </button>
+
+  <!-- arctanh                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arctanh" id="@arctanh" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <arctanh/>
+    </math>
+  </button>
+
+  <!-- arcsech                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arcsech" id="@arcsech" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <arcsech/>
+    </math>
+  </button>
+
+  <!-- arccsch                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arccsch" id="@arccsch" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <arccsch/>
+    </math>
+  </button>
+
+  <!-- arccoth                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arccoth" id="@arccoth" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <arccoth/>
+    </math>
+  </button>
+
+  <!-- sinh                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: sinh" id="@sinh_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <sinh/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- cosh                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: cosh" id="@cosh_apply" type="mathml" 
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <cosh/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- tanh                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: tanh" id="@tanh_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <tanh/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- sech                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: sech" id="@sech_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <sech/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- csch                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: csch" id="@csch_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <csch/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- coth                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: coth" id="@coth_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <coth/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- arcsinh                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arcsinh" id="@arcsinh_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <arcsinh/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- arccosh                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arccosh" id="@arccosh_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <arccosh/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- arctanh                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arctanh" id="@arctanh_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <arctanh/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- arcsech                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arcsech" id="@arcsech_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <arcsech/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- arccsch                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arccsch" id="@arccsch_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <arccsch/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+  <!-- arccoth                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The standard hyperbolic function: arccoth" id="@arccoth_apply" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <arccoth/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+</toolbar>

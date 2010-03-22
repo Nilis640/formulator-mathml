@@ -1,0 +1,455 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Content MathML: Calculus and Vector Calculus Templates        -->
+<!--                                                                        -->
+<toolbar id="@t@CMCalculus@"
+         group="Content"
+         name="Calculus and vector calculus"
+         caption="Calculus" 
+         image="images/buttons/cm_calculus.bmp"
+         image-title="images/title/t_cm_calculus_n.bmp"
+         image-title-hot="images/title/t_cm_calculus_h.bmp"
+
+         columns="5" >
+
+
+  <!-- int                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The int element is the operator element for an integral"
+          id="@cm_int" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <int/>
+    </math>
+  </button>
+
+
+  <!-- int                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The int element is the operator element for an integral"
+          id="@cm_int1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <int/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- int                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The int element is the operator element for an integral (a definite integral, using the qualifiers lowlimit, uplimit)"
+          id="@cm_int2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <int/>
+          <bvar><mrow __flag="0x20000000"></mrow></bvar>
+          <lowlimit><mrow __flag="0x20000000"></mrow></lowlimit>
+          <uplimit><mrow __flag="0x20000000"></mrow></uplimit>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- int                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The int element is the operator element for an integral (specifies the domain of integration with an interval element)"
+          id="@cm_int3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <int/>
+          <bvar><mrow __flag="0x20000000"></mrow></bvar>
+          <interval>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </interval>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- int                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The int element is the operator element for an integral (specifies the domain of integration with an condition element)"
+          id="@cm_int4" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <int/>
+          <bvar><mrow __flag="0x20000000"></mrow></bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- diff                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The diff element is the differentiation operator element for functions of a single variable"
+          id="@cm_diff" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <diff/>
+    </math>
+  </button>
+
+
+  <!-- diff                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The diff element is the differentiation operator element for functions of a single variable (the derivative of a function)"
+          id="@cm_diff1" type="mathml" eatleftop="yes"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <diff/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- diff                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The diff element is the differentiation operator element for functions of a single variable (the derivative of an expression with respect to a bound variable)"
+          id="@cm_diff2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <diff/>
+          <bvar><mrow __flag="0x20000000"></mrow></bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- diff                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The diff element is the differentiation operator element for functions of a single variable (the derivative of an expression with respect to a bound variable)"
+          id="@cm_diff3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <diff/>
+          <bvar>
+            <mrow __flag="0x20000000"></mrow>
+            <degree><mrow __flag="0x20000000"></mrow></degree>
+          </bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- partialdiff                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The partialdiff element is the partial differentiation operator element for functions or algebraic expressions in several variables"
+          id="@cm_partialdiff" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <partialdiff/>
+    </math>
+  </button>
+
+
+  <!-- partialdiff                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The partialdiff element is the partial differentiation operator element for functions or algebraic expressions in several variables"
+          id="@cm_partialdiff1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <partialdiff/>
+          <bvar><mrow __flag="0x20000000"></mrow></bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- partialdiff                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The partialdiff element is the partial differentiation operator element for functions or algebraic expressions in several variables"
+          id="@cm_partialdiff2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <partialdiff/>
+          <bvar>
+            <mrow __flag="0x20000000"></mrow>
+            <degree><mrow __flag="0x20000000"></mrow></degree>
+          </bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- partialdiff                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The partialdiff element is the partial differentiation operator element for functions or algebraic expressions in several variables"
+          id="@cm_partialdiff3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <partialdiff/>
+          <degree><mrow __flag="0x20000000"></mrow></degree>
+          <bvar>
+            <mrow __flag="0x20000000"></mrow>
+            <degree><mrow __flag="0x20000000"></mrow></degree>
+          </bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- partialdiff                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The partialdiff element is the partial differentiation operator element for functions or algebraic expressions in several variables"
+          id="@cm_partialdiff1_ask" type="mathml" rows="ask"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <partialdiff/>
+          <bvar><mrow __flag="0x20000000"></mrow></bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- partialdiff                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The partialdiff element is the partial differentiation operator element for functions or algebraic expressions in several variables"
+          id="@cm_partialdiff2_ask" type="mathml" rows="ask"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <partialdiff/>
+          <bvar>
+            <mrow __flag="0x20000000"></mrow>
+            <degree><mrow __flag="0x20000000"></mrow></degree>
+          </bvar>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- partialdiff                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The partialdiff element is the partial differentiation operator element for functions or algebraic expressions in several variables"
+          id="@cm_partialdiff3_ask" type="mathml" rows="ask"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <partialdiff/>
+          <bvar>
+            <mrow __flag="0x20000000"></mrow>
+            <degree><mrow __flag="0x20000000"></mrow></degree>
+          </bvar>
+          <degree><mrow __flag="0x20000000"></mrow></degree>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- partialdiff                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The partialdiff element is the partial differentiation operator element for functions or algebraic expressions in several variables"
+          id="@cm_partialdiff4_list1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <partialdiff/>
+          <list>
+            <mrow __flag="0x20000000"></mrow>
+          </list>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- partialdiff                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The partialdiff element is the partial differentiation operator element for functions or algebraic expressions in several variables"
+          id="@cm_partialdiff4_list2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <partialdiff/>
+          <list>
+            <mrow __flag="0x20000000"></mrow>
+            <mrow __flag="0x20000000"></mrow>
+          </list>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- partialdiff                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The partialdiff element is the partial differentiation operator element for functions or algebraic expressions in several variables"
+          id="@cm_partialdiff4_list_ask" type="mathml" rows="ask"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <partialdiff/>
+          <list>
+            <mrow __flag="0x20000000"></mrow>
+          </list>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- divergence                                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The divergence element is the vector calculus divergence operator"
+          id="@cm_divergence" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <divergence/>
+    </math>
+  </button>
+
+
+  <!-- divergence                                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The divergence element is the vector calculus divergence operator"
+          id="@cm_divergence1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <divergence/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- grad                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The grad element is the vector calculus gradient operator"
+          id="@cm_grad" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <grad/>
+    </math>
+  </button>
+
+
+  <!-- grad                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The grad element is the vector calculus gradient operator"
+          id="@cm_grad1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <grad/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <button name="" id="@b@Empty@" type="text" />
+
+
+  <!-- curl                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The curl element is the vector calculus curl operator"
+          id="@cm_curl" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <curl/>
+    </math>
+  </button>
+
+
+  <!-- curl                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The curl element is the vector calculus curl operator"
+          id="@cm_curl1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <curl/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- laplacian                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The laplacian element is the vector calculus laplacian operator"
+          id="@cm_laplacian" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <laplacian/>
+    </math>
+  </button>
+
+
+  <!-- laplacian                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The laplacian element is the vector calculus laplacian operator"
+          id="@cm_laplacian1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <laplacian/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+</toolbar>

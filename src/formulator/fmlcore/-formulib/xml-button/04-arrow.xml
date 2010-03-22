@@ -1,0 +1,328 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Arrow symbols                                                 -->
+<!--                                                                        -->
+<toolbar id="@t@Arrow@"
+         group="Presentation"
+         name="Arrow symbols" 
+         caption="Arrow"
+         image="images/buttons/arrow.bmp"
+         image-title="images/title/t_arrow_n.bmp" 
+         image-title-hot="images/title/t_arrow_h.bmp" >
+
+
+  <!-- Left right arrow                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left right arrow (Ctrl+K,Alt+Left)"
+          type="text" value="&amp;#x2194;" style="mathextra" id="@arrow_h"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence alt ="yes" key="Left" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&harr;" type="mo" />
+    <dsr head="@arrow_h" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Rightwards arrow                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Rightwards arrow (Ctrl+K,Right)"
+          type="text" value="&amp;#x2192;" style="mathextra" id="@arrow_r"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence            key="Right" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&rarr;" type="mo" />
+    <dsr head="@arrow_r" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Leftwards arrow                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Leftwards arrow (Ctrl+K,Left)"
+          type="text" value="&amp;#x2190;" style="mathextra" id="@arrow_l"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence            key="Left" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&larr;" type="mo" />
+    <dsr head="@arrow_l" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Up down arrow                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Up down arrow (Ctrl+K,Alt+Up)"
+          type="text" value="&amp;#x2195;" style="mathextra" id="@arrow_v"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence alt ="yes" key="Up" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&varr;" type="mo" />
+    <dsr head="@arrow_v" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Upwards arrow                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upwards arrow (Ctrl+K,Up)"
+          type="text" value="&amp;#x2191;" style="mathextra" id="@arrow_u"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence            key="Up" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&uarr;" type="mo" />
+    <dsr head="@arrow_u" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Downwards arrow                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Downwards arrow (Ctrl+K,Down)"
+          type="text" value="&amp;#x2193;" style="mathextra" id="@arrow_d"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence            key="Down" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&darr;" type="mo" />
+    <dsr head="@arrow_d" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Left right double arrow                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left right double arrow (Ctrl+K,Alt+Shift+Left)"
+          type="text" value="&amp;#x21D4;" style="mathextra" id="@darrow_h"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence alt ="yes" shift="yes" key="Left" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&hArr;" type="mo" />
+    <dsr head="@darrow_h" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Rightwards double arrow                                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Rightwards double arrow (Ctrl+K,Shift+Right)"
+          type="text" value="&amp;#x21D2;" style="mathextra" id="@darrow_r"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence shift="yes" key="Right" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&rArr;" type="mo" />
+    <dsr head="@darrow_r" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Leftwards double arrow                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Leftwards double arrow (Ctrl+K,Shift+Left)"
+          type="text" value="&amp;#x21D0;" style="mathextra" id="@darrow_l"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence shift="yes" key="Left" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&lArr;" type="mo" />
+    <dsr head="@darrow_l" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Up down double arrow                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Up down double arrow (Ctrl+K,Alt+Shift+Up)"
+          type="text" value="&amp;#x21D5;" style="mathextra" id="@darrow_v"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence alt ="yes" shift="yes" key="Up" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&vArr;" type="mo" />
+    <dsr head="@darrow_v" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Upwards double arrow                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upwards double arrow (Ctrl+K,Shift+Up)"
+          type="text" value="&amp;#x21D1;" style="mathextra" id="@darrow_u"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence shift="yes" key="Up" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&uArr;" type="mo" />
+    <dsr head="@darrow_u" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Downwards double arrow                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Downwards double arrow (Ctrl+K,Shift+Down)"
+          type="text" value="&amp;#x21D3;" style="mathextra" id="@darrow_d"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="K" />
+        <sequence shift="yes" key="Down" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&dArr;" type="mo" />
+    <dsr head="@darrow_d" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- North east arrow                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="North east arrow"
+          type="text" value="&amp;#x2197;" style="mathextra" id="@aarrow_ne"
+  >
+    <mathml value="&nearr;" type="mo" />
+    <dsr head="@aarrow_ne" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- South west arrow                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="South west arrow"
+          type="text" value="&amp;#x2199;" style="mathextra" id="@aarrow_sw"
+  >
+    <mathml value="&swarr;" type="mo" />
+    <dsr head="@aarrow_sw" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- South east arrow                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="South east arrow"
+          type="text" value="&amp;#x2198;" style="mathextra" id="@aarrow_se"
+  >
+    <mathml value="&searr;" type="mo" />
+    <dsr head="@aarrow_se" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- North west arrow                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="North west arrow"
+          type="text" value="&amp;#x2196;" style="mathextra" id="@aarrow_nw"
+  >
+    <mathml value="&nwarr;" type="mo" />
+    <dsr head="@aarrow_nw" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Rightwards arrow over leftwards arrow                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Rightwards arrow over leftwards arrow"
+          type="text" value="&amp;#x21C4;" style="mathextra" id="@aarrow_rlarr"
+  >
+    <mathml value="&rlarr;" type="mo" />
+    <dsr head="@aarrow_rlarr" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Right harpoon over left harpoon                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right harpoon over left harpoon"
+          type="text" value="&amp;#x21CC;" style="mathextra" id="@aarrow_rlhar"
+  >
+    <mathml value="&rlhar;" type="mo" />
+    <dsr head="@aarrow_rlhar" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Rightwards arrow from bar                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Rightwards arrow from bar (Ctrl+K,Tab)"
+          type="text" value="&amp;#x21A6;" style="mathextra" id="@arrow_map"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence            key="Tab" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&map;" type="mo" />
+    <dsr head="@arrow_map" tail=" " param="$empty$" />
+  </button>
+
+
+  <!-- Downwards arrow with corner leftwards                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Downwards arrow with corner leftwards (Ctrl+K,Enter)"
+          type="text" value="&amp;#8629;" style="mathextra" id="@arrow_corner"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="K" />
+        <sequence            key="Enter" />
+      </hot-key>
+    </hot-keys>
+    <mathml value="&amp;#8629;" type="mo" />
+    <dsr head="@arrow_corner" tail=" " param="$empty$" />
+  </button>
+
+
+</toolbar>

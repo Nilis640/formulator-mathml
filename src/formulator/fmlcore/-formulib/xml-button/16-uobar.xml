@@ -1,0 +1,1334 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Underbar and overbar templates                                -->
+<!--                                                                        -->
+<toolbar id="@t@Bars@"
+         group="Presentation"
+         name="Underbar and overbar templates" 
+         caption="Bars" 
+         image="images/buttons/uobar.bmp"
+         image-title="images/title/t_uobar_n.bmp" 
+         image-title-hot="images/title/t_uobar_h.bmp" >
+
+
+  <!-- Tilde                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Tilde (Ctrl+^,~)" id="@tilde"
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence            shift="yes" key="~" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+
+
+	<object name="ARC" 
+              shape="spline" type="formula">
+			  
+        <point type="moveto" x=   "2	" y="82	" />
+		<point type="splnto" x=  "6	" y="52	" />
+		<point type="splnto" x=  "15	" y="3" />
+		<point type="splnto" x=  "30	" y="3" />
+		<point type="splnto" x=  "48	" y="3" />
+		<point type="splnto" x=  "60	" y="85	" />
+		<point type="splnto" x=  "73	" y="85	" />
+		<point type="splnto" x=  "87	" y="85	" />
+		<point type="splnto" x=  "92	" y="39	" />
+		<point type="splnto" x=  "95	" y="18	" />
+		<point type="lineto" x=  "98	" y="18	" />
+		<point type="splnto" x=  "93	" y="52	" />
+		<point type="splnto" x=  "90	" y="100	" />
+		<point type="splnto" x=  "74	" y="100	" />
+		<point type="splnto" x=  "60	" y="100	" />
+		<point type="splnto" x=  "44	" y="18	" />
+		<point type="splnto" x=  "30	" y="18	" />
+		<point type="splnto" x=  "18	" y="18	" />
+		<point type="splnto" x=  "10" y="54	" />
+		<point type="splnto" x=  "4	" y="82	" />
+		<point type="lineto" x=  "2	" y="82	" />
+
+      </object>
+
+    </objects>
+    <expr>
+		DY = 4;
+
+        ARC.top    = A.top;
+        ARC.bottom = ARC.top + DY - 1;
+        ARC.left   = A.left + 1;
+        ARC.right  = A.right - 1;
+
+		A.top_margin  = DY;
+		A.left_margin = 1;
+		A.right_margin = 1;
+    </expr>
+    <mathml mathml-template=
+"<mover>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"  <mo stretchy='true'>&tilde;</mo>&#x0D;&#x0A;"
+"</mover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@tilde(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Hat                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Hat (Ctrl+^,6)" id="@hat" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence                        key="6" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L" 
+              shape="spline" type="formula" >
+
+        <point type="moveto" x=   "0" y= "100" />
+        <point type="lineto" x=   "0" y=  "95" />
+        <point type="lineto" x=  "50" y=   "0" />
+        <point type="lineto" x= "100" y=  "95" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=  "50" y=  "5" />
+      </object>
+    </objects>
+    <expr>
+		DY = 8;
+
+        L.top    = A.top + 1;
+        L.bottom = L.top + DY - 2;
+        L.left   = A.left;
+        L.right  = A.right;
+
+		A.top_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<mover>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"  <mo stretchy='true'>&circ;</mo>&#x0D;&#x0A;"
+"</mover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@hat(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Arc                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Arc (Ctrl+^,9)" id="@frown" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence                        key="9" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="ARC" 
+              shape="spline-ex" type="formula" 
+              offset-direction-y="-0.1" >
+
+        <point type="moveto" x =   "0" y = "100" />
+        <point type="splnto" x =   "5" y =   "5" />
+        <point type="splnto" x =  "95" y =   "5" />
+        <point type="splnto" x = "100" y = "100" />
+      </object>
+
+       
+<!--    
+      <object name="ARC" shape="spline" type="formula" >
+        <point type="moveto" x =   "0" y =  "99" />
+        <point type="splnto" x =   "5" y =  "10" />
+        <point type="splnto" x =  "95" y =  "10" />
+        <point type="splnto" x = "100" y =  "99" />
+		<point type="lineto" x = "100" y =  "90" />
+		<point type="splnto" x =  "95" y =   "1" />
+        <point type="splnto" x =   "5" y =   "1" />
+        <point type="splnto" x =   "0" y =  "90" />
+        <point type="lineto" x =   "0" y =  "99" />
+      </object>                                     -->
+    </objects>
+    <expr>
+		DY = 9;
+
+        ARC.top    = A.top + 1;
+        ARC.bottom = ARC.top + DY - 2;
+        ARC.left   = A.left;
+        ARC.right  = A.right;
+
+		A.top_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<mover>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"  <mo stretchy='true'>&frown;</mo>&#x0D;&#x0A;"
+"</mover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@frown(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Joint status                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Joint status (Ctrl+^,J)" id="@jointstatus" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence                        key="J" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L" 
+              shape="spline" type="formula" >
+        <point type="moveto" x =   "0" y =   "0" />
+        <point type="lineto" x =   "0" y = "10" />
+        <point type="lineto" x = "100" y = "10" />
+        <point type="lineto" x = "100" y =   "0" />
+      </object>
+
+      <object name="HL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x =   "0" y = "100" />
+        <point type="lineto" x =   "10" y =  "100" />
+        <point type="lineto" x = "100" y =   "4" />
+        <point type="lineto" x = "92" y =  "4" />
+      </object>
+      <object name="HR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x =   "0" y = "100" />
+        <point type="lineto" x =   "10" y =  "100" />
+        <point type="lineto" x = "100" y =   "4" />
+        <point type="lineto" x = "92" y =  "4" />
+      </object>
+    </objects>
+    <expr>
+		DY = 8;
+		DX = 2;
+		BRD = 3;
+
+        LMO = A.left_margin;
+        A.left_margin = BRD;
+        A.right_margin = BRD;
+
+		A.top_margin  = DY;
+
+        L.top    = A.top + 1;
+        L.bottom = L.top + 1;
+        L.left   = A.left  + A.left_margin/* + DX*/;
+        L.right  = A.right - A.right_margin + (A.left_margin - LMO)/* - DX*/;
+
+        HL.top    = L.top;
+        HL.bottom = HL.top + (DY - 2);
+        HL.left   = L.left/* - DX*/ - BRD;
+        HL.right  = L.left;
+
+        HR.bottom = L.top;
+        HR.top    = HR.bottom + (DY - 2);
+        HR.left   = L.right;
+        HR.right  = L.right/* + DX*/ + BRD;
+    </expr>
+    <mathml name="menclose" type="joint-status" />
+    <dsr head="@jointstatus(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Over-bar                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Over-bar (Ctrl+^,-)" id="@overbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence                        key="-" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L" shape="line" type="formula" width="1" />
+    </objects>
+    <expr>
+		DY = 3;
+		TMO = A.top_margin;
+		A.top_margin  = DY;
+        L.top    = A.top + 2;
+        L.bottom = L.top;
+        L.left   = A.left;
+        L.right  = A.right;
+    </expr>
+    <mathml value="&macr;" type="mo" frame="mover" />
+    <dsr head="@overbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Double over-bar                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double over-bar (Ctrl+^,D)" id="@doverbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence                        key="D" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L1" shape="line" type="formula" width="1" />
+      <object name="L2" shape="line" type="formula" width="1" />
+    </objects>
+    <expr>
+		DY = 5;
+		TMO = A.top_margin;
+		A.top_margin  = DY;
+        L1.top    = A.top + 2;
+        L1.bottom = L1.top;
+        L1.left   = A.left;
+        L1.right  = A.right;
+        L2.top    = L1.top + 2;
+        L2.bottom = L2.top;
+        L2.left   = L1.left;
+        L2.right  = L1.right;
+    </expr>
+    <mathml mathml-template=
+"<mover>&#x0D;&#x0A;"
+"  <mover>&#x0D;&#x0A;"
+"    ///$$$ 1st slot&#x0D;&#x0A;"
+"    <mo>&macr;</mo>&#x0D;&#x0A;"
+"  </mover>&#x0D;&#x0A;"
+"  <mo>&macr;</mo>&#x0D;&#x0A;"
+"</mover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@doverbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Under-bar                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Under-bar (Ctrl+^,_)" id="@underbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence            shift="yes" key="_" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L" shape="line" type="formula" width="1" />
+    </objects>
+    <expr>
+		DY = 3;
+        L.top    = A.bottom + (DY - A.bottom_margin) - 1;
+        L.bottom = L.top;
+        L.left   = A.left;
+        L.right  = A.right;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml value="&macr;" type="mo" frame="munder" />
+    <dsr head="@underbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Double Under-bar                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double Under-bar (Ctrl+^,Shift+D)" id="@dunderbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="^" />
+        <sequence             shift="yes" key="D" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L1" shape="line" type="formula" width="1" />
+      <object name="L2" shape="line" type="formula" width="1" />
+    </objects>
+    <expr>
+		DY = 5;
+        L1.top    = A.bottom + (DY - A.bottom_margin) - 1;
+        L1.bottom = L1.top;
+        L1.left   = A.left;
+        L1.right  = A.right;
+        L2.top    = L1.top - 2;
+        L2.bottom = L2.top;
+        L2.left   = L1.left;
+        L2.right  = L1.right;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml mathml-template=
+"<munder>&#x0D;&#x0A;"
+"  <munder>&#x0D;&#x0A;"
+"    ///$$$ 1st slot&#x0D;&#x0A;"
+"    <mo>&macr;</mo>&#x0D;&#x0A;"
+"  </munder>&#x0D;&#x0A;"
+"  <mo>&macr;</mo>&#x0D;&#x0A;"
+"</munder>&#x0D;&#x0A;"
+	/>
+    <dsr head="@dunderbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Right arrow over-bar                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right arrow over-bar (Ctrl+^,Right)" id="@raoverbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence                        key="Right" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DY = 6;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top;
+        L.left   = A.left;
+        L.right  = A.right - 3;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = A.right - 4;
+        AR.right  = A.right;
+
+		A.top_margin  = DY;
+    </expr>
+    <mathml value="&rarr;" type="mo" frame="mover" />
+    <dsr head="@raoverbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Left arrow over-bar                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left arrow over-bar (Ctrl+^,Left)" id="@laoverbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence                        key="Left" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DY = 6;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top;
+        L.left   = A.left + 3;
+        L.right  = A.right;
+
+        AL.top    = L.top - 2;
+        AL.bottom = L.top + 2;
+        AL.left   = A.left;
+        AL.right  = A.left + 4;
+
+		A.top_margin  = DY;
+    </expr>
+    <mathml value="&larr;" type="mo" frame="mover" />
+    <dsr head="@laoverbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Right harpoon over-bar                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right harpoon over-bar (Ctrl+^,Alt+Right)" id="@rhoverbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence alt ="yes" key="Right" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+
+	  <object name="L"  shape="line" type="formula" width="1" />
+      <object name="ARH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y= "66.8" />
+        <point type="lineto" x= "90" y= "66.8" />
+      </object>
+    </objects>
+    <expr>
+		DY = 6;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top;
+        L.left   = A.left;
+        L.right  = A.right - 3;
+
+        ARH.top    = L.top - 2;
+        ARH.bottom = L.top + 1;
+        ARH.left   = A.right - 4;
+        ARH.right  = A.right;
+
+		A.top_margin  = DY;
+    </expr>
+    <mathml value="&rharu;" type="mo" frame="mover" />
+    <dsr head="@rhoverbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Double-headed arrow over-bar                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double-headed arrow over-bar (Ctrl+^,Up)" id="@daoverbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="^" />
+        <sequence                         key="Up" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DY = 6;
+		DX = 2;
+
+        L.top    = A.top + 3;
+        L.bottom = L.top;
+        L.left   = A.left + 3;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        AL.top    = L.top - 2;
+        AL.bottom = L.top + 2;
+        AL.left   = A.left;
+        AL.right  = A.left + 4;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = A.right - 4;
+        AR.right  = A.right;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.top_margin  = DY;
+    </expr>
+    <mathml value="&harr;" type="mo" frame="mover" />
+    <dsr head="@daoverbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Right arrow under-bar                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right arrow under-bar (Ctrl+^,Shift+Right)" id="@raunderbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="^" />
+        <sequence             shift="yes" key="Right" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DY = 6;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 3;
+        L.bottom = L.top;
+        L.left   = A.left;
+        L.right  = A.right - 3;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = A.right - 4;
+        AR.right  = A.right;
+
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml value="&rarr;" type="mo" frame="munder" />
+    <dsr head="@raunderbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Left arrow under-bar                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Left arrow under-bar (Ctrl+^,Shift+Left)" id="@launderbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="^" />
+        <sequence             shift="yes" key="Left" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DY = 6;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 3;
+        L.bottom = L.top;
+        L.left   = A.left + 3;
+        L.right  = A.right;
+
+        AL.top    = L.top - 2;
+        AL.bottom = L.top + 2;
+        AL.left   = A.left;
+        AL.right  = A.left + 4;
+
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml value="&larr;" type="mo" frame="munder" />
+    <dsr head="@launderbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Right harpoon under-bar                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Right harpoon under-bar (Ctrl+^,Alt+Shift+Right)" id="@rhunderbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence alt ="yes" shift="yes" key="Right" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+	  <object name="L"  shape="line" type="formula" width="1" />
+      <object name="ARH" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y= "100" />
+        <point type="lineto" x=  "25" y=   "66.8" />
+        <point type="lineto" x= "90" y=   "66.8" />
+      </object>
+    </objects>
+    <expr>
+		DY = 6;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 3;
+        L.bottom = L.top;
+        L.left   = A.left;
+        L.right  = A.right - 3;
+
+        ARH.top    = L.top - 4;
+        ARH.bottom = L.top + 2;
+        ARH.left   = A.right - 4;
+        ARH.right  = A.right;
+
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml value="&rharu;" type="mo" frame="munder" />
+    <dsr head="@rhunderbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Double-headed arrow under-bar                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double-headed arrow under-bar (Ctrl+^,Shift+Up)" id="@daunderbar" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="^" />
+        <sequence             shift="yes" key="Up" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L"  shape="line" type="formula" width="1" />
+      <object name="AL" 
+              shape="spline" type="formula" >
+        <point type="moveto" x= "100" y=   "0" />
+        <point type="lineto" x=  "75" y=  "50" />
+        <point type="lineto" x= "100" y= "100" />
+        <point type="lineto" x=   "0" y=  "50" />
+      </object>
+      <object name="AR" 
+              shape="spline" type="formula" >
+        <point type="moveto" x=   "0" y=   "0" />
+        <point type="lineto" x=  "25" y=  "50" />
+        <point type="lineto" x=   "0" y= "100" />
+        <point type="lineto" x= "100" y=  "50" />
+      </object>
+    </objects>
+    <expr>
+		DY = 6;
+		DX = 2;
+
+        L.top    = A.bottom + (DY - A.bottom_margin) - 3;
+        L.bottom = L.top;
+        L.left   = A.left + 3;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin) - 3;
+
+        AL.top    = L.top - 2;
+        AL.bottom = L.top + 2;
+        AL.left   = A.left;
+        AL.right  = A.left + 4;
+
+        AR.top    = L.top - 2;
+        AR.bottom = L.top + 2;
+        AR.left   = A.right - 4;
+        AR.right  = A.right;
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+		A.bottom_margin  = DY;
+    </expr>
+    <mathml value="&harr;" type="mo" frame="munder" />
+    <dsr head="@daunderbar(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- OverBrace                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Over brace" id="@overbrace" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence            shift="yes" key="~" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+<objects>
+
+	<object name="CNW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "100		"y = "99		"/>
+		<point type="lineto" x =  "100		"y = "92		"/>
+		<point type="splnto" x =  "60		"y = "90		"/>
+		<point type="splnto" x =  "20		"y = "42		"/>
+		<point type="splnto" x =  "8		"y = "14		"/>
+		                                                   
+		<point type="lineto" x =  "3		"y = "14		"/>
+		<point type="splnto" x =  "10		"y = "29		"/>
+		<point type="splnto" x =  "50		"y = "104		"/>
+		<point type="splnto" x =  "100		"y = "99		"/>	
+      </object>                                
+
+     <object name="L1" 
+            shape="spline" type="formula"
+            alt-group="2"  >
+        <point type="moveto" x =   "0" 	y =   "-8" />
+        <point type="lineto" x =   "100" 	y = "-8" />
+		<point type="lineto" x =   "100" 	y = "0" />
+		<point type="lineto" x =   "0" 	y = "0" />
+      </object>   
+
+       <object name="CNE" 
+             shape="spline" type="formula"
+              alt-group="2"  >
+
+		<point type="moveto" x =  "0	"y = "99	"/>
+		<point type="lineto" x =  "0	"y = "92		"/> 
+		<point type="splnto" x =  "40	"y = "90		"/>   
+		<point type="splnto" x =  "80	"y = "42	"/>
+		<point type="splnto" x =  "92	"y = "14	"/>   	
+                                                               
+		<point type="lineto" x =  "97	"y = "14	"/>
+		<point type="splnto" x =  "90	"y = "29	"/>
+		<point type="splnto" x =  "50	"y = "104	"/>
+		<point type="splnto" x =  "0	"y = "99	"/>	
+                                                        
+      </object>                              
+
+     <object name="SE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "101,666666667		"y = "100		"/>
+		<point type="splnto" x =  "102,5		 		"y = "100		"/>
+		<point type="splnto" x =  "91,666666667	 		"y = "60	"/>
+		<point type="splnto" x =  "70	 				"y = "35	"/>
+		<point type="splnto" x =  "42					"y = "1	"/>
+		<point type="splnto" x =  "15	 				"y = "-10	"/>
+		<point type="splnto" x =  "0	 				"y = "-6	"/>
+		<point type="lineto" x =  "0	 				"y = "0	"/>
+		<point type="splnto" x =  "28,33333333	 		"y = "0	"/>
+		<point type="splnto" x =  "79	 				"y = "37	"/>
+		<point type="splnto" x =  "100	 				"y = "100		"/>
+      </object>
+
+      <object name="L2" 
+                 shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "0" 	y =   "-8" />
+        <point type="lineto" x =   "100" 	y = "-8" />
+		<point type="lineto" x =   "100" 	y = "0" />
+		<point type="lineto" x =   "0" 	y = "0" />
+      </object>   
+
+      <object name="SW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "-1,666666667		 	"y = "100		"/>
+		<point type="splnto" x =  "-2,5		 			"y = "100		"/>
+		<point type="splnto" x =  "8,333333333	 		"y = "60	"/>
+		<point type="splnto" x =  "30	 				"y = "35	"/>
+		<point type="splnto" x =  "58					"y = "1	"/>
+		<point type="splnto" x =  "85	 				"y = "-10	"/>
+		<point type="splnto" x =  "100	 				"y = "-6	"/>
+		<point type="lineto" x =  "100	 				"y = "0	"/>
+		<point type="splnto" x =  "71,66666667	 		"y = "0	"/>
+		<point type="splnto" x =  "21	 				"y = "37	"/>
+		<point type="splnto" x =  "0	 				"y = "100		"/>
+
+      </object>
+
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 4;
+		x_margin = 1;
+		y_margin = 1;
+
+ 		ALEN = A.right - A.left - A.left_margin - A.right_margin;
+		LR = max( 0, 4 * DX + 8 - ALEN ) / 2;
+		LDX = (ALEN + LR + LR - 4 * DX) / 2;
+
+		L1.top  = A.top + DY + y_margin;
+        L1.bottom   = L1.top + DY;
+		L1.left    = A.left + DX + x_margin;
+        L1.right = L1.left + LDX;
+
+        L2.left  = (A.left + A.right) * 0.5 + DX;
+        L2.right = L2.left + LDX;
+        L2.top   = L1.top;
+        L2.bottom  = L1.bottom;
+
+		SW.left  = L1.left - DX;
+		SW.right = L1.left;
+		SW.top   = L1.top;
+		SW.bottom  = L1.top + DY;
+
+		SE.left    = L2.right;
+		SE.right = L2.right + DX;
+		SE.top   = SW.top;
+		SE.bottom  = SW.bottom;
+
+		CNE.left    = L1.right;
+		CNE.right = CNE.left + DX;
+		CNE.top   = L1.top - DY;
+		CNE.bottom  = CNE.top + DY;
+
+		CNW.left    = CNE.right;
+		CNW.right = L2.left;
+		CNW.top   = CNE.top;
+		CNW.bottom  = CNE.bottom;
+ 
+		A.left_margin = LR + x_margin;
+		A.right_margin = LR + x_margin;
+		A.top_margin = 2 * DY + y_margin;
+
+    </expr>
+    <mathml mathml-template=
+"<mover>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"  <mo stretchy='true'>&OverBrace;</mo>&#x0D;&#x0A;"
+"</mover>&#x0D;&#x0A;"
+	/>
+    <dsr head="@overbrace(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- UnderBrace                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Under brace" id="@underbrace" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence            shift="yes" key="~" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+
+	<object name="CNW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "100		"y = "0		"/>
+		<point type="lineto" x =  "100		"y = "8		"/>
+		<point type="splnto" x =  "60		"y = "10		"/>
+		<point type="splnto" x =  "20		"y = "58		"/>
+		<point type="splnto" x =  "8		"y = "86		"/>
+		                                                   
+		<point type="lineto" x =  "3		"y = "86		"/>
+		<point type="splnto" x =  "10		"y = "71		"/>
+		<point type="splnto" x =  "50		"y = "-4		"/>
+		<point type="splnto" x =  "100		"y = "0		"/>	
+      </object>                                
+
+     <object name="L1" 
+            shape="spline" type="formula"
+            alt-group="2"  >
+        <point type="moveto" x =   "0" 	y =   "0" />
+        <point type="lineto" x =   "100" 	y = "0" />
+		<point type="lineto" x =   "100" 	y = "8" />
+		<point type="lineto" x =   "0" 	y = "8" />
+      </object>   
+
+       <object name="CNE" 
+             shape="spline" type="formula"
+              alt-group="2"  >
+
+		<point type="moveto" x =  "0	"y = "0	"/>
+		<point type="lineto" x =  "0	"y = "8		"/> 
+		<point type="splnto" x =  "40	"y = "10		"/>   
+		<point type="splnto" x =  "80	"y = "58	"/>
+		<point type="splnto" x =  "92	"y = "86	"/>   	
+                                                               
+		<point type="lineto" x =  "97	"y = "86	"/>
+		<point type="splnto" x =  "90	"y = "71	"/>
+		<point type="splnto" x =  "50	"y = "-4	"/>
+		<point type="splnto" x =  "0	"y = "0	"/>	
+                                                        
+      </object>                              
+
+     <object name="SE" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "101,666666667		"y = "0		"/>
+		<point type="splnto" x =  "102,5		 		"y = "0		"/>
+		<point type="splnto" x =  "91,666666667	 		"y = "40	"/>
+		<point type="splnto" x =  "70	 				"y = "65	"/>
+		<point type="splnto" x =  "42					"y = "97	"/>
+		<point type="splnto" x =  "15	 				"y = "110	"/>
+		<point type="splnto" x =  "0	 				"y = "106	"/>
+		<point type="lineto" x =  "0	 				"y = "100	"/>
+		<point type="splnto" x =  "28,33333333	 		"y = "100	"/>
+		<point type="splnto" x =  "79	 				"y = "63	"/>
+		<point type="splnto" x =  "100	 				"y = "0		"/>
+      </object>
+
+      <object name="L2" 
+                 shape="spline" type="formula"
+              alt-group="2"  >
+        <point type="moveto" x =   "0" 	y =   "0" />
+        <point type="lineto" x =   "100" 	y = "0" />
+		<point type="lineto" x =   "100" 	y = "8" />
+		<point type="lineto" x =   "0" 	y = "8" />
+      </object>   
+
+      <object name="SW" 
+              shape="spline" type="formula"
+              alt-group="2"  >
+		<point type="moveto" x =  "-1,666666667		 	"y = "0		"/>
+		<point type="splnto" x =  "-2,5		 			"y = "0		"/>
+		<point type="splnto" x =  "8,333333333	 		"y = "40	"/>
+		<point type="splnto" x =  "30	 				"y = "65	"/>
+		<point type="splnto" x =  "58					"y = "97	"/>
+		<point type="splnto" x =  "85	 				"y = "110	"/>
+		<point type="splnto" x =  "100	 				"y = "106	"/>
+		<point type="lineto" x =  "100	 				"y = "100	"/>
+		<point type="splnto" x =  "71,66666667	 		"y = "100	"/>
+		<point type="splnto" x =  "21	 				"y = "63	"/>
+		<point type="splnto" x =  "0	 				"y = "0		"/>
+
+      </object>
+
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 4;
+		x_margin = 1;
+		y_margin = 1;
+
+ 		ALEN = A.right - A.left - A.left_margin - A.right_margin;
+		LR = max( 0, 4 * DX + 8 - ALEN ) / 2;
+		LDX = (ALEN + LR + LR - 4 * DX) / 2;
+
+		L1.top  = A.bottom - DY - y_margin;
+        L1.bottom   = L1.top + DY;
+		L1.left    = A.left + DX + x_margin;
+        L1.right = L1.left + LDX;
+
+        L2.left  = (A.left + A.right) * 0.5 + DX;
+        L2.right = L2.left + LDX;
+        L2.top   = L1.top;
+        L2.bottom  = L1.bottom;
+
+		SW.left  = L1.left - DX;
+		SW.right = L1.left;
+		SW.top   = L1.top - DY;
+		SW.bottom  = L1.top;
+
+		SE.left    = L2.right;
+		SE.right = L2.right + DX;
+		SE.top   = SW.top;
+		SE.bottom  = SW.bottom;
+
+		CNE.left    = L1.right;
+		CNE.right = CNE.left + DX;
+		CNE.top   = L1.top;
+		CNE.bottom  = CNE.top + DY;
+
+		CNW.left    = CNE.right;
+		CNW.right = L2.left;
+		CNW.top   = CNE.top;
+		CNW.bottom  = CNE.bottom;
+ 
+		A.left_margin = LR + x_margin;
+		A.right_margin = LR + x_margin;
+		A.bottom_margin = 2 * DY + y_margin;
+
+    </expr>
+    <mathml mathml-template=
+"<munder>&#x0D;&#x0A;"
+"  ///$$$ 1st slot&#x0D;&#x0A;"
+"  <mo stretchy='true'>&UnderBrace;</mo>&#x0D;&#x0A;"
+"</munder>&#x0D;&#x0A;"
+	/>
+    <dsr head="@underbrace(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Horizontal mid-line strike-through                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Horizontal mid-line strike through (Ctrl+^,Alt+-)" id="@hormidstrike"
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence            alt ="yes"  key="-" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" />
+    </frames>
+    <objects>
+      <object name="L" shape="line" type="formula" />
+    </objects>
+    <expr>
+		DX = 2;
+
+        L.top    = average( A.top, A.bottom );
+        L.bottom = L.top;
+        L.left   = A.left;
+        L.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin);
+
+        A.left_margin = DX;
+        A.right_margin = DX;
+    </expr>
+    <mathml name="menclose" type="horizontalstrike" />
+    <dsr head="@hormidstrike(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Vertical mid-line strike-through                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Vertical mid-line strike through" id="@vermidstrike"
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" />
+    </frames>
+    <objects>
+      <object name="L" shape="line" type="formula" />
+    </objects>
+    <expr>
+		DY = 2;
+
+        L.left   = average( A.left, A.right );
+        L.right  = L.left;
+        L.top    = A.top;
+        L.bottom = A.bottom + (DY - A.bottom_margin) + (DY - A.top_margin);
+
+        A.top_margin = DY;
+        A.bottom_margin = DY;
+    </expr>
+    <mathml name="menclose" type="verticalstrike" />
+    <dsr head="@verstrike(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Strike-through                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Strike through (Ctrl+^,X)" id="@strike" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence                        key="X" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" />
+    </frames>
+    <objects>
+      <object name="L1" shape="line" type="formula" />
+      <object name="L2" shape="line" type="formula" />
+    </objects>
+    <expr>
+		DY = 2;
+		DX = 2;
+
+        L1.top    = A.top;
+        L1.bottom = A.bottom + (DY - A.bottom_margin);
+        L1.left   = A.left;
+        L1.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin);
+
+        L2.top    = L1.top;
+        L2.bottom = L1.bottom;
+        L2.left   = L1.right;
+        L2.right  = L1.left;
+
+        A.top_margin    = DY;
+        A.bottom_margin = DY;
+        A.left_margin   = DX;
+        A.right_margin  = DX;
+    </expr>
+    <mathml name="menclose" type="strike-through" />
+    <dsr head="@strike(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Strike-through (bottom-left to upper-right)                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Strike-through (bottom-left to upper-right) (Ctrl+^,/)" id="@strike_blur" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence                        key="/" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" />
+    </frames>
+    <objects>
+      <object name="L2" shape="line" type="formula" />
+    </objects>
+    <expr>
+		DY = 2;
+		DX = 2;
+
+        L2.top    = A.top;
+        L2.bottom = A.bottom + (DY - A.bottom_margin);
+        L2.left   = A.right + (DX - A.right_margin) + (DX - A.left_margin);
+        L2.right  = A.left;
+
+        A.top_margin    = DY;
+        A.bottom_margin = DY;
+        A.left_margin   = DX;
+        A.right_margin  = DX;
+    </expr>
+    <mathml name="menclose" type="updiagonalstrike" />
+    <dsr head="@strike_blur(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Strike-through (top-left to bottom-right)                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Strike-through (top-left to bottom-right) (Ctrl+^,\)" id="@strike_tlbr" 
+          vertical-center-type="frame" vertical-center-value="1" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="^" />
+        <sequence                        key="\" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" />
+    </frames>
+    <objects>
+      <object name="L1" shape="line" type="formula" />
+    </objects>
+    <expr>
+		DY = 2;
+		DX = 2;
+
+        L1.top    = A.top;
+        L1.bottom = A.bottom + (DY - A.bottom_margin);
+        L1.left   = A.left;
+        L1.right  = A.right + (DX - A.right_margin) + (DX - A.left_margin);
+
+        A.top_margin    = DY;
+        A.bottom_margin = DY;
+        A.left_margin   = DX;
+        A.right_margin  = DX;
+    </expr>
+    <mathml name="menclose" type="downdiagonalstrike" />
+    <dsr head="@strike_tlbr(" tail=")" param="$child_list$" bracket="off" />
+  </button>
+
+
+</toolbar>

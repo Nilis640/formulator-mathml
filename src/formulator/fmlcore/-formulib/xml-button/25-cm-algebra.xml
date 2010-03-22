@@ -1,0 +1,171 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Content MathML: Algebra Templates                             -->
+<!--                                                                        -->
+<toolbar id="@t@Algebra@"
+         group="Content"
+         name="Algebra operators"
+         caption="Algebra" 
+         image="images/buttons/cm_algebra.bmp"
+         image-title="images/title/t_cm_algebra_n.bmp"
+         image-title-hot="images/title/t_cm_algebra_h.bmp"
+
+         columns="2" >
+
+
+  <!-- abs                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The abs element represents the absolute value of a real quantity or the modulus of a complex quantity"
+          id="@cm_abs" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <abs/>
+    </math>
+  </button>
+
+
+  <!-- abs                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The abs element represents the absolute value of a real quantity or the modulus of a complex quantity"
+          id="@cm_abs1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <abs/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- conjugate                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The conjugate element represents the complex conjugate of a complex quantity"
+          id="@cm_conjugate" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <conjugate/>
+    </math>
+  </button>
+
+
+  <!-- conjugate                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The conjugate element represents the complex conjugate of a complex quantity"
+          id="@cm_conjugate1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <conjugate/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- arg                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The arg operator gives the 'argument' of a complex number, which is the angle (in radians) it makes with the positive real axis"
+          id="@cm_arg" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <arg/>
+    </math>
+  </button>
+
+
+  <!-- arg                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The arg operator gives the 'argument' of a complex number, which is the angle (in radians) it makes with the positive real axis"
+          id="@cm_arg1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <arg/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- real                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The real operator gives the real part of a complex number"
+          id="@cm_real" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <real/>
+    </math>
+  </button>
+
+
+  <!-- real                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The real operator gives the real part of a complex number"
+          id="@cm_real1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <real/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- imaginary                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The imaginary operator gives the imaginary part of a complex number"
+          id="@cm_imaginary" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <imaginary/>
+    </math>
+  </button>
+
+
+  <!-- imaginary                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The imaginary operator gives the imaginary part of a complex number"
+          id="@cm_imaginary1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <imaginary/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+</toolbar>

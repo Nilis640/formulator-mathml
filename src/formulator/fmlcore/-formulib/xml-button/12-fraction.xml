@@ -1,0 +1,242 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Fraction and radical templates                                -->
+<!--                                                                        -->
+<toolbar id="@t@Fraction@"
+         group="Presentation"
+         name="Fraction and radical templates" 
+         caption="Fractions and Roots" 
+         image="images/buttons/fraction.bmp"
+         image-title="images/title/t_fraction_n.bmp" 
+         image-title-hot="images/title/t_fraction_h.bmp" >
+
+  <!-- Full-size fraction                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Full-size fraction (Ctrl+F)" id="@fraction" 
+          vertical-center-type="object" vertical-center-value="1" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes"  key="F" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="10" top="0" right="90" bottom="45"
+            halign="center" valign="top" />
+      <frame name="B" left="10" top="55" right="90" bottom="100"
+            halign="center" valign="bottom" />
+    </frames>
+    <objects>
+      <object shape="line" name="X" type="formula" />
+    </objects>
+    <expr>
+      X.top    = average(A.bottom, B.top);
+      X.bottom = X.top;
+      X.left   = min(A.left,  B.left)/*  + 1*/;
+      X.right  = max(A.right, B.right)/* - 1*/;
+    </expr>
+    <mathml name="mfrac" />
+    <dsr head="@fraction( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+  <!-- Full-size diagonal fraction                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Full-size diagonal fraction (Ctrl+/)" id="@diagonal_fraction" 
+          bevelled="yes"
+          vertical-center-type="blank-average"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="/" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left= 0 top=0 right=50 bottom=50 
+            halign="center" valign="top" />
+      <frame name="B" left=50 top=50 right=100 bottom=100 
+            halign="center" valign="bottom" />
+    </frames>
+    <objects>
+      <object shape="line" name="X" type="formula" scale="fixed"/>
+    </objects>
+    <expr>
+      AB = 2;
+
+      X.bottom = A.top;
+      X.top = B.bottom;
+      YC = average(A.bottom, B.top);
+      LMO = A.left_margin;
+      L = B.left + (AB - A.right_margin) - (X.top - YC) / 1.732;
+
+      A.left_margin = max( 0, A.left + A.left_margin - L );
+      X.left = L + (A.left_margin - LMO);
+      X.right = X.left + (X.top - X.bottom) / 1.732;
+
+      B.right_margin = max( 0, X.right - 
+                                 (B.right - B.right_margin 
+                                 + (AB - B.left_margin) 
+                                 + (A.left_margin - LMO)) );
+      A.right_margin = AB;
+      B.left_margin = AB;
+    </expr>
+    <mathml name="mfrac" />
+    <dsr head="@diagonal_fraction( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+  <!-- Slash fraction                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Slash fraction (Ctrl+T, Alt+/)" id="/" 
+          vertical-center-type="half"
+          mathml-form="infix" 
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes"  key="T" />
+        <sequence alt ="yes"  key="/" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left= 0 top=0 right=50 bottom=100 
+            halign="center" valign="center" />
+      <frame name="B" left=50 top=0 right=100 bottom=100 
+            halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" name="X" type="formula" scale="fixed"/>
+    </objects>
+    <expr>
+        X.bottom = min(A.top, B.top);
+        X.top = max(A.bottom, B.bottom);
+        X.left = A.right + 1;
+        X.right = X.left + (X.top - X.bottom) / 3;
+        B.left_margin = X.right - B.left + 1;
+    </expr>
+    <mathml value="/" type="mo" frame="mrow" />
+    <dsr head="( " tail=")" separator="/" param="$child_list$" bracket="on" />
+  </button>
+
+  <!-- Square root                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Square root (Ctrl+R)" id="@sqrt" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes"  key="R" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame left=90 top=16 right=98 bottom=84 halign="center" valign="center" />
+    </frames>
+    <objects>
+    <object shape="line" left=70 top= 0 right=100 bottom=  0 />
+      <object shape="line" left=23 top=48 right= 40 bottom=100 />
+      <object shape="line" left=77 top= 0 right= 40 bottom=100 />
+      <object shape="line" left=30 top=48 right=  2 bottom= 48 />
+    </objects>
+    <mathml name="msqrt" />
+    <dsr head="@sqrt( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+<button name="nth root (Ctrl+T,N)" id="@root" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes"  key="T" />
+        <sequence             key="N" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame left=90 top= 16 right=99 bottom=84 halign="center" valign="center" />
+      <frame left= 5 top=  0 right=10 bottom=46 halign="right" valign="bottom" level="child" />
+    </frames>
+    <objects>
+      <object shape="line" left=70 top= 0 right=100 bottom=  0 />
+      <object shape="line" left=23 top=54 right= 40 bottom=100 />
+      <object shape="line" left=74 top= 0 right= 40 bottom=100 />
+      <object shape="line" left=27 top=54 right=  2 bottom= 54 />
+    </objects>
+    <mathml name="mroot" />
+    <dsr head="@root( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+  <!-- Long division                                                        -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Long division" id="@longdiv" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A"
+             left="0" top="0" right="100" bottom="100" 
+             halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="L1" 
+              shape="spline-ex" type="formula"
+              offset-direction-y="-0.1" >
+        <point type="moveto" x = "0"   y = "0" />
+        <point type="lineto" x = "100" y = "100" />
+      </object>
+      <object name="ARC" 
+              shape="spline-ex" type="formula" 
+              offset-direction-x="0.1" >
+
+        <point type="moveto" x =  "0" y = "100" />
+        <point type="splnto" x = "90" y =  "70" />
+        <point type="splnto" x = "90" y =  "30" />
+        <point type="splnto" x =  "0" y =   "0" />
+      </object>
+    </objects>
+    <expr>
+		DX = 5;
+		DY = 3;
+
+        L1.top    = A.top;
+        L1.bottom = L1.top;
+        L1.left   = A.left;
+        L1.right  = A.right;
+
+		ARC.top    = L1.top + 1;
+		ARC.bottom = A.bottom;
+		ARC.left   = A.left + 0.5;
+		ARC.right  = ARC.left + DX;
+
+		A.top_margin  = DY;
+        A.left_margin = DX + 1;
+        A.right_margin = 1;
+    </expr>
+    <mathml name="menclose" type="longdiv" />
+    <dsr head="@longdiv( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+</toolbar>

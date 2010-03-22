@@ -1,0 +1,452 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Products and set theory templates                             -->
+<!--                                                                        -->
+<toolbar id="@t@Products@"
+         group="Presentation"
+         name="Products and set theory templates" 
+         caption="Products"
+         image="images/buttons/products.bmp"
+         image-title="images/title/t_products_n.bmp" 
+         image-title-hot="images/title/t_products_h.bmp" >
+
+
+  <!-- Product with no limits                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Product with no limits (Ctrl+T,Shift+P)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@product_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence shift="yes" key="P" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo largeop='true'>&prod;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Product with underscript limit                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Product with underscript limit (Ctrl+T,Alt+P)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@product_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence alt ="yes" key="P" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo largeop='true'>&prod;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Product with underscript and overscript limits                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Product with underscript and overscript limits (Ctrl+T,P)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@product_uol" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence             key="P" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munderover>
+          <mo largeop='true'>&prod;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </munderover>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Product with subscript limit                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Product with subscript limit" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@product_subl" type="mathml" >
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo largeop='true'>&prod;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Product with subscript and superscript limit                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Product with subscript and superscript limit" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@product_subsupl" type="mathml" >
+    <math display='block'>
+      <mrow>
+        <msubsup>
+          <mo largeop='true'>&prod;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </msubsup>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Coproduct with no limits                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Coproduct with no limits (Ctrl+T,Shift+C)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@coproduct_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence shift="yes" key="C" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo largeop='true'>&coprod;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Coproduct with underscript limit                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Coproduct with underscript limit (Ctrl+T,Alt+C)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@coproduct_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence alt ="yes" key="C" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo largeop='true'>&coprod;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Coproduct with underscript and overscript limits                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Coproduct with underscript and overscript limits (Ctrl+T,C)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@coproduct_uol" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence             key="C" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munderover>
+          <mo largeop='true'>&coprod;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </munderover>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Coproduct with subscript limit                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Coproduct with subscript limit" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@coproduct_subl" type="mathml" >
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo largeop='true'>&coprod;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Coproduct with subscript and superscript limit                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Coproduct with subscript and superscript limit" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@coproduct_subsupl" type="mathml" >
+    <math display='block'>
+      <mrow>
+        <msubsup>
+          <mo largeop='true'>&coprod;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </msubsup>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Intersection with no limits                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Intersection with no limits (Ctrl+T,Shift+I)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@intersection_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence shift="yes" key="I" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo largeop='true'>&cap;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Intersection with underscript limit                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Intersection with underscript limit (Ctrl+T,Alt+I)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@intersection_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence alt ="yes" key="I" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo largeop='true'>&cap;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Intersection with underscript and overscript limits                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Intersection with underscript and overscript limits (Ctrl+T,I)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@intersection_uol" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence             key="I" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munderover>
+          <mo largeop='true'>&cap;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </munderover>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Intersection with subscript limit                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Intersection with subscript limit" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@intersection_subl" type="mathml" >
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo largeop='true'>&cap;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Intersection with subscript and superscript limit                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Intersection with subscript and superscript limit" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@intersection_subsupl" type="mathml" >
+    <math display='block'>
+      <mrow>
+        <msubsup>
+          <mo largeop='true'>&cap;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </msubsup>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Union with no limits                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Union with no limits (Ctrl+T,Shift+U)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@union_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence shift="yes" key="U" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo largeop='true'>&cup;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Union with underscript limit                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Union with underscript limit (Ctrl+T,Alt+U)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@union_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence alt ="yes" key="U" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo largeop='true'>&cup;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Union with underscript and overscript limits                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Union with underscript and overscript limits (Ctrl+T,U)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@union_uol" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence             key="U" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munderover>
+          <mo largeop='true'>&cup;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </munderover>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Union with subscript limit                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Union with subscript limit" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@union_subl" type="mathml" >
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo largeop='true'>&cup;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Union with subscript and superscript limit                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Union with subscript and superscript limit" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@union_subsupl" type="mathml" >
+    <math display='block'>
+      <mrow>
+        <msubsup>
+          <mo largeop='true'>&cup;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </msubsup>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+</toolbar>

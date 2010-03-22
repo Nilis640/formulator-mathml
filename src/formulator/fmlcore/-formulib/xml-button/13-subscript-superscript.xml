@@ -1,0 +1,396 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Subscript and superscript templates                           -->
+<!--                                                                        -->
+<toolbar id="@t@Script@"
+         group="Presentation"
+         name="Subscript and superscript templates" 
+         caption="Script"
+         image="images/buttons/script.bmp"
+         image-title="images/title/t_script_n.bmp" 
+         image-title-hot="images/title/t_script_h.bmp" 
+         columns="3" >
+
+  <!-- Superscript                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Superscript (Ctrl+H)" id="@sup"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="H" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame left= "0" top="0" right="50" bottom="100"
+             halign="right" valign="bottom" />
+      <frame left="60" top="0" right="100" bottom="65"
+             halign="left"  valign="top" level="child" />
+    </frames>
+    <mathml name="msup" type="1" />
+    <dsr head="@sup( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Subscript                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Subscript (Ctrl+L)" id="@sub"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="L" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame left="0" top="0" right="50" bottom="100"
+             halign="right" valign="top"    />
+      <frame left="60" top="35" right="100" bottom="100"
+             halign="left"  valign="bottom" level="child" />
+    </frames>
+    <mathml name="msub" type="2" />
+    <dsr head="@sub( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Superscript and subscript                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Superscript and subscript (Ctrl+J)" id="@subsup"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="J" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame left="0" top="0" right="50" bottom="100"
+             halign="center" valign="center" />
+      <frame left="60" top="45" right="100" bottom="100"
+             halign="left"  valign="bottom" level="child" />
+      <frame left="60" top="0" right="100" bottom="45"
+             halign="left"  valign="top" level="child" />
+    </frames>
+    <mathml name="msubsup" type="3" />
+    <dsr head="@subsup( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Upper prescript                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upper prescript" id="@presup"
+          vertical-center-type="frame" vertical-center-value="2" >
+    <frames>
+      <frame left="0" top="0" right="40" bottom="65"
+             halign="right"  valign="top" level="child" />
+      <frame left= "50" top="0" right="100" bottom="100"
+             halign="left" valign="bottom" />
+    </frames>
+    <mathml name="mmultiscripts" type="4" />
+    <dsr head="@presup( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Lower prescript                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Lower prescript" id="@presub"
+          vertical-center-type="frame" vertical-center-value="2" >
+    <frames>
+      <frame left="0" top="35" right="40" bottom="100"
+             halign="right"  valign="bottom" level="child" />
+      <frame left="50" top="0" right="100" bottom="100"
+             halign="left" valign="top"    />
+    </frames>
+    <mathml name="mmultiscripts" type="8" />
+    <dsr head="@presub( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Upper and lower prescript                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upper and lower prescript" id="@presubsup"
+          vertical-center-type="frame" vertical-center-value="3" >
+    <frames>
+      <frame left="0" top="45" right="40" bottom="100"
+             halign="right"  valign="bottom" level="child" />
+      <frame left="0" top="0" right="40" bottom="45"
+             halign="right"  valign="top" level="child" />
+      <frame left="50" top="0" right="100" bottom="100"
+             halign="center" valign="center" />
+    </frames>
+    <mathml name="mmultiscripts" type="12" />
+    <dsr head="@presubsup( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Upper script and prescript                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upper script and prescript" id="@suppresup"
+          vertical-center-type="frame" vertical-center-value="2" >
+    <frames>
+      <frame left="0" top="0" right="25" bottom="65"
+             halign="right"  valign="top" level="child" />
+      <frame left="30" top="0" right="70" bottom="100"
+             halign="center" valign="center" />
+      <frame left="75" top="0" right="100" bottom="65"
+             halign="left"  valign="top" level="child" />
+    </frames>
+    <mathml name="mmultiscripts" type="5" />
+    <dsr head="@suppresup( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Lower script and prescript                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Lower script and prescript" id="@subpresub"
+          vertical-center-type="frame" vertical-center-value="2" >
+    <frames>
+      <frame left="0" top="35" right="25" bottom="100"
+             halign="right"  valign="bottom" level="child" />
+      <frame left="30" top="0" right="70" bottom="100"
+             halign="center" valign="center" />
+      <frame left="75" top="35" right="100" bottom="100"
+             halign="left"  valign="bottom" level="child" />
+    </frames>
+    <mathml name="mmultiscripts" type="10" />
+    <dsr head="@subpresub( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Upper and lower script and prescript                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upper and lower script and prescript" id="@suppresup_subpresub"
+          vertical-center-type="frame" vertical-center-value="3" >
+    <frames>
+      <frame left="0" top="45" right="25" bottom="100"
+             halign="right"  valign="bottom" level="child" />
+      <frame left="0" top="0" right="25" bottom="45"
+             halign="right"  valign="top" level="child" />
+
+      <frame left="30" top="0" right="70" bottom="100"
+             halign="center" valign="center" />
+
+      <frame left="75" top="45" right="100" bottom="100"
+             halign="left"  valign="bottom" level="child" />
+      <frame left="75" top="0" right="100" bottom="45"
+             halign="left"  valign="top" level="child" />
+    </frames>
+    <mathml name="mmultiscripts" type="15" />
+    <dsr head="@presubsup( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Upper script and lower prescript                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upper script and lower prescript" id="@sup_presub"
+          vertical-center-type="frame" vertical-center-value="2" >
+    <frames>
+      <frame left="0" top="45" right="25" bottom="100"
+             halign="right"  valign="bottom" level="child" />
+
+      <frame left="30" top="0" right="70" bottom="100"
+             halign="center" valign="center" />
+
+      <frame left="75" top="0" right="100" bottom="45"
+             halign="left"  valign="top" level="child" />
+    </frames>
+    <mathml name="mmultiscripts" type="9" />
+    <dsr head="@sup_presub( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Upper prescript and lower script                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upper prescript and lower script" id="@sub_presup"
+          vertical-center-type="frame" vertical-center-value="2" >
+    <frames>
+      <frame left="0" top="0" right="25" bottom="45"
+             halign="right"  valign="top" level="child" />
+
+      <frame left="30" top="0" right="70" bottom="100"
+             halign="center" valign="center" />
+
+      <frame left="75" top="45" right="100" bottom="100"
+             halign="left"  valign="bottom" level="child" />
+    </frames>
+    <mathml name="mmultiscripts" type="6" />
+    <dsr head="@presubsup( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Upper and lower script, lower prescript                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upper and lower script, lower prescript" id="@supsub_presub"
+          vertical-center-type="frame" vertical-center-value="2" >
+    <frames>
+      <frame left="0" top="45" right="25" bottom="100"
+             halign="right"  valign="bottom" level="child" />
+
+      <frame left="30" top="0" right="70" bottom="100"
+             halign="center" valign="center" />
+
+      <frame left="75" top="45" right="100" bottom="100"
+             halign="left"  valign="bottom" level="child" />
+      <frame left="75" top="0" right="100" bottom="45"
+             halign="left"  valign="top" level="child" />
+    </frames>
+    <mathml name="mmultiscripts" type="11" />
+    <dsr head="@supsub_presub( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Upper and lower prescript, lower script                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upper and lower prescript, lower script" id="@sub_presupsub"
+          vertical-center-type="frame" vertical-center-value="3" >
+    <frames>
+      <frame left="0" top="45" right="25" bottom="100"
+             halign="right"  valign="bottom" level="child" />
+      <frame left="0" top="0" right="25" bottom="45"
+             halign="right"  valign="top" level="child" />
+
+      <frame left="30" top="0" right="70" bottom="100"
+             halign="center" valign="center" />
+
+      <frame left="75" top="45" right="100" bottom="100"
+             halign="left"  valign="bottom" level="child" />
+    </frames>
+    <mathml name="mmultiscripts" type="14" />
+    <dsr head="@sub_presupsub( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Upper and lower prescript, upper script                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upper and lower prescript, upper script" id="@sup_presupsub"
+          vertical-center-type="frame" vertical-center-value="3" >
+    <frames>
+      <frame left="0" top="45" right="25" bottom="100"
+             halign="right"  valign="bottom" level="child" />
+      <frame left="0" top="0" right="25" bottom="45"
+             halign="right"  valign="top" level="child" />
+
+      <frame left="30" top="0" right="70" bottom="100"
+             halign="center" valign="center" />
+
+      <frame left="75" top="0" right="100" bottom="45"
+             halign="left"  valign="top" level="child" />
+    </frames>
+    <mathml name="mmultiscripts" type="13" />
+    <dsr head="@sup_presupsub( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Upper and lower script, upper prescript                              -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Upper and lower script, upper prescript" id="@supsub_presup"
+          vertical-center-type="frame" vertical-center-value="2" >
+    <frames>
+      <frame left="0" top="0" right="25" bottom="45"
+             halign="right"  valign="top" level="child" />
+
+      <frame left="30" top="0" right="70" bottom="100"
+             halign="center" valign="center" />
+
+      <frame left="75" top="45" right="100" bottom="100"
+             halign="left"  valign="bottom" level="child" />
+      <frame left="75" top="0" right="100" bottom="45"
+             halign="left"  valign="top" level="child" />
+    </frames>
+    <mathml name="mmultiscripts" type="7" />
+    <dsr head="@supsub_presup( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Over-script                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Over-script (Ctrl+T, Shift+L)" id="@over"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence shift="yes" key="L" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame left="0" top="25" right="100" bottom="100"
+             halign="center" valign="top"    />
+      <frame left="0" top="0" right="100" bottom="25"
+             halign="center" valign="bottom" level="child" />
+    </frames>
+    <mathml name="mover" />
+    <dsr head="@over( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Under-script                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Under-script (limit) (Ctrl+T, Alt+L)" id="@under"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence alt ="yes" key="L" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame left="0" top="0" right="100" bottom="75"
+             halign="center" valign="bottom" />
+      <frame left="0" top="75" right="100" bottom="100"
+             halign="center" valign="top"    level="child" />
+    </frames>
+    <mathml name="munder" />
+    <dsr head="@under( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Over-script and under-script                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Over-script and under-script (Ctrl+T, L)" id="@underover"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence             key="L" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame left="0" top="26" right="100" bottom="74"
+             halign="center" valign="center" />
+      <frame left="0" top="74" right="100" bottom="100" 
+             halign="center" valign="top"    level="child" />
+      <frame left="0" top="0" right="100" bottom="26" 
+             halign="center" valign="bottom" level="child" />
+    </frames>
+    <mathml name="munderover" />
+    <dsr head="@underover( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+</toolbar>

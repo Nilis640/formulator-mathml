@@ -1,0 +1,265 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Content MathML: Maximum and Minimum Templates                 -->
+<!--                                                                        -->
+<toolbar id="@t@CMMaxMin@"
+         group="Content"
+         name="Maximum and minimum"
+         caption="Maximum and Minimum" 
+         image="images/buttons/cm_maxmin.bmp"
+         image-title="images/title/t_cm_maxmin_n.bmp"
+         image-title-hot="images/title/t_cm_maxmin_h.bmp"
+         columns="7" >
+
+
+  <!-- max                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The maximum operator"
+          id="@cm_max" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <max/>
+    </math>
+  </button>
+
+
+  <!-- max                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The maximum operator"
+          id="@cm_max1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <max/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- max                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The maximum operator"
+          id="@cm_max2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <max/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- max                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The maximum operator"
+          id="@cm_max3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <max/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- max                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The maximum operator"
+          id="@cm_max_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <max/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- max                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The maximum operator; the elements to be compared are described using bound variables with a condition element and an expression to be maximized"
+          id="@cm_max_bvar" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <max/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- max                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The maximum operator; the elements to be compared are described using bound variables with a condition element and an expression to be maximized"
+          id="@cm_max_bvar_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <max/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- min                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The minimum operator"
+          id="@cm_min" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+          <min/>
+    </math>
+  </button>
+
+
+  <!-- min                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The minimum operator"
+          id="@cm_min1" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <min/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- min                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The minimum operator"
+          id="@cm_min2" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <min/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- min                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The minimum operator"
+          id="@cm_min3" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <min/>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- min                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The minimum operator"
+          id="@cm_min_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <min/>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- min                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The minimum operator; the elements to be compared are described using bound variables with a condition element and an expression to be minimized"
+          id="@cm_min_bvar" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <min/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+  <!-- min                                                                  -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The minimum operator; the elements to be compared are described using bound variables with a condition element and an expression to be minimized"
+          id="@cm_min_bvar_ask" type="mathml" rows="ask" columns=1
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+        <apply>
+          <min/>
+          <bvar __flag="0x10000000">
+            <mrow __flag="0x20000000"></mrow>
+          </bvar>
+          <condition>
+            <mrow __flag="0x20000000"></mrow>
+          </condition>
+          <mrow __flag="0x20000000"></mrow>
+        </apply>
+    </math>
+  </button>
+
+
+</toolbar>

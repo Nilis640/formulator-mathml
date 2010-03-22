@@ -1,0 +1,139 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Summation templates                                           -->
+<!--                                                                        -->
+<toolbar id="@t@Sum@"
+         group="Presentation"
+         name="Summation templates" 
+         caption="Sum"
+         image="images/buttons/summation.bmp"
+         image-title="images/title/t_summation_n.bmp" 
+         image-title-hot="images/title/t_summation_h.bmp" >
+
+  <!-- Summation with no limits                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Summation with no limits (Ctrl+T,Shift+S)" id="@sum_nl" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="T" />
+        <sequence shift="yes" key="S" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo>&sum;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Summation with underscript limit                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Summation with underscript limit (Ctrl+T,Alt+S)" id="@sum_ul" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence alt ="yes" key="S" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo>&sum;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Summation with underscript and overscript                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Summation with underscript and overscript (Ctrl+T,S)" id="@sum_uol" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" key="T" />
+        <sequence            key="S" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munderover>
+          <mo>&sum;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </munderover>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Summation with subscript limit                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Summation with subscript limit" id="@sum_subl" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo>&sum;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Summation with subscript and superscript limit                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Summation with subscript and superscript limit" id="@sum_subsupl" type="mathml"
+          vertical-center-type="frame" vertical-center-value="1" >
+    <math display='block'>
+      <mrow>
+        <msubsup>
+          <mo>&sum;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </msubsup>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+</toolbar>

@@ -1,0 +1,618 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Integral templates                                            -->
+<!--                                                                        -->
+<toolbar id="@t@Integral@"
+         group="Presentation"
+         name="Integral templates" 
+         caption="Integral"
+         image="images/buttons/integral.bmp"
+         image-title="images/title/t_integral_n.bmp" 
+         image-title-hot="images/title/t_integral_h.bmp" >
+
+  <!-- Indefinite integral (no limits)                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Indefinite integral (no limits) (Ctrl+Shift+I,!)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@integral_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="I" />
+        <sequence             shift="yes" key="!" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo>&int;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Definite integral with underscript and overscript limits             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Definite integral with underscript and overscript limits (Ctrl+Shift+I,S)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@integral_uol" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="I" />
+        <sequence                         key="S" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munderover>
+          <mo>&int;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </munderover>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Definite integral with subscript and superscript limit               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Definite integral with subscript and superscript limit (Ctrl+I)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@integral_subsupl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" key="I" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <msubsup>
+          <mo>&int;</mo>
+          <mrow></mrow>
+          <mrow></mrow>
+        </msubsup>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Definite integral with underscript limit                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Definite integral with underscript limit (Ctrl+Shift+I,Alt+S)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@integral_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence alt ="yes" key="S" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo>&int;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Definite integral with subscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Definite integral with subscript limit (Ctrl+Shift+I,Alt+1)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@integral_subl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence alt ="yes" key="1" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo>&int;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Double integral with no limits                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double integral with no limits (Ctrl+Shift+I,@)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@dintegral_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="I" />
+        <sequence             shift="yes" key="@" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo>&Int;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Double integral with underscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double integral with underscript limit (Ctrl+Shift+I,2)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@dintegral_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence                       key="2" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo>&Int;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Double integral with subscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Double integral with subscript limit (Ctrl+Shift+I,Alt+2)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@dintegral_subl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence alt ="yes" key="2" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo>&Int;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Triple integral with no limits                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Triple integral with no limits (Ctrl+Shift+I,#)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@tintegral_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="I" />
+        <sequence             shift="yes" key="#" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo>&tint;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Triple integral with underscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Triple integral with underscript limit (Ctrl+Shift+I,3)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@tintegral_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence                       key="3" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo>&tint;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Triple integral with subscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Triple integral with subscript limit (Ctrl+Shift+I,Alt+3)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@tintegral_subl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence alt ="yes" key="3" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo>&tint;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Contour integral with no limits                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Contour integral with no limits (Ctrl+Shift+I,Shift+C)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@cintegral_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="I" />
+        <sequence             shift="yes" key="C" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo>&conint;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Contour integral with underscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Contour integral with underscript limit (Ctrl+Shift+I,C)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@cintegral_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence                       key="C" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo>&conint;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Contour integral with subscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Contour integral with subscript limit (Ctrl+Shift+I,Alt+C)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@cintegral_subl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence alt ="yes" key="C" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo>&conint;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Area integral with no limits                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Area integral with no limits (Ctrl+Shift+I,Shift+A)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@aintegral_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="I" />
+        <sequence             shift="yes" key="A" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo>&Conint;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Area integral with underscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Area integral with underscript limit (Ctrl+Shift+I,A)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@aintegral_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence                       key="A" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo>&Conint;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Area integral with subscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Area integral with subscript limit (Ctrl+Shift+I,Alt+A)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@aintegral_subl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence alt ="yes" key="A" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo>&Conint;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Volume integral with no limits                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Volume integral with no limits (Ctrl+Shift+I,Shift+V)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@vintegral_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="I" />
+        <sequence             shift="yes" key="V" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo>&Cconint;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Volume integral with underscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Volume integral with underscript limit (Ctrl+Shift+I,V)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@vintegral_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence                       key="V" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo>&Cconint;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Volume integral with subscript limit                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Volume integral with subscript limit (Ctrl+Shift+I,Alt+V)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@vintegral_subl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence alt ="yes" key="V" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo>&Cconint;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Integral with counter-clockwise loop with no limits                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Integral with counter-clockwise loop with no limits (Ctrl+Shift+I,Shift+Left)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@awintegral_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="I" />
+        <sequence             shift="yes" key="Left" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo>&awconint;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Integral with counter-clockwise loop with underscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Integral with counter-clockwise loop with underscript limit (Ctrl+Shift+I,Left)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@awintegral_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence                       key="Left" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo>&awconint;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Integral with counter-clockwise loop with subscript limit                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Integral with counter-clockwise loop with subscript limit (Ctrl+Shift+I,Alt+Left)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@awintegral_subl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence alt ="yes" key="Left" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo>&awconint;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Integral with clockwise loop with no limits                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Integral with clockwise loop with no limits (Ctrl+Shift+I,Shift+Right)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@cwintegral_nl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl ="yes" shift="yes" key="I" />
+        <sequence             shift="yes" key="Right" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <mo>&cwconint;</mo>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Integral with clockwise loop with underscript limit                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Integral with clockwise loop with underscript limit (Ctrl+Shift+I,Right)"
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@cwintegral_ul" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence                        key="Right" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <munder>
+          <mo>&cwconint;</mo>
+          <mrow></mrow>
+        </munder>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+  <!-- Integral with clockwise loop with subscript limit                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Integral with clockwise loop with subscript limit (Ctrl+Shift+I,Alt+Right)" 
+          vertical-center-type="frame" vertical-center-value="1"
+          id="@cwintegral_subl" type="mathml" >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="I" />
+        <sequence alt ="yes" key="Right" />
+      </hot-key>
+    </hot-keys>
+    <math display='block'>
+      <mrow>
+        <msub>
+          <mo>&cwconint;</mo>
+          <mrow></mrow>
+        </msub>
+        <mrow></mrow>
+      </mrow>
+    </math>
+  </button>
+
+
+</toolbar>

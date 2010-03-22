@@ -1,0 +1,542 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Box templates                                                 -->
+<!--                                                                        -->
+<toolbar id="@t@Box@"
+         group="Presentation"
+         name="Box templates" 
+         caption="Box" 
+         image="images/buttons/box.bmp"
+         image-title="images/title/t_box_n.bmp"
+         image-title-hot="images/title/t_box_h.bmp"
+         columns="4" >
+
+  <!-- Box (left side)                                                      -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Box (left side)" id="@box_l" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" type="formula" name="L" />
+    </objects>
+    <expr>
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+		L.left   = A.left + 1;
+		L.top    = A.top + 1;
+        L.right  = L.left;
+        L.bottom = A.bottom - 1 + (A.top_margin - TMO);
+
+        A.left_margin = 3;
+        A.top_margin = 3;
+        A.right_margin = 3;
+        A.bottom_margin = 3;
+    </expr>
+    <mathml name="menclose" type="left" />
+    <dsr head="@box_l( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Box (right side)                                                     -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Box (right side)" id="@box_r" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" type="formula" name="R" />
+    </objects>
+    <expr>
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+		R.left   = A.right - 1 + (A.left_margin - LMO);
+		R.top    = A.top + 1;
+        R.right  = R.left;
+        R.bottom = A.bottom - 1 + (A.top_margin - TMO);
+
+        A.left_margin = 3;
+        A.top_margin = 3;
+        A.right_margin = 3;
+        A.bottom_margin = 3;
+    </expr>
+    <mathml name="menclose" type="right" />
+    <dsr head="@box_r( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Box (top side)                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Box (top side)" id="@box_t" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" type="formula" name="T" />
+    </objects>
+    <expr>
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+		T.left   = A.left + 1;
+		T.top    = A.top + 1;
+        T.right  = A.right - 1 + (A.left_margin - LMO);
+        T.bottom = T.top;
+
+        A.left_margin = 3;
+        A.top_margin = 3;
+        A.right_margin = 3;
+        A.bottom_margin = 3;
+    </expr>
+    <mathml name="menclose" type="top" />
+    <dsr head="@box_t( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Box (bottom side)                                                    -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Box (bottom side)" id="@box_b" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" type="formula" name="B" />
+    </objects>
+    <expr>
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+		B.left   = A.left + 1;
+		B.top    = A.bottom - 1 + (A.top_margin - TMO);
+        B.right  = A.right - 1 + (A.left_margin - LMO);
+        B.bottom = B.top;
+
+        A.left_margin = 3;
+        A.top_margin = 3;
+        A.right_margin = 3;
+        A.bottom_margin = 3;
+    </expr>
+    <mathml name="menclose" type="bottom" />
+    <dsr head="@box_b( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Box (top and left sides)                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Box (top and left sides)" id="@box_lt" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" type="formula" name="T" />
+      <object shape="line" type="formula" name="L" />
+    </objects>
+    <expr>
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+		T.left   = A.left + 1;
+		T.top    = A.top + 1;
+        T.right  = A.right - 1 + (A.left_margin - LMO);
+        T.bottom = T.top;
+
+		L.left   = A.left + 1.5;
+		L.top    = A.top + 1;
+        L.right  = L.left;
+        L.bottom = A.bottom - 1 + (A.top_margin - TMO);
+
+        A.left_margin = 3;
+        A.top_margin = 3;
+        A.right_margin = 3;
+        A.bottom_margin = 3;
+    </expr>
+    <mathml name="menclose" type="top-left" />
+    <dsr head="@box_lt( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Box (top and right sides)                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Box (top and right sides)" id="@box_rt" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" type="formula" name="T" />
+      <object shape="line" type="formula" name="R" />
+    </objects>
+    <expr>
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+		T.left   = A.left + 1;
+		T.top    = A.top + 1;
+        T.right  = A.right - 1 + (A.left_margin - LMO);
+        T.bottom = T.top;
+
+		R.left   = A.right - 1.5 + (A.left_margin - LMO);
+		R.top    = A.top + 1;
+        R.right  = R.left;
+        R.bottom = A.bottom - 1 + (A.top_margin - TMO);
+
+        A.left_margin = 3;
+        A.top_margin = 3;
+        A.right_margin = 3;
+        A.bottom_margin = 3;
+    </expr>
+    <mathml name="menclose" type="top-right" />
+    <dsr head="@box_rt( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Box (bottom and left sides)                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Box (bottom and left sides)" id="@box_lb" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" type="formula" name="B" />
+      <object shape="line" type="formula" name="L" />
+    </objects>
+    <expr>
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+		L.left   = A.left + 1;
+		L.top    = A.top + 1;
+        L.right  = L.left;
+        L.bottom = A.bottom - 1 + (A.top_margin - TMO);
+
+		B.left   = A.left + 1 - 0.5;
+		B.top    = A.bottom - 1 + (A.top_margin - TMO);
+        B.right  = A.right - 1 + (A.left_margin - LMO);
+        B.bottom = B.top;
+
+        A.left_margin = 3;
+        A.top_margin = 3;
+        A.right_margin = 3;
+        A.bottom_margin = 3;
+    </expr>
+    <mathml name="menclose" type="bottom-left" />
+    <dsr head="@box_lb( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Box (bottom and right sides)                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Box (bottom and right sides)" id="@box_rb" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" type="formula" name="B" />
+      <object shape="line" type="formula" name="R" />
+    </objects>
+    <expr>
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+		B.left   = A.left + 1;
+		B.top    = A.bottom - 1 + (A.top_margin - TMO);
+        B.right  = A.right - 0.5 + (A.left_margin - LMO);
+        B.bottom = B.top;
+
+		R.left   = A.right - 1 + (A.left_margin - LMO);
+		R.top    = A.top + 1;
+        R.right  = R.left;
+        R.bottom = A.bottom - 1 + (A.top_margin - TMO);
+
+        A.left_margin = 3;
+        A.top_margin = 3;
+        A.right_margin = 3;
+        A.bottom_margin = 3;
+    </expr>
+    <mathml name="menclose" type="bottom-right" />
+    <dsr head="@box_rb( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Box (Ctrl+Shift+T,X)                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Box (Ctrl+Shift+T,X)" id="@box" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <hot-keys>
+      <hot-key>
+        <sequence ctrl="yes" shift="yes" key="T" />
+        <sequence                        key="X" />
+      </hot-key>
+    </hot-keys>
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="rectangle" type="formula" name="BOX" />
+    </objects>
+    <expr>
+		BOX.left   = A.left + 1;
+		BOX.top    = A.top + 1;
+
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+        BOX.right  = A.right - 1 + (A.left_margin - LMO);
+        BOX.bottom = A.bottom - 1 + (A.top_margin - TMO);
+
+        A.left_margin = 3;
+        A.top_margin = 3;
+        A.right_margin = 3;
+        A.bottom_margin = 3;
+    </expr>
+    <mathml name="menclose" type="box" />
+    <dsr head="@box( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Actuarial notation                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Actuarial notation" id="@box_a" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object shape="line" type="formula" name="T" />
+      <object shape="line" type="formula" name="R" />
+    </objects>
+    <expr>
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+		T.left   = A.left + 1;
+		T.top    = A.top + 1;
+        T.right  = A.right - 1 + (A.left_margin - LMO);
+        T.bottom = T.top;
+
+		R.left   = A.right - 3 + (A.left_margin - LMO);
+		R.top    = A.top + 4;
+        R.right  = R.left;
+        R.bottom = A.bottom - 1 + (A.top_margin - TMO);
+
+        A.left_margin = 3;
+        A.top_margin = 4;
+        A.right_margin = 5;
+        A.bottom_margin = 2;
+    </expr>
+    <mathml name="menclose" type="actuarial" />
+    <dsr head="@box_a( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Rounded box                                                          -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Rounded box" id="@roundedbox" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+
+      <object name="L" shape="spline-ex" type="formula" offset-direction-x="0.1" >
+        <point type="moveto" x = "0"    y =   "0" />
+        <point type="lineto" x = "0"    y = "100" />
+      </object>
+
+      <object name="R" shape="spline-ex" type="formula" offset-direction-x="-0.1" >
+        <point type="moveto" x = "100"  y =  "0"  />
+        <point type="lineto" x = "100"  y = "100" />
+      </object>
+
+      <object name="T" shape="spline-ex" type="formula" offset-direction-y="0.1" >
+        <point type="moveto" x = "0"   y = "0" />
+        <point type="lineto" x = "100" y = "0" />
+      </object>
+
+      <object name="B" shape="spline-ex" type="formula" offset-direction-y="-0.1" >
+        <point type="moveto" x = "0"   y = "100" />
+        <point type="lineto" x = "100" y = "100" />
+      </object>
+
+      <object name="ANW" 
+              shape="spline-ex" type="formula"
+              offset-direction-x="0.1" offset-direction-y="0.1" >
+        <point type="moveto" x =   "0" y = "100" />
+        <point type="splnto" x =   "0" y =  "35" />
+        <point type="splnto" x =  "35" y =   "0" />
+        <point type="splnto" x = "100" y =   "0" />
+      </object>
+
+      <object name="ASW" 
+              shape="spline-ex" type="formula"
+			  offset-direction-x="0.1" offset-direction-y="-0.1">
+        <point type="moveto" x =   "0" y =   "0" />
+        <point type="splnto" x =   "0" y =  "65" />
+        <point type="splnto" x =  "35" y =  "100" />
+        <point type="splnto" x = "100" y = "100" />
+      </object>
+
+      <object name="ANE" 
+              shape="spline-ex" type="formula"
+              offset-direction-x="-0.1" offset-direction-y="0.1" >
+        <point type="moveto" x = "100" y = "100" />
+        <point type="splnto" x =  "100" y =  "35" />
+        <point type="splnto" x =  "65" y =   "0" />
+        <point type="splnto" x =   "0" y =   "0" />
+      </object>
+
+      <object name="ASE" 
+              shape="spline-ex" type="formula"
+              offset-direction-x="-0.1" offset-direction-y="-0.1" >
+        <point type="moveto" x = "100" y =   "0" />
+        <point type="splnto" x =  "100" y =  "65" />
+        <point type="splnto" x =  "65" y =  "100" />
+        <point type="splnto" x =   "0" y = "100" />
+      </object>
+
+    </objects>
+    <expr>
+		DX = 4;
+		DY = 5;
+
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+		L.left   = A.left + 1;
+		L.top    = A.top + 4;
+        L.right  = L.left;
+        L.bottom = A.bottom - 4 + (A.top_margin - TMO); 
+
+		R.left   = A.right - 1 + (A.left_margin - LMO);
+		R.top    = A.top + 4;
+        R.right  = R.left;
+        R.bottom = A.bottom - 4 + (A.top_margin - TMO); 
+
+		T.left   = A.left + 4;
+		T.top    = A.top + 1;
+        T.right  = A.right - 4 + (A.left_margin - LMO); 
+        T.bottom = T.top;
+
+		B.left   = A.left + 4;
+		B.top    = A.bottom - 1 +  (A.top_margin - TMO);
+        B.right  = A.right - 4 +  (A.left_margin - LMO);
+        B.bottom = B.top;
+
+		ANW.top    = T.top;
+		ANW.bottom = L.top;
+		ANW.left   = L.left;
+		ANW.right  = T.left;
+
+		ASW.top    = L.bottom;
+		ASW.bottom = B.top;
+		ASW.left   = L.left;
+		ASW.right  = B.left;
+
+		ANE.top    = T.top;
+		ANE.bottom = R.top;
+		ANE.left   = T.right;
+		ANE.right  = R.right;
+
+		ASE.top    = R.bottom;
+		ASE.bottom = B.bottom;
+		ASE.left   = T.right;
+		ASE.right  = R.right;
+
+        A.left_margin = DX;
+        A.top_margin = DY;
+        A.right_margin = DX;
+        A.bottom_margin = DY;
+    </expr>
+    <mathml name="menclose" type="roundedbox" />
+    <dsr head="@roundedbox( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+  <!-- Circle                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="Circle" id="@circle" 
+          vertical-center-type="frame" vertical-center-value="1"
+  >
+    <frames>
+      <frame name="A" left="0" top="0" right="100" bottom="100" halign="center" valign="center" />
+    </frames>
+    <objects>
+      <object name="BOX" shape="ellipse" type="formula" />
+    </objects>
+    <expr>
+		HOR = A.right - A.left - A.right_margin - A.left_margin;
+		VER = A.bottom - A.top - A.bottom_margin - A.top_margin;
+		D = max(HOR, VER) * 1.5;
+		DX = (D - HOR) * 0.5;
+		DY = (D - VER) * 0.5;
+
+		BOX.left = A.left;
+		BOX.top  = A.top;
+
+        LMO = A.left_margin;
+		TMO = A.top_margin;
+
+        BOX.right  = BOX.left + D;
+        BOX.bottom = BOX.top + D;
+
+        A.left_margin = DX;
+        A.top_margin = DY;
+        A.right_margin = DX;
+        A.bottom_margin = DY;
+    </expr>
+    <mathml name="menclose" type="circle" />
+    <dsr head="@circle( " tail=")" separator="," param="$child_list$" bracket="off" />
+  </button>
+
+
+</toolbar>

@@ -1,0 +1,163 @@
+<!--
+
+   Copyright (C) 2010 Andriy Kovalchuk, Vyacheslav Levytskyy,
+   Igor Samolyuk, Valentyn Yanchuk (aka "Hermitech Laboratory")
+   
+   All rights reserved.
+   Contact: Hermitech Laboratory (info@mmlsoft.com)
+   
+   This file is a part of the Formulator MathML Editor project
+   (http://www.mmlsoft.com).
+   
+   Commercial Usage
+   Licensees holding valid Formulator Commercial licenses may use this 
+   file in accordance with the Formulator Commercial License Agreement 
+   provided with the Software or, alternatively, in accordance with the 
+   terms contained in a written agreement between you and 
+   Hermitech Laboratory.
+   
+   GNU General Public License Usage
+   Alternatively, this file may be used under the terms of the GNU
+   General Public License version 3.0 as published by the Free Software
+   Foundation and appearing in the file LICENSE.GPL included in the
+   packaging of this file.  Please review the following information to
+   ensure the GNU General Public License version 3.0 requirements will be
+   met: http://www.gnu.org/copyleft/gpl.html.
+   
+   If you have questions regarding the use of this file, please contact
+   Hermitech Laboratory at info@mmlsoft.com.
+
+-->
+
+<!--                                                                        -->
+<!-- TOOLBAR: Content MathML: Constant and Symbol Elements templates        -->
+<!--                                                                        -->
+<toolbar id="@t@CMConstant@"
+         group="Content"
+         name="Constant and symbol elements" 
+         caption="Constant and Symbol Elements" 
+         image="images/buttons/cm_const.bmp"
+         image-title="images/title/t_cm_const_n.bmp" 
+         image-title-hot="images/title/t_cm_const_h.bmp" >
+
+  <!-- integers                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set of all integer numbers" id="@integers_cm" type="mathml" >
+    <math display='block'>
+      <integers/>
+    </math>
+  </button>
+
+  <!-- reals                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set of all real numbers" id="@reals_cm" type="mathml" >
+    <math display='block'>
+      <reals/>
+    </math>
+  </button>
+
+  <!-- rationals                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set of all rational numbers" id="@rationals_cm" type="mathml" >
+    <math display='block'>
+      <rationals/>
+    </math>
+  </button>
+
+  <!-- naturalnumbers                                                       -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set of all natural numbers" id="@naturalnumbers_cm" type="mathml" >
+    <math display='block'>
+      <naturalnumbers/>
+    </math>
+  </button>
+
+  <!-- complexes                                                            -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set of all complex numbers" id="@complexes_cm" type="mathml" >
+    <math display='block'>
+      <complexes/>
+    </math>
+  </button>
+
+  <!-- primes                                                               -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The set of all natural prime numbers" id="@primes_cm" type="mathml" >
+    <math display='block'>
+      <primes/>
+    </math>
+  </button>
+
+  <!-- exponentiale                                                         -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The exponential base of the natural logarithms" id="@exponentiale_cm" type="mathml" >
+    <math display='block'>
+      <exponentiale/>
+    </math>
+  </button>
+
+  <!-- imaginaryi                                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The mathematical constant which is the square root of -1" id="@imaginaryi_cm" type="mathml" >
+    <math display='block'>
+      <imaginaryi/>
+    </math>
+  </button>
+
+  <!-- notanumber                                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The result of an ill-defined floating point operation" id="@notanumber_cm" type="mathml" >
+    <math display='block'>
+      <notanumber/>
+    </math>
+  </button>
+
+  <!-- true                                                                 -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The logical constant for truth" id="@true" type="mathml" >
+    <math display='block'>
+      <true/>
+    </math>
+  </button>
+
+  <!-- false                                                                -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The logical constant for false" id="@false" type="mathml" >
+    <math display='block'>
+      <false/>
+    </math>
+  </button>
+
+  <!-- emptyset                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The empty set" id="@emptyset_cm" type="mathml" >
+    <math display='block'>
+      <emptyset/>
+    </math>
+  </button>
+
+  <!-- pi                                                                   -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The ratio of a circle's circumference to its diameter" id="@pi_cm" type="mathml" >
+    <math display='block'>
+      <pi/>
+    </math>
+  </button>
+
+  <!-- eulergamma                                                           -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The Euler's constant (approximately 0.5772156649)" id="@eulergamma_cm" type="mathml" >
+    <math display='block'>
+      <eulergamma/>
+    </math>
+  </button>
+
+  <!-- infinity                                                             -->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button name="The concept of infinity" id="@infinity_cm" type="mathml" >
+    <math display='block'>
+      <infinity/>
+    </math>
+  </button>
+
+</toolbar>

@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fmlide", "fmlide\fmlide.vcproj", "{192D1439-130F-4D64-B7B7-EA33B2DA6627}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25B9BAA5-513D-4E61-855F-8B35BC458E8B} = {25B9BAA5-513D-4E61-855F-8B35BC458E8B}
+		{A22D04B4-BD20-47AD-AE1D-1C5D9CDE7819} = {A22D04B4-BD20-47AD-AE1D-1C5D9CDE7819}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fmlcore", "fmlcore\fmlcore.vcproj", "{25B9BAA5-513D-4E61-855F-8B35BC458E8B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A22D04B4-BD20-47AD-AE1D-1C5D9CDE7819} = {A22D04B4-BD20-47AD-AE1D-1C5D9CDE7819}
+		{0D9040E4-C279-42A4-8191-8CCE1606275D} = {0D9040E4-C279-42A4-8191-8CCE1606275D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hutils", "..\hutils\hutils.vcproj", "{A22D04B4-BD20-47AD-AE1D-1C5D9CDE7819}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hmathast", "..\hmath\hmathast\hmathast.vcproj", "{0D9040E4-C279-42A4-8191-8CCE1606275D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{494D1AA0-180B-4DF7-822C-8654B7EA4BF2} = {494D1AA0-180B-4DF7-822C-8654B7EA4BF2}
+		{A22D04B4-BD20-47AD-AE1D-1C5D9CDE7819} = {A22D04B4-BD20-47AD-AE1D-1C5D9CDE7819}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hmathbs", "..\hmath\hmathbs\hmathbs.vcproj", "{494D1AA0-180B-4DF7-822C-8654B7EA4BF2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fmltest", "fmltest\fmltest.vcproj", "{4DB0D13D-C0B6-4BF0-9EDD-27FDB872A918}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25B9BAA5-513D-4E61-855F-8B35BC458E8B} = {25B9BAA5-513D-4E61-855F-8B35BC458E8B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{192D1439-130F-4D64-B7B7-EA33B2DA6627}.Debug|Win32.ActiveCfg = Debug|Win32
+		{192D1439-130F-4D64-B7B7-EA33B2DA6627}.Debug|Win32.Build.0 = Debug|Win32
+		{192D1439-130F-4D64-B7B7-EA33B2DA6627}.Release|Win32.ActiveCfg = Release|Win32
+		{192D1439-130F-4D64-B7B7-EA33B2DA6627}.Release|Win32.Build.0 = Release|Win32
+		{25B9BAA5-513D-4E61-855F-8B35BC458E8B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{25B9BAA5-513D-4E61-855F-8B35BC458E8B}.Debug|Win32.Build.0 = Debug|Win32
+		{25B9BAA5-513D-4E61-855F-8B35BC458E8B}.Release|Win32.ActiveCfg = Release|Win32
+		{25B9BAA5-513D-4E61-855F-8B35BC458E8B}.Release|Win32.Build.0 = Release|Win32
+		{A22D04B4-BD20-47AD-AE1D-1C5D9CDE7819}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A22D04B4-BD20-47AD-AE1D-1C5D9CDE7819}.Debug|Win32.Build.0 = Debug|Win32
+		{A22D04B4-BD20-47AD-AE1D-1C5D9CDE7819}.Release|Win32.ActiveCfg = Release|Win32
+		{A22D04B4-BD20-47AD-AE1D-1C5D9CDE7819}.Release|Win32.Build.0 = Release|Win32
+		{0D9040E4-C279-42A4-8191-8CCE1606275D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0D9040E4-C279-42A4-8191-8CCE1606275D}.Debug|Win32.Build.0 = Debug|Win32
+		{0D9040E4-C279-42A4-8191-8CCE1606275D}.Release|Win32.ActiveCfg = Release|Win32
+		{0D9040E4-C279-42A4-8191-8CCE1606275D}.Release|Win32.Build.0 = Release|Win32
+		{494D1AA0-180B-4DF7-822C-8654B7EA4BF2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{494D1AA0-180B-4DF7-822C-8654B7EA4BF2}.Debug|Win32.Build.0 = Debug|Win32
+		{494D1AA0-180B-4DF7-822C-8654B7EA4BF2}.Release|Win32.ActiveCfg = Release|Win32
+		{494D1AA0-180B-4DF7-822C-8654B7EA4BF2}.Release|Win32.Build.0 = Release|Win32
+		{4DB0D13D-C0B6-4BF0-9EDD-27FDB872A918}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4DB0D13D-C0B6-4BF0-9EDD-27FDB872A918}.Debug|Win32.Build.0 = Debug|Win32
+		{4DB0D13D-C0B6-4BF0-9EDD-27FDB872A918}.Release|Win32.ActiveCfg = Release|Win32
+		{4DB0D13D-C0B6-4BF0-9EDD-27FDB872A918}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
