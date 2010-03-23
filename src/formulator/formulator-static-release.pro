@@ -18,7 +18,7 @@ DEPENDPATH +=			\
 	./fmlide/
 MOC_DIR += ./GeneratedFiles/release
 OBJECTS_DIR += ../../int/release/formulator
-LIBPATH += /home/debian/qt-x11-opensource-src-4.5.2/lib
+LIBPATH += C:/Qt/4.6.0/lib/
 LIBS += -lQtCore -lQtGui -lQtNetwork -lQtSvg
 UI_DIR += ./GeneratedFiles
 RCC_DIR += ./GeneratedFiles
